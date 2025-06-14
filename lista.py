@@ -262,12 +262,9 @@ def eventi_m3u8_generator_world():
     # Carica le variabili d'ambiente dal file .env
     load_dotenv()
 
-    LINK_DADDY = os.getenv("LINK_DADDY", "https://daddylive.dad").strip()
-    PROXY = os.getenv("PROXYIP", "").strip()  # Proxy HLS 
+    LINK_DADDY = os.getenv("LINK_DADDY", "https://daddylive.dad").strip() 
     JSON_FILE = "daddyliveSchedule.json" 
     OUTPUT_FILE = "eventi.m3u8" 
-    MFP_IP = os.getenv("IPMFP", "").strip()
-    MFP_PASSWORD = os.getenv("PASSMFP", "").strip()
     HEADERS = { 
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" 
     } 
@@ -676,12 +673,8 @@ def eventi_m3u8_generator_world():
         # La seconda definizione di eventi_m3u8_generator_world usa /stream/stream-{id}.php
         embed_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php" 
 
-        if MFP_IP:
-            return f"{MFP_IP.rstrip('/')}/extractor/video?host=DLHD&api_password={MFP_PASSWORD}&redirect_stream=true&d={embed_url}"
-        else:
-            print(f"[!] MFP_IP non impostato. Generazione URL base per il canale Daddylive {channel_id}.")
-            base_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php"
-            return base_url
+        print(f"Generazione URL base per il canale Daddylive {channel_id}.")
+        return embed_url
      
     # def clean_category_name(name): # Rimossa definizione duplicata
     #     # Rimuove tag html come </span> o simili
@@ -848,8 +841,6 @@ def eventi_m3u8_generator():
     # Carica le variabili d'ambiente dal file .env
     load_dotenv()
     LINK_DADDY = os.getenv("LINK_DADDY", "https://daddylive.dad").strip()
-    MFP_IP = os.getenv("IPMFP", "").strip()
-    MFP_PASSWORD = os.getenv("PASSMFP", "").strip()
     JSON_FILE = "daddyliveSchedule.json" 
     OUTPUT_FILE = "eventi.m3u8" 
      
@@ -1261,12 +1252,8 @@ def eventi_m3u8_generator():
         # eventi_m3u8_generator usa /stream/stream-{id}.php
         embed_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php" 
 
-        if MFP_IP:
-            return f"{MFP_IP.rstrip('/')}/extractor/video?host=DLHD&api_password={MFP_PASSWORD}&redirect_stream=true&d={embed_url}"
-        else:
-            print(f"[!] MFP_IP non impostato. Generazione URL base per il canale Daddylive {channel_id}.")
-            base_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php"
-            return base_url
+        print(f"Generazione URL base per il canale Daddylive {channel_id}.")
+        return embed_url
      
     def clean_category_name(name): 
         # Rimuove tag html come </span> o simili 
@@ -1398,8 +1385,6 @@ def eventi_sps():
     load_dotenv()
 
     # Prefisso per il proxy dello stream
-    MFP_IP = os.getenv("IPMFP", "").strip()
-    MFP_PASSWORD = os.getenv("PASSMFP", "").strip()
 
     # URL di partenza (homepage o pagina con elenco eventi)
     base_url = "https://www.sportstreaming.net/"
@@ -1589,11 +1574,12 @@ def eventi_sps():
                 encoded_referer = quote_plus(headers["Referer"])
                 encoded_origin = quote_plus(headers["Origin"])
 
-                # Costruisci l'URL finale con il proxy e gli header
-                # stream_url qui Ã¨ l'URL originale dello stream (es. https://xuione.sportstreaming.net/...)
-                final_stream_url = f"{MFP_IP.rstrip('/')}/proxy/hls/manifest.m3u8?api_password={MFP_PASSWORD}&d={stream_url}&h_user-agent={encoded_ua}&h_referer={encoded_referer}&h_origin={encoded_origin}"
-
                 group_title_text = "Sport" if is_perma else "Eventi Live"
+
+                # Scrivi gli header usando #EXTVLCOPT
+                f.write(f'#EXTHTTP:{{"User-Agent":"{encoded_ua}","Referer":"{encoded_referer}","Origin":"{encoded_origin}"}}\n')
+                # f.write(f'#EXTVLCOPT:http-referrer={encoded_referer}\n') # Kept for reference, replaced by EXTHTTP
+                # f.write(f'#EXTVLCOPT:origin={encoded_origin}\n') # Kept for reference, replaced by EXTHTTP
 
                 # Aggiungi il canale iniziale/informativo solo se ci sono eventi da scrivere
                 if f.tell() == len("#EXTM3U\n"): # Controlla se Ã¨ stata scritta solo l'intestazione iniziale
@@ -1601,7 +1587,7 @@ def eventi_sps():
                     f.write("https://example.com.m3u8\n\n")
 
                 f.write(f"#EXTINF:-1 tvg-name=\"{tvg_name_final} (SPS)\" group-title=\"{group_title_text}\" tvg-logo=\"{image_url}\",{tvg_name_final} (SPS)\n")
-                f.write(f"{final_stream_url}\n")
+                f.write(f"{stream_url}\n") # Scrivi l'URL originale dello stream
                 f.write("\n") # Aggiungi una riga vuota dopo ogni canale
 
 
@@ -2365,8 +2351,6 @@ def italy_channels():
 
     LINK_SS = os.getenv("LINK_SKYSTREAMING", "https://skystreaming.yoga").strip()
     LINK_DADDY = os.getenv("LINK_DADDY", "https://daddylive.dad").strip()
-    MFP_IP = os.getenv("IPMFP", "").strip()
-    MFP_PASSWORD = os.getenv("PASSMFP", "").strip()
     EPG_FILE = "epg.xml"
     LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"
@@ -2473,19 +2457,44 @@ def italy_channels():
         return "Altro"
 
     def get_manual_channels():
-        encoded_link_ss = urllib.parse.quote(LINK_SS, safe=':/') # Encode LINK_SZ
+        # LINK_SS e LINK_DADDY sono disponibili qui se necessario per costruire URL o header specifici,
+        # poichÃ© sono caricate nello scope della funzione italy_channels().
+
+        # Esempio di header comuni per un gruppo di canali (es. kangal)
+        kangal_common_headers = {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+            "referer": f"{LINK_SS}/", 
+            "origin": LINK_SS        
+        }
+
         return [
-            {"name": "SKY SPORT 251 (X)", "url": f"https://hls.kangal.icu/hls/sky251/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..251.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 252 (X)", "url": f"https://hls.kangal.icu/hls/sky252/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..252.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 253 (X)", "url": f"https://hls.kangal.icu/hls/sky253/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..253.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 254 (X)", "url": f"https://hls.kangal.icu/hls/sky254/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..254.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 255 (X)", "url": f"https://hls.kangal.icu/hls/sky255/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..255.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 256 (X)", "url": f"https://hls.kangal.icu/hls/sky256/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..256.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 257 (X)", "url": f"https://hls.kangal.icu/hls/sky257/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..257.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 258 (X)", "url": f"https://hls.kangal.icu/hls/sky258/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..258.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 259 (X)", "url": f"https://hls.kangal.icu/hls/sky259/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..259.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 260 (X)", "url": f"https://hls.kangal.icu/hls/sky260/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..260.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
-            {"name": "SKY SPORT 261 (X)", "url": f"https://hls.kangal.icu/hls/sky261/index.m3u8&h_user-agent=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F133.0.0.0%20Safari%2F537.36&h_referer={encoded_link_ss}%2F&h_origin={encoded_link_ss}", "tvg_id": "sky.sport..261.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport"},
+            # --- Canali KANGAL.ICU (esempio con header comuni) ---
+            {"name": "SKY SPORT 251 (X)", "url": "https://hls.kangal.icu/hls/sky251/index.m3u8", "tvg_id": "sky.sport..251.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 252 (X)", "url": "https://hls.kangal.icu/hls/sky252/index.m3u8", "tvg_id": "sky.sport..252.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 253 (X)", "url": "https://hls.kangal.icu/hls/sky253/index.m3u8", "tvg_id": "sky.sport..253.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 254 (X)", "url": "https://hls.kangal.icu/hls/sky254/index.m3u8", "tvg_id": "sky.sport..254.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 255 (X)", "url": "https://hls.kangal.icu/hls/sky255/index.m3u8", "tvg_id": "sky.sport..255.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 256 (X)", "url": "https://hls.kangal.icu/hls/sky256/index.m3u8", "tvg_id": "sky.sport..256.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 257 (X)", "url": "https://hls.kangal.icu/hls/sky257/index.m3u8", "tvg_id": "sky.sport..257.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 258 (X)", "url": "https://hls.kangal.icu/hls/sky258/index.m3u8", "tvg_id": "sky.sport..258.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 259 (X)", "url": "https://hls.kangal.icu/hls/sky259/index.m3u8", "tvg_id": "sky.sport..259.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 260 (X)", "url": "https://hls.kangal.icu/hls/sky260/index.m3u8", "tvg_id": "sky.sport..260.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            {"name": "SKY SPORT 261 (X)", "url": "https://hls.kangal.icu/hls/sky261/index.m3u8", "tvg_id": "sky.sport..261.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+
+            # --- ESEMPIO: Canale con header DIVERSI/UNICI ---
+            #{
+            #    "name": "Mio Canale Custom Alpha (X)",
+            #    "url": "https://streaming.esempio.com/alpha/playlist.m3u8",
+            #    "tvg_id": "custom.alpha.it", # ID per EPG
+            #    "logo": "https://esempio.com/logo_alpha.png", # URL del logo
+            #    "category": "Custom", # Categoria per raggruppamento
+            #    "http_headers": {
+            #        "user-agent": "MioPlayerCustom/1.0",
+            #        "Referer": "https://sito-referer.esempio.com/"
+            #        "origin": "https://sito-referer.esempio.com"
+            #    }
+            #}
+            
         ]
 
     # --- Funzioni per risolvere gli stream Daddylive ---
@@ -2494,12 +2503,8 @@ def italy_channels():
         # italy_channels usa /stream/stream-{id}.php per i canali Daddylive dalla pagina HTML
         raw_php_url = f"{LINK_DADDY.rstrip('/')}/stream/stream-{channel_id}.php"
         
-        if MFP_IP:
-            return f"{MFP_IP.rstrip('/')}/extractor/video?host=DLHD&api_password={MFP_PASSWORD}&redirect_stream=true&d={raw_php_url}"
-        else:
-            print(f"[!] MFP_IP non impostato. Generazione URL base per il canale Daddylive {channel_id}.")
-            base_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php"
-            return base_url
+        print(f"Generazione URL base per il canale Daddylive {channel_id}.")
+        return raw_php_url
     # --- Fine funzioni Daddylive ---
 
     def fetch_channels_from_daddylive_page(page_url, base_daddy_url):
@@ -2584,30 +2589,36 @@ def italy_channels():
             os.remove(OUTPUT_FILE)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write('#EXTM3U\n\n')
-            for category, channels in organized_channels.items():
-                channels.sort(key=lambda x: x["name"].lower())
-                for ch in channels:
-                    raw_channel_url = ch['url']
-                    channel_name = ch['name']
-                    tvg_name_cleaned = re.sub(r"\s*\(.*?\)", "", ch["name"])
-
-                    if MFP_IP and not channel_name.upper().endswith(" (D)"):
-                        # Canale Vavoo o manuale, applica il formato proxy/hls
-                        final_url_to_write = f"{MFP_IP.rstrip('/')}/proxy/hls/manifest.m3u8?api_password={MFP_PASSWORD}&d={raw_channel_url}"
-                    else:
-                        # Canale Daddylive (URL giÃ  formattato o None) o MFP_IP non impostato (usa URL grezzo)
-                        final_url_to_write = raw_channel_url
+            for category, channels_list in organized_channels.items(): # Renamed 'channels' to 'channels_list'
+                channels_list.sort(key=lambda x: x["name"].lower())
+                for ch_data in channels_list: # Renamed 'ch' to 'ch_data' as it's a dict
+                    raw_channel_url = ch_data['url']
+                    channel_name = ch_data['name']
+                    tvg_name_cleaned = re.sub(r"\s*\(.*?\)", "", ch_data["name"])
+                    final_url_to_write = raw_channel_url
 
                     if final_url_to_write: # Scrivi solo se l'URL Ã¨ valido
-                        f.write(f'#EXTINF:-1 tvg-id="{ch.get("tvg_id", "")}" tvg-name="{tvg_name_cleaned}" tvg-logo="{ch.get("logo", DEFAULT_TVG_ICON)}" group-title="{category}",{ch["name"]}\n')
+                        f.write(f'#EXTINF:-1 tvg-id="{ch_data.get("tvg_id", "")}" tvg-name="{tvg_name_cleaned}" tvg-logo="{ch_data.get("logo", DEFAULT_TVG_ICON)}" group-title="{category}",{channel_name}\n')
                         
-                        # Controlla se Ã¨ un file .php (piÃ¹ generico)
-                        if final_url_to_write.endswith('.php') or 'kangal.icu' in final_url_to_write:
-                            # Per i file .php, non aggiungere i parametri VAVOO
+                        # 1. Controlla se ci sono header HTTP personalizzati (tipicamente per canali manuali)
+                        if "http_headers" in ch_data and ch_data["http_headers"]:
+                            headers_dict = ch_data["http_headers"]
+                            exthttp_line = "#EXTHTTP:" + json.dumps(headers_dict)
+                            f.write(f"{exthttp_line}\n")
+                            f.write(f"{final_url_to_write}\n\n") # Write the base URL
+                        # 2. Controlla se Ã¨ un canale Vavoo (basato sull'URL)
+                        elif any(base_vavoo_url.rstrip('/') + "/play/" in final_url_to_write for base_vavoo_url in BASE_URLS): # VAVOO
+                            vavoo_headers = {"User-Agent": "VAVOO/2.6", "Referer": "https://vavoo.to/", "Origin": "https://vavoo.to"}
+                            f.write(f'#EXTHTTP:{json.dumps(vavoo_headers)}\n')
                             f.write(f"{final_url_to_write}\n\n")
+                        # 3. Controlla se Ã¨ un file .php (tipicamente Daddylive)
+                        elif final_url_to_write.endswith('.php'): 
+                            # Per file .php (es. Daddylive), nessun header speciale aggiunto qui
+                            f.write(f"{final_url_to_write}\n\n")
+                        # 4. Altri canali (es. link diretti manuali senza http_headers specifici)
                         else:
-                            # Per gli altri canali, aggiungi i parametri VAVOO
-                            f.write(f"{final_url_to_write}&h_User-Agent=VAVOO2%2F6&h_Referer=https%3A%2F%2Fvavoo.to%2F&h_Origin=https%3A%2F%2Fvavoo.to\n\n")
+                            # Scrivi l'URL direttamente senza header aggiuntivi
+                            f.write(f"{final_url_to_write}\n\n")
                     else:
                         print(f"Skipping channel {channel_name} due to missing stream URL after processing.")
 
@@ -2742,14 +2753,20 @@ def italy_channels():
             })
 
         # Processa canali manuali (formato: dict)
-        for ch_data in manual_channels_data:
-            cat = ch_data.get("category") or classify_channel(ch_data["name"])
-            organized_channels.setdefault(cat, []).append({
-                "name": ch_data["name"],
-                "url": ch_data["url"],
-                "tvg_id": ch_data.get("tvg_id", ""),
-                "logo": ch_data.get("logo", DEFAULT_TVG_ICON)
-            })
+        for ch_data_manual in manual_channels_data:
+            cat = ch_data_manual.get("category") or classify_channel(ch_data_manual["name"])
+            # Construct the dictionary to append, ensuring all necessary fields are included
+            channel_entry = {
+                "name": ch_data_manual["name"],
+                "url": ch_data_manual["url"],
+                "tvg_id": ch_data_manual.get("tvg_id", ""),
+                "logo": ch_data_manual.get("logo", DEFAULT_TVG_ICON)
+            }
+            if "http_headers" in ch_data_manual: # Pass through http_headers if they exist
+                channel_entry["http_headers"] = ch_data_manual["http_headers"]
+            
+            organized_channels.setdefault(cat, []).append(channel_entry)
+
 
         save_m3u8(organized_channels)
         print(f"\nFile {OUTPUT_FILE} creato con successo!")
@@ -2772,8 +2789,6 @@ def world_channels_generator():
     # Carica le variabili d'ambiente dal file .env
     load_dotenv()
 
-    MFP_IP = os.getenv("IPMFP", "").strip()
-    MFP_PASSWORD = os.getenv("PASSMFP", "").strip()
     OUTPUT_FILE = "world.m3u8"
     BASE_URLS = [
         "https://vavoo.to"
@@ -2814,14 +2829,10 @@ def world_channels_generator():
                 grouped_channels[country].sort(key=lambda x: x[0].lower())
     
                 for name, url in grouped_channels[country]:
-                    final_url_to_write = url
-                    if MFP_IP:
-                        final_url_to_write = f"{MFP_IP.rstrip('/')}/proxy/hls/manifest.m3u8?api_password={MFP_PASSWORD}&d={final_url}"
-                    else:
-                        # Se MFP_IP non Ã¨ settato, usa l'URL originale
-                        final_url_to_write = url
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{country}", {name}\n')
-                    f.write(f"{final_url_to_write}&h_User-Agent=VAVOO2%2F6&h_Referer=https%3A%2F%2Fvavoo.to%2F&h_Origin=https%3A%2F%2Fvavoo.to\n\n")
+                    vavoo_headers = {"User-Agent": "VAVOO/2.6", "Referer": "https://vavoo.to/", "Origin": "https://vavoo.to"}
+                    f.write(f'#EXTHTTP:{json.dumps(vavoo_headers)}\n')
+                    f.write(f"{url}\n\n")
     
     # Funzione principale
     def main():
