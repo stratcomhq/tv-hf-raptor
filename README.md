@@ -75,6 +75,11 @@ Con OMG Premium TV potrai sfruttare:
 
   Usa questa repo ottimizzata: [hfmfp](https://github.com/nzo66/hfmfp)
 
+- **TvProxy**:
+  [tvproxy (repo GitHub)](https://github.com/nzo66/tvproxy)
+
+  `usando questo proxy hai la possibilita' di installarlo su un qualsiasi dispositivo android grazie all'app Termux`
+
 ---
 
 ## ⚙️ Vuoi Personalizzare la lista
@@ -87,7 +92,7 @@ Avvia creando un fork della repository proxy.
 
 ---
 
-### 🔁 Come proxare la lista completa?
+### 🔁 Come proxare la lista con Mediaflow-Proxy?
 
 Utilizza il seguente URL: `https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&<url-lista>`
 
@@ -97,6 +102,21 @@ Sostituisci:
 
 - `<server-ip>` con l'indirizzo IP del tuo server MFP
 - `<password>` con la password del tuo mediaflow-proxy  
+- `<url-lista>` con l'URL effettivo della tua lista M3U (es. quello GitHub)
+
+Questo ti permetterà di servire la lista M3U attraverso il tuo proxy personale in modo sicuro e performante.
+
+---
+
+### 🔁 Come proxare la lista con TvProxy?
+
+Utilizza il seguente URL: `https://<server-ip>/proxy?url=<url-lista>`
+
+questo sara il link della tua lista da mettere nelle app iptv!
+
+Sostituisci:
+
+- `<server-ip>` con l'indirizzo IP del tuo server MFP
 - `<url-lista>` con l'URL effettivo della tua lista M3U (es. quello GitHub)
 
 Questo ti permetterà di servire la lista M3U attraverso il tuo proxy personale in modo sicuro e performante.
