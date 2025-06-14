@@ -43,8 +43,13 @@ Per utilizzare questa lista IPTV su Stremio, dovrai usare l'addon **OMG Premium 
 1. **Usa questo fork specifico**: [https://github.com/nzo66/OMG-Premium-TV](https://github.com/nzo66/OMG-Premium-TV)  
 2. **Deploy su Docker** tramite Hugging Face o VPS seguendo la guida nel repository  
 3. **Configura l'addon** inserendo:
-   - **URL M3U**: Il link della lista M3U sopra indicato con il proxy prima dell' url della Lista 
+   - **URL M3U**: Il link della lista M3U sopra indicato senza il proxy 
    - **URL EPG**: Il link dell'EPG XML sopra indicato  
+   - **Abilita EPG**: Metti la spunta su Abilita EPG
+   - **Proxy URL:**: Url del tuo MFP
+   - **Proxy Password:**: Api Password del tuo MFP
+   - **Forza Proxy**: Metti la spunta su Forza Proxy
+   - **Intervallo Aggiornamento Playlist:**: Metti 02:00
 4. **Installa su Stremio** cliccando sul pulsante "INSTALLA SU STREMIO"
 
 ### ✨ Funzionalità disponibili
