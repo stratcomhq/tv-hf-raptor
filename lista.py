@@ -60,7 +60,7 @@ def merger_playlist():
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist6
     
     # Aggiungi intestazione EPG
-    lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
+    lista = f'#EXTM3U url-tvg="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
     
     # Salva la playlist
     output_filename = os.path.join(script_directory, "lista.m3u")
@@ -123,7 +123,7 @@ def merger_playlistworld():
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist5 + "\n" + playlist6
     
     # Aggiungi intestazione EPG
-    lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
+    lista = f'#EXTM3U url-tvg="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
     
     # Salva la playlist
     output_filename = os.path.join(script_directory, "lista.m3u")
