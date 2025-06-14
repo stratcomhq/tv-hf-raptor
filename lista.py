@@ -1,3 +1,4 @@
+
 import requests
 import os
 import re
@@ -28,7 +29,6 @@ def merger_playlist():
     # Percorsi o URL delle playlist M3U8
     url1 = "channels_italy.m3u8"  # File locale
     url2 = "eventi.m3u8"   
-    url3 = "eventisps.m3u8"  # Remoto
     url6 = "https://raw.githubusercontent.com/Brenders/Pluto-TV-Italia-M3U/main/PlutoItaly.m3u"
     
     # Funzione per scaricare o leggere una playlist
@@ -55,11 +55,10 @@ def merger_playlist():
     # Scarica/leggi le playlist
     playlist1 = download_playlist(url1)
     playlist2 = download_playlist(url2, append_params=True)
-    playlist3 = download_playlist(url3)
     playlist6 = download_playlist(url6)
     
     # Unisci le playlist
-    lista = playlist1 + "\n" + playlist2 + "\n" + playlist3 + "\n" + playlist6
+    lista = playlist1 + "\n" + playlist2 + "\n" + playlist6
     
     # Aggiungi intestazione EPG
     lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
@@ -91,7 +90,6 @@ def merger_playlistworld():
     # Percorsi o URL delle playlist M3U8
     url1 = "channels_italy.m3u8"  
     url2 = "eventi.m3u8"   
-    url4 = "eventisps.m3u8"           
     url5 = "https://raw.githubusercontent.com/Brenders/Pluto-TV-Italia-M3U/main/PlutoItaly.m3u"      
     url6 = "world.m3u8"
     
@@ -119,12 +117,11 @@ def merger_playlistworld():
     # Scarica/leggi le playlist
     playlist1 = download_playlist(url1)
     playlist2 = download_playlist(url2, append_params=True)
-    playlist4 = download_playlist(url4, exclude_group_title="Italy")
     playlist5 = download_playlist(url5)
-    playlist6 = download_playlist(url6)
+    playlist6 = download_playlist(url6, exclude_group_title="Italy")
 
     # Unisci le playlist
-    lista = playlist1 + "\n" + playlist2 + "\n" + playlist4 + "\n" + playlist5 + "\n" + playlist6
+    lista = playlist1 + "\n" + playlist2 + "\n" + playlist5 + "\n" + playlist6
     
     # Aggiungi intestazione EPG
     lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
@@ -284,7 +281,7 @@ def eventi_m3u8_generator_world():
         """
         Pulisce il tvg-id rimuovendo caratteri speciali, spazi e convertendo tutto in minuscolo
         """
-        # import re # 're' Ã¨ giÃ  importato a livello di funzione
+        # import re # 're' Ã¨ giÃ  importato a livello di funzione
         # Rimuove caratteri speciali comuni mantenendo solo lettere e numeri
         cleaned = re.sub(r'[^a-zA-Z0-9ÃÂ-ÃÂ¿]', '', tvg_id)
         return cleaned.lower()
@@ -334,7 +331,7 @@ def eventi_m3u8_generator_world():
                         logos_dir = "logos"
                         os.makedirs(logos_dir, exist_ok=True)
                         
-                        # Verifica se l'immagine combinata esiste giÃÂ  e non ÃÂ¨ obsoleta
+                        # Verifica se l'immagine combinata esiste giÃÂ  e non ÃÂ¨ obsoleta
                         output_filename = f"logos/{team1}_vs_{team2}.png"
                         if exists(output_filename):
                             file_age = current_time - os.path.getmtime(output_filename)
@@ -403,7 +400,7 @@ def eventi_m3u8_generator_world():
                         vs_path = "vs.png"
                         if exists(vs_path):
                             img_vs = Image.open(vs_path)
-                            # Converti l'immagine VS in modalitÃÂ  RGBA se non lo ÃÂ¨ giÃÂ 
+                            # Converti l'immagine VS in modalitÃÂ  RGBA se non lo ÃÂ¨ giÃÂ 
                             if img_vs.mode != 'RGBA':
                                 img_vs = img_vs.convert('RGBA')
                         else:
@@ -420,7 +417,7 @@ def eventi_m3u8_generator_world():
                         # Procedi con la combinazione solo se entrambi i loghi sono stati caricati con successo
                         if not (img1 and img2):
                             print(f"[!] Impossibile caricare entrambi i loghi come immagini valide per la combinazione. Logo1 caricato: {bool(img1)}, Logo2 caricato: {bool(img2)}.")
-                            raise ValueError("Uno o entrambi i loghi non sono stati caricati correttamente.") # Questo forzerÃ  l'except sottostante
+                            raise ValueError("Uno o entrambi i loghi non sono stati caricati correttamente.") # Questo forzerÃ  l'except sottostante
                         
                         # Ridimensiona le immagini a dimensioni uniformi
                         size = (150, 150)
@@ -428,7 +425,7 @@ def eventi_m3u8_generator_world():
                         img2 = img2.resize(size)
                         img_vs = img_vs.resize((100, 100))
                         
-                        # Assicurati che tutte le immagini siano in modalitÃÂ  RGBA per supportare la trasparenza
+                        # Assicurati che tutte le immagini siano in modalitÃÂ  RGBA per supportare la trasparenza
                         if img1.mode != 'RGBA':
                             img1 = img1.convert('RGBA')
                         if img2.mode != 'RGBA':
@@ -746,7 +743,7 @@ def eventi_m3u8_generator_world():
                                 continue
                         else: # Eventi di oggi
                             # Controllo: includi solo se l'evento Ã¨ iniziato da meno di 2 ore
-                            # Usa event_datetime_adjusted_for_display_and_filter che ha giÃ  il +2h
+                            # Usa event_datetime_adjusted_for_display_and_filter che ha giÃ  il +2h
                             if now - event_datetime_adjusted_for_display_and_filter > timedelta(hours=2):
                                 # Evento di oggi iniziato da piÃ¹ di 2 ore -> salto
                                 continue
@@ -913,7 +910,7 @@ def eventi_m3u8_generator():
                         logos_dir = "logos"
                         os.makedirs(logos_dir, exist_ok=True)
                         
-                        # Verifica se l'immagine combinata esiste giÃÂ  e non ÃÂ¨ obsoleta
+                        # Verifica se l'immagine combinata esiste giÃÂ  e non ÃÂ¨ obsoleta
                         output_filename = f"logos/{team1}_vs_{team2}.png"
                         if exists(output_filename):
                             file_age = current_time - os.path.getmtime(output_filename)
@@ -982,7 +979,7 @@ def eventi_m3u8_generator():
                         vs_path = "vs.png"
                         if exists(vs_path):
                             img_vs = Image.open(vs_path)
-                            # Converti l'immagine VS in modalitÃÂ  RGBA se non lo ÃÂ¨ giÃÂ 
+                            # Converti l'immagine VS in modalitÃÂ  RGBA se non lo ÃÂ¨ giÃÂ 
                             if img_vs.mode != 'RGBA':
                                 img_vs = img_vs.convert('RGBA')
                         else:
@@ -999,7 +996,7 @@ def eventi_m3u8_generator():
                         # Procedi con la combinazione solo se entrambi i loghi sono stati caricati con successo
                         if not (img1 and img2):
                             print(f"[!] Impossibile caricare entrambi i loghi come immagini valide per la combinazione. Logo1 caricato: {bool(img1)}, Logo2 caricato: {bool(img2)}.")
-                            raise ValueError("Uno o entrambi i loghi non sono stati caricati correttamente.") # Questo forzerÃ  l'except sottostante
+                            raise ValueError("Uno o entrambi i loghi non sono stati caricati correttamente.") # Questo forzerÃ  l'except sottostante
                         
                         # Ridimensiona le immagini a dimensioni uniformi
                         size = (150, 150)
@@ -1007,7 +1004,7 @@ def eventi_m3u8_generator():
                         img2 = img2.resize(size)
                         img_vs = img_vs.resize((100, 100))
                         
-                        # Assicurati che tutte le immagini siano in modalitÃÂ  RGBA per supportare la trasparenza
+                        # Assicurati che tutte le immagini siano in modalitÃÂ  RGBA per supportare la trasparenza
                         if img1.mode != 'RGBA':
                             img1 = img1.convert('RGBA')
                         if img2.mode != 'RGBA':
@@ -1372,264 +1369,6 @@ def eventi_m3u8_generator():
      
     if __name__ == "__main__": 
         generate_m3u_from_schedule(JSON_FILE, OUTPUT_FILE)
-    
-def eventi_sps():
-    import requests
-    import re
-    import os
-    from bs4 import BeautifulSoup
-    from urllib.parse import quote_plus
-    from datetime import datetime # Aggiunto import per la data corrente
-    from dotenv import load_dotenv
-
-    load_dotenv()
-
-    # Prefisso per il proxy dello stream
-
-    # URL di partenza (homepage o pagina con elenco eventi)
-    base_url = "https://www.sportstreaming.net/"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
-        "Origin": "https://www.sportstreaming.net",
-        "Referer": "https://www.sportstreaming.net/"
-    }
-
-    # Funzione helper per formattare la data dell'evento
-    def format_event_date(date_text):
-        """
-        Formatta la data dell'evento e restituisce la stringa formattata completa e una stringa DD/MM per il confronto.
-        Restituisce: (full_formatted_date, simple_date_dd_mm)
-        Esempio: ("20:45 23/07", "23/07") o ("", "") se non parsabile.
-        """
-        if not date_text:
-            return "", ""
-        match = re.search(
-            r'(?:[a-zA-ZÃ¬]+\s+)?(\d{1,2})\s+([a-zA-Z]+)\s+(?:ore\s+)?(\d{1,2}:\d{2})',
-            date_text,
-            re.IGNORECASE
-        )
-        if match:
-            day_str = match.group(1).zfill(2)
-            month_name = match.group(2).lower()
-            time = match.group(3)
-            month_number = ITALIAN_MONTHS_MAP.get(month_name)
-            if month_number:
-                return f"{time} {day_str}/{month_number}", f"{day_str}/{month_number}"
-        return "", ""
-
-    # Mappa dei mesi italiani per la formattazione della data
-    ITALIAN_MONTHS_MAP = {
-        "gennaio": "01", "febbraio": "02", "marzo": "03", "aprile": "04",
-        "maggio": "05", "giugno": "06", "luglio": "07", "agosto": "08",
-        "settembre": "09", "ottobre": "10", "novembre": "11", "dicembre": "12"
-    }
-
-    # Funzione per trovare i link alle pagine evento
-    def find_event_pages():
-        try:
-            response = requests.get(base_url, headers=headers)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-
-            event_links = []
-            seen_links = set()
-            for a in soup.find_all('a', href=True):
-                href = a['href']
-                if re.match(r'/live-(perma-)?\d+', href):
-                    full_url = base_url + href.lstrip('/')
-                    if full_url not in seen_links:
-                        event_links.append(full_url)
-                        seen_links.add(full_url)
-                elif re.match(r'https://www\.sportstreaming\.net/live-(perma-)?\d+', href):
-                    if href not in seen_links:
-                        event_links.append(href)
-                        seen_links.add(href)
-
-            return event_links
-
-        except requests.RequestException as e:
-            print(f"Errore durante la ricerca delle pagine evento: {e}")
-            return []
-
-    # Funzione per estrarre il flusso video e i dettagli dell'evento dalla pagina evento
-    def get_event_details(event_url):
-        try:
-            response = requests.get(event_url, headers=headers)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-
-            stream_url = None
-            element = None
-            for iframe in soup.find_all('iframe'):
-                src = iframe.get('src')
-                if src and ("stream" in src.lower() or re.search(r'\.(m3u8|mp4|ts|html|php)', src, re.IGNORECASE)):
-                    stream_url = src
-                    element = iframe
-                    break
-
-            if not stream_url:
-                for embed in soup.find_all('embed'):
-                    src = embed.get('src')
-                    if src and ("stream" in src.lower() or re.search(r'\.(m3u8|mp4|ts|html|php)', src, re.IGNORECASE)):
-                        stream_url = src
-                        element = embed
-                        break
-
-            if not stream_url:
-                for video in soup.find_all('video'):
-                    src = video.get('src')
-                    if src and ("stream" in src.lower() or re.search(r'\.(m3u8|mp4|ts)', src, re.IGNORECASE)):
-                        stream_url = src
-                        element = video
-                        break
-                    for source in video.find_all('source'):
-                        src = source.get('src')
-                        if src and ("stream" in src.lower() or re.search(r'\.(m3u8|mp4|ts)', src, re.IGNORECASE)):
-                            stream_url = src
-                            element = source
-                            break
-
-            # Estrai data e ora formattate
-            full_event_datetime_str = ""
-            event_date_comparable = "" # ConterrÃ  "DD/MM" per il confronto
-            event_time_str = ""        # ConterrÃ  "HH:MM"
-            date_span = soup.find('span', class_='uk-text-meta uk-text-small')
-            if date_span:
-                date_text = date_span.get_text(strip=True)
-                full_event_datetime_str, event_date_comparable = format_event_date(date_text)
-                if full_event_datetime_str:
-                    # Estrai solo l'orario (es. "20:45" da "20:45 23/07")
-                    time_match = re.match(r'(\d{1,2}:\d{2})', full_event_datetime_str)
-                    if time_match:
-                        event_time_str = time_match.group(1)
-     
-            # Estrai il titolo dell'evento dal tag <title>
-            event_title_from_html = "Unknown Event"
-            title_tag = soup.find('title')
-            if title_tag:
-                event_title_from_html = title_tag.get_text(strip=True)
-                event_title_from_html = re.sub(r'\s*\|\s*Sport Streaming\s*$', '', event_title_from_html, flags=re.IGNORECASE).strip()
-
-            # Estrai informazioni sulla lega/competizione
-            league_info = "Event" # Default
-            is_perma_channel = "perma" in event_url.lower()
-
-            if is_perma_channel:
-                if event_title_from_html and event_title_from_html != "Unknown Event":
-                    league_info = event_title_from_html
-                # Se il titolo del canale perma non Ã¨ stato trovato, league_info resta "Event"
-            else:
-                # Per canali non-perma (eventi specifici), cerca lo span della lega/competizione
-                league_spans = soup.find_all(
-                    lambda tag: tag.name == 'span' and \
-                                'uk-text-small' in tag.get('class', []) and \
-                                'uk-text-meta' not in tag.get('class', []) # Escludi lo span della data
-                )
-                if league_spans:
-                    # Prendi il testo del primo span corrispondente, pulito
-                    league_info = ' '.join(league_spans[0].get_text(strip=True).split())
-                # Se lo span non viene trovato per un evento non-perma, league_info resta "Event"
-
-            return stream_url, event_date_comparable, event_time_str, event_title_from_html, league_info
-
-        except requests.RequestException as e:
-            print(f"Errore durante l'accesso a {event_url}: {e}")
-            return None, "", "", "Unknown Event", "Event"
-
-    # Funzione per aggiornare il file M3U8
-    def update_m3u_file(video_streams, m3u_file="eventisps.m3u8"):
-        REPO_PATH = os.getenv('GITHUB_WORKSPACE', '.')
-        file_path = os.path.join(REPO_PATH, m3u_file)
-
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write("#EXTM3U\n")
-
-            perma_count = 1
-
-            for event_url, stream_url, event_time, event_title, league_info in video_streams:
-                if not stream_url:
-                    continue
-
-                # Determina se Ã¨ un canale permanente o standard
-                is_perma = "perma" in event_url.lower()
-                if is_perma:
-                    image_url = f"https://sportstreaming.net/assets/img/live/perma/live{perma_count}.png"
-                    perma_count += 1
-                else:
-                    # Estrai il numero dall'URL per i canali standard (es. live-3 -> 3)
-                    match = re.search(r'live-(\d+)', event_url)
-                    if match:
-                        live_number = match.group(1)
-                        image_url = f"https://sportstreaming.net/assets/img/live/standard/live{live_number}.png"
-                    else:
-                        image_url = "https://sportstreaming.net/assets/img/live/standard/live1.png"  # Fallback
-
-                tvg_name_prefix = f"{event_time} " if event_time else ""
-                tvg_name_final = f"{event_title} | {league_info} | {tvg_name_prefix}".strip()
-                if not tvg_name_final: # Fallback se il titolo Ã¨ vuoto
-                    tvg_name_final = "Eventi Live"
-
-                # Codifica gli header per l'URL
-                encoded_ua = quote_plus(headers["User-Agent"])
-                encoded_referer = quote_plus(headers["Referer"])
-                encoded_origin = quote_plus(headers["Origin"])
-
-                group_title_text = "Sport" if is_perma else "Eventi Live"
-
-                # Scrivi gli header usando #EXTVLCOPT
-                f.write(f'#EXTHTTP:{{"User-Agent":"{encoded_ua}","Referer":"{encoded_referer}","Origin":"{encoded_origin}"}}\n')
-                # f.write(f'#EXTVLCOPT:http-referrer={encoded_referer}\n') # Kept for reference, replaced by EXTHTTP
-                # f.write(f'#EXTVLCOPT:origin={encoded_origin}\n') # Kept for reference, replaced by EXTHTTP
-
-                # Aggiungi il canale iniziale/informativo solo se ci sono eventi da scrivere
-                if f.tell() == len("#EXTM3U\n"): # Controlla se Ã¨ stata scritta solo l'intestazione iniziale
-                    f.write(f'#EXTINF:-1 tvg-name="SPORTSTREAMING" group-title="Eventi Live",SPORTSTREAMING\n')
-                    f.write("https://example.com.m3u8\n\n")
-
-                f.write(f"#EXTINF:-1 tvg-name=\"{tvg_name_final} (SPS)\" group-title=\"{group_title_text}\" tvg-logo=\"{image_url}\",{tvg_name_final} (SPS)\n")
-                f.write(f"{stream_url}\n") # Scrivi l'URL originale dello stream
-                f.write("\n") # Aggiungi una riga vuota dopo ogni canale
-
-
-        print(f"File M3U8 aggiornato con successo: {file_path}")
-
-    # Esegui lo script
-    if __name__ == "__main__":
-        current_date_dd_mm = datetime.now().strftime("%d/%m")
-        print(f"Recupero eventi per il giorno: {current_date_dd_mm}")
-
-        event_pages = find_event_pages()
-        if not event_pages:
-            print("Nessuna pagina evento trovata.")
-        else:
-            video_streams = []
-            for event_url in event_pages:
-                # print(f"Analizzo: {event_url}") # Rimosso per output piÃ¹ pulito, riattivare se necessario
-                stream_url, event_date_str, event_time, event_title, league_info = get_event_details(event_url)
-                
-                if stream_url:
-                    is_perma = "perma" in event_url.lower()
-                    # Modifica: Includi solo se NON Ã¨ perma E la data corrisponde
-                    if not is_perma and (event_date_str == current_date_dd_mm):
-                        print(f"Includo: {event_title} (URL: {event_url}, Data evento: {event_date_str})")
-                        video_streams.append((event_url, stream_url, event_time, event_title, league_info))
-                    elif is_perma:
-                        print(f"Scarto canale perma: {event_title} (URL: {event_url})")
-                    # else: # Evento non perma ma di un altro giorno
-                        # print(f"Scarto evento (data non corrispondente): {event_title} (Data evento: {event_date_str}, Richiesta: {current_date_dd_mm})")
-                else:
-                    print(f"Nessun flusso trovato per {event_url}")
-
-            update_m3u_file(video_streams)
-
-            # Add a note if no actual video streams were processed and added to the file.
-            if not video_streams:
-                if not event_pages:
-                    # "Nessuna pagina evento trovata." was already printed.
-                    # update_m3u_file confirms file creation.
-                    pass # Avoid redundant messages.
-                else: # event_pages were found, but no streams matched criteria
-                    print("Nota: Nessun flusso video specifico per gli eventi odierni Ã¨ stato aggiunto a eventisps.m3u8 (potrebbe contenere solo l'intestazione).")
 
 # Funzione per il quarto script (schedule_extractor.py)
 def schedule_extractor():
@@ -1805,11 +1544,11 @@ def epg_eventi_generator_world():
     import json
     from datetime import datetime, timedelta
     
-    # Funzione di utilitÃÂ  per pulire il testo (rimuovere tag HTML span)
+    # Funzione di utilitÃÂ  per pulire il testo (rimuovere tag HTML span)
     def clean_text(text):
         return re.sub(r'</?span.*?>', '', str(text))
     
-    # Funzione di utilitÃÂ  per pulire il Channel ID (rimuovere spazi e caratteri speciali)
+    # Funzione di utilitÃÂ  per pulire il Channel ID (rimuovere spazi e caratteri speciali)
     def clean_channel_id(text):
         """Rimuove caratteri speciali e spazi dal channel ID lasciando tutto attaccato"""
         # Rimuovi prima i tag HTML
@@ -1901,7 +1640,7 @@ def epg_eventi_generator_world():
         current_datetime_utc = datetime.utcnow()
         current_datetime_local = current_datetime_utc + italian_offset
     
-        # Tiene traccia degli ID dei canali per cui ÃÂ¨ giÃÂ  stato scritto il tag <channel>
+        # Tiene traccia degli ID dei canali per cui ÃÂ¨ giÃÂ  stato scritto il tag <channel>
         channel_ids_processed_for_channel_tag = set() 
     
         for date_key, categories in json_data.items():
@@ -1967,7 +1706,7 @@ def epg_eventi_generator_world():
     
                         channel_name_cleaned = clean_text(channel_data.get("channel_name", "Canale Sconosciuto"))
     
-                        # Crea tag <channel> se non giÃÂ  processato
+                        # Crea tag <channel> se non giÃÂ  processato
                         if channel_id not in channel_ids_processed_for_channel_tag:
                             epg_content += f'  <channel id="{channel_id}">\n'
                             epg_content += f'    <display-name>{event_name}</display-name>\n'
@@ -1996,7 +1735,7 @@ def epg_eventi_generator_world():
     
                         # Assicura che l'inizio dell'annuncio sia prima della fine
                         if announcement_start_local < announcement_stop_local:
-                            announcement_title = f'IniziaÂ  alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
+                            announcement_title = f'IniziaÂ  alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
                             
                             epg_content += f'  <programme start="{announcement_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{announcement_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
                             epg_content += f'    <title lang="it">{announcement_title}</title>\n'
@@ -2083,11 +1822,11 @@ def epg_eventi_generator():
     import json
     from datetime import datetime, timedelta
     
-    # Funzione di utilitÃÂ  per pulire il testo (rimuovere tag HTML span)
+    # Funzione di utilitÃÂ  per pulire il testo (rimuovere tag HTML span)
     def clean_text(text):
         return re.sub(r'</?span.*?>', '', str(text))
     
-    # Funzione di utilitÃÂ  per pulire il Channel ID (rimuovere spazi e caratteri speciali)
+    # Funzione di utilitÃÂ  per pulire il Channel ID (rimuovere spazi e caratteri speciali)
     def clean_channel_id(text):
         """Rimuove caratteri speciali e spazi dal channel ID lasciando tutto attaccato"""
         # Rimuovi prima i tag HTML
@@ -2163,7 +1902,7 @@ def epg_eventi_generator():
         current_datetime_utc = datetime.utcnow()
         current_datetime_local = current_datetime_utc + italian_offset
     
-        # Tiene traccia degli ID dei canali per cui ÃÂ¨ giÃÂ  stato scritto il tag <channel>
+        # Tiene traccia degli ID dei canali per cui ÃÂ¨ giÃÂ  stato scritto il tag <channel>
         channel_ids_processed_for_channel_tag = set() 
     
         for date_key, categories in json_data.items():
@@ -2228,7 +1967,7 @@ def epg_eventi_generator():
     
                         channel_name_cleaned = clean_text(channel_data.get("channel_name", "Canale Sconosciuto"))
     
-                        # Crea tag <channel> se non giÃÂ  processato
+                        # Crea tag <channel> se non giÃÂ  processato
                         if channel_id not in channel_ids_processed_for_channel_tag:
                             epg_content += f'  <channel id="{channel_id}">\n'
                             epg_content += f'    <display-name>{event_name}</display-name>\n'
@@ -2257,7 +1996,7 @@ def epg_eventi_generator():
     
                         # Assicura che l'inizio dell'annuncio sia prima della fine
                         if announcement_start_local < announcement_stop_local:
-                            announcement_title = f'IniziaÂ  alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
+                            announcement_title = f'IniziaÂ  alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
                             
                             epg_content += f'  <programme start="{announcement_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{announcement_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
                             epg_content += f'    <title lang="it">{announcement_title}</title>\n'
@@ -2510,7 +2249,7 @@ def italy_channels():
     def fetch_channels_from_daddylive_page(page_url, base_daddy_url):
         print(f"Tentativo di fetch dei canali da: {page_url}")
         channels = []
-        seen_daddy_channel_ids = set() # Set per tracciare i channel_id giÃ  visti da Daddylive
+        seen_daddy_channel_ids = set() # Set per tracciare i channel_id giÃ  visti da Daddylive
         try:
             response = session.get(page_url, timeout=HTTP_TIMEOUT, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'})
             response.raise_for_status()
@@ -2548,7 +2287,7 @@ def italy_channels():
                     lower_channel_name = channel_name_raw.lower()
 
                     if channel_id in seen_daddy_channel_ids:
-                        print(f"Skipping Daddylive channel '{channel_name_raw}' (ID: {channel_id}) perchÃ© l'ID Ã¨ giÃ  stato processato.")
+                        print(f"Skipping Daddylive channel '{channel_name_raw}' (ID: {channel_id}) perchÃ© l'ID Ã¨ giÃ  stato processato.")
                         continue # Passa al prossimo item
 
                     # Filtro primario: deve contenere "italy"
@@ -2631,7 +2370,7 @@ def italy_channels():
         logos_dict = fetch_logos(LOGOS_FILE)
         channel_id_map = create_channel_id_map(epg_root)
         
-        all_fetched_channels = [] # ConterrÃ  tuple (nome_canale, url_stream)
+        all_fetched_channels = [] # ConterrÃ  tuple (nome_canale, url_stream)
 
         # 1. Canali da sorgenti JSON (Vavoo)
         print("\n--- Fetching canali da sorgenti Vavoo (JSON) ---")
@@ -2655,7 +2394,7 @@ def italy_channels():
             # 2. Trasformazioni specifiche per Daddylive:
             #    - Rimuovi "italy" (case insensitive)
             #    - Converti in maiuscolo
-            # Questo sarÃ  il nome base per la gestione dei duplicati Daddylive
+            # Questo sarÃ  il nome base per la gestione dei duplicati Daddylive
             base_daddy_name = re.sub(r'italy', '', name_after_initial_clean, flags=re.IGNORECASE).strip()
             base_daddy_name = re.sub(r'\s+', ' ', base_daddy_name).strip() # Rimuovi spazi doppi
             base_daddy_name = base_daddy_name.upper()
@@ -2680,7 +2419,7 @@ def italy_channels():
 
 
             # Gestione skip DAZN (usa il nome base trasformato per il check)
-            # clean_channel_name potrebbe giÃ  aver trasformato "dazn 1" in "DAZN2"
+            # clean_channel_name potrebbe giÃ  aver trasformato "dazn 1" in "DAZN2"
             if base_daddy_name == "DAZN" or base_daddy_name == "DAZN2":
                 print(f"Skipping canale Daddylive (HTML) a causa della regola DAZN: {raw_name} (base trasformato: {base_daddy_name})")
                 continue
@@ -2708,7 +2447,7 @@ def italy_channels():
 
         # Processa canali da Vavoo e Daddylive HTML (formato: (nome, url))
         for name, url in all_fetched_channels:
-            # 'name' Ã¨ il nome finale che verrÃ  visualizzato, 
+            # 'name' Ã¨ il nome finale che verrÃ  visualizzato, 
             # es. "CANALE SPORT (D) (2)" o "CANALE NEWS (3)" (da Vavoo)
             category = classify_channel(name)
 
@@ -2724,7 +2463,7 @@ def italy_channels():
             # Rimuovi suffissi numerici per duplicati, es. (2), (3)...
             name_for_lookup = re.sub(r'\s*\(\d+\)$', '', name_for_lookup).strip()
             # A questo punto, name_for_lookup dovrebbe essere il nome del canale "pulito" 
-            # es. "CANALE SPORT" o "CANALE NEWS" (giÃ  in maiuscolo se da Daddylive)
+            # es. "CANALE SPORT" o "CANALE NEWS" (giÃ  in maiuscolo se da Daddylive)
 
             # Logica per assegnazione logo
             final_logo_url = DEFAULT_TVG_ICON # Inizializza con il logo di default
@@ -2888,12 +2627,6 @@ def main():
         schedule_success = schedule_extractor()
     except Exception as e:
         print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
-        
-    try:
-        eventi_sps()
-    except Exception as e:
-        print(f"Errore durante l'esecuzione di eventi_sps: {e}")
-        return
 
     eventi_en = os.getenv("EVENTI_EN", "no").strip().lower()
     world_flag = os.getenv("WORLD", "si").strip().lower()
