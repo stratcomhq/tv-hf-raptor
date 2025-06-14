@@ -46,10 +46,10 @@ Per utilizzare questa lista IPTV su Stremio, dovrai usare l'addon **OMG Premium 
    - **URL M3U**: Il link della lista M3U sopra indicato senza il proxy 
    - **URL EPG**: Il link dell'EPG XML sopra indicato  
    - **Abilita EPG**: Metti la spunta su Abilita EPG
-   - **Proxy URL:**: Url del tuo MFP
-   - **Proxy Password:**: Api Password del tuo MFP
+   - **Proxy URL**: Url del tuo MFP
+   - **Proxy Password**: Api Password del tuo MFP
    - **Forza Proxy**: Metti la spunta su Forza Proxy
-   - **Intervallo Aggiornamento Playlist:**: Metti 02:00
+   - **Intervallo Aggiornamento Playlist**: Metti 02:00
 4. **Installa su Stremio** cliccando sul pulsante "INSTALLA SU STREMIO"
 
 ### ✨ Funzionalità disponibili
