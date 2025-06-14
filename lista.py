@@ -60,7 +60,7 @@ def merger_playlist():
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist6
     
     # Aggiungi intestazione EPG
-    lista = f'#EXTM3U url-tvg="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
+    lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
     
     # Salva la playlist
     output_filename = os.path.join(script_directory, "lista.m3u")
@@ -123,7 +123,7 @@ def merger_playlistworld():
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist5 + "\n" + playlist6
     
     # Aggiungi intestazione EPG
-    lista = f'#EXTM3U url-tvg="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
+    lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
     
     # Salva la playlist
     output_filename = os.path.join(script_directory, "lista.m3u")
@@ -282,7 +282,7 @@ def eventi_m3u8_generator_world():
         """
         # import re # 're' Ã¨ giÃ  importato a livello di funzione
         # Rimuove caratteri speciali comuni mantenendo solo lettere e numeri
-        cleaned = re.sub(r'[^a-zA-Z0-9ÃÂ-ÃÂ¿]', '', tvg_id)
+        cleaned = re.sub(r'[^a-zA-Z0-9À-ÿ]', '', tvg_id)
         return cleaned.lower()
      
     def search_logo_for_event(event_name): 
@@ -314,10 +314,10 @@ def eventi_m3u8_generator_world():
                 team1 = teams[0].strip()
                 team2 = teams[1].strip()
                 
-                print(f"[ð] Ricerca logo per Team 1: {team1}")
+                print(f"[🔍] Ricerca logo per Team 1: {team1}")
                 logo1_url = search_team_logo(team1)
                 
-                print(f"[ð] Ricerca logo per Team 2: {team2}")
+                print(f"[🔍] Ricerca logo per Team 2: {team2}")
                 logo2_url = search_team_logo(team2)
                 
                 # Se abbiamo trovato entrambi i loghi, creiamo un'immagine combinata
@@ -335,7 +335,7 @@ def eventi_m3u8_generator_world():
                         if exists(output_filename):
                             file_age = current_time - os.path.getmtime(output_filename)
                             if file_age <= three_hours_in_seconds:
-                                print(f"[â] Utilizzo immagine combinata esistente: {output_filename}")
+                                print(f"[✓] Utilizzo immagine combinata esistente: {output_filename}")
                                 
                                 # Carica le variabili d'ambiente per GitHub
                                 NOMEREPO = os.getenv("NOMEREPO", "").strip()
@@ -344,7 +344,7 @@ def eventi_m3u8_generator_world():
                                 # Se le variabili GitHub sono disponibili, restituisci l'URL raw di GitHub
                                 if NOMEGITHUB and NOMEREPO:
                                     github_raw_url = f"https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/main/{output_filename}"
-                                    print(f"[â] URL GitHub generato per logo esistente: {github_raw_url}")
+                                    print(f"[✓] URL GitHub generato per logo esistente: {github_raw_url}")
                                     return github_raw_url
                                 else:
                                     # Altrimenti restituisci il percorso locale
@@ -363,10 +363,10 @@ def eventi_m3u8_generator_world():
                                 response1.raise_for_status() # Controlla errori HTTP
                                 if 'image' in response1.headers.get('Content-Type', '').lower():
                                     img1 = Image.open(io.BytesIO(response1.content))
-                                    print(f"[â] Logo1 scaricato con successo da: {logo1_url}")
+                                    print(f"[✓] Logo1 scaricato con successo da: {logo1_url}")
                                 else:
-                                    print(f"[!] URL logo1 ({logo1_url}) non Ã¨ un'immagine (Content-Type: {response1.headers.get('Content-Type')}).")
-                                    logo1_url = None # Invalida URL se non Ã¨ un'immagine
+                                    print(f"[!] URL logo1 ({logo1_url}) non è un'immagine (Content-Type: {response1.headers.get('Content-Type')}).")
+                                    logo1_url = None # Invalida URL se non è un'immagine
                             except requests.exceptions.RequestException as e_req:
                                 print(f"[!] Errore scaricando logo1 ({logo1_url}): {e_req}")
                                 logo1_url = None
@@ -384,10 +384,10 @@ def eventi_m3u8_generator_world():
                                 response2.raise_for_status() # Controlla errori HTTP
                                 if 'image' in response2.headers.get('Content-Type', '').lower():
                                     img2 = Image.open(io.BytesIO(response2.content))
-                                    print(f"[â] Logo2 scaricato con successo da: {logo2_url}")
+                                    print(f"[✓] Logo2 scaricato con successo da: {logo2_url}")
                                 else:
-                                    print(f"[!] URL logo2 ({logo2_url}) non Ã¨ un'immagine (Content-Type: {response2.headers.get('Content-Type')}).")
-                                    logo2_url = None # Invalida URL se non Ã¨ un'immagine
+                                    print(f"[!] URL logo2 ({logo2_url}) non è un'immagine (Content-Type: {response2.headers.get('Content-Type')}).")
+                                    logo2_url = None # Invalida URL se non è un'immagine
                             except requests.exceptions.RequestException as e_req:
                                 print(f"[!] Errore scaricando logo2 ({logo2_url}): {e_req}")
                                 logo2_url = None
@@ -455,7 +455,7 @@ def eventi_m3u8_generator_world():
                         os.makedirs(os.path.dirname(output_filename), exist_ok=True)
                         combined.save(output_filename)
                         
-                        print(f"[â] Immagine combinata creata: {output_filename}")
+                        print(f"[✓] Immagine combinata creata: {output_filename}")
                         
                         # Carica le variabili d'ambiente per GitHub
                         NOMEREPO = os.getenv("NOMEREPO", "").strip()
@@ -464,7 +464,7 @@ def eventi_m3u8_generator_world():
                         # Se le variabili GitHub sono disponibili, restituisci l'URL raw di GitHub
                         if NOMEGITHUB and NOMEREPO:
                             github_raw_url = f"https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/main/{output_filename}"
-                            print(f"[â] URL GitHub generato: {github_raw_url}")
+                            print(f"[✓] URL GitHub generato: {github_raw_url}")
                             return github_raw_url
                         else:
                             # Altrimenti restituisci il percorso locale
@@ -480,7 +480,7 @@ def eventi_m3u8_generator_world():
             if ':' in event_name:
                 # Usa la parte prima dei ":" per la ricerca
                 prefix_name = event_name.split(':', 1)[0].strip()
-                print(f"[ð] Tentativo ricerca logo con prefisso: {prefix_name}")
+                print(f"[🔍] Tentativo ricerca logo con prefisso: {prefix_name}")
                 
                 # Prepara la query di ricerca con il prefisso
                 search_query = urllib.parse.quote(f"{prefix_name} logo")
@@ -514,14 +514,14 @@ def eventi_m3u8_generator_world():
                             # Prendi il primo risultato che sembra un logo (preferibilmente PNG o SVG)
                             for match in matches:
                                 if '.png' in match.lower() or '.svg' in match.lower():
-                                    print(f"[â] Logo trovato con prefisso: {match}")
+                                    print(f"[✓] Logo trovato con prefisso: {match}")
                                     return match
                             # Se non troviamo PNG o SVG, prendi il primo risultato
-                            print(f"[â] Logo trovato con prefisso: {matches[0]}")
+                            print(f"[✓] Logo trovato con prefisso: {matches[0]}")
                             return matches[0]
             
             # Se non riusciamo a identificare le squadre e il prefisso non ha dato risultati, procedi con la ricerca normale
-            print(f"[ð] Ricerca standard per: {clean_event_name}")
+            print(f"[🔍] Ricerca standard per: {clean_event_name}")
             
             
             # Se non riusciamo a identificare le squadre, procedi con la ricerca normale
@@ -782,7 +782,7 @@ def eventi_m3u8_generator_world():
                 f.write(f'#EXTINF:-1 tvg-name="DADDYLIVE" group-title="Eventi Live",DADDYLIVE\n')
                 f.write("https://example.com.m3u8\n\n")
             else:
-                print("[â¹ï¸] Nessun evento trovato, canale DADDYLIVE non aggiunto.")
+                print("[ℹ️] Nessun evento trovato, canale DADDYLIVE non aggiunto.")
 
             for category, channels in categorized_channels.items(): 
                 if not channels: 
@@ -796,7 +796,7 @@ def eventi_m3u8_generator_world():
                     # Cerca un logo per questo evento
                     # Rimuovi l'orario dal titolo dell'evento prima di cercare il logo
                     clean_event_title = re.sub(r'\s*\(\d{1,2}:\d{2}\)\s*$', '', event_title)
-                    print(f"[ð] Ricerca logo per: {clean_event_title}") 
+                    print(f"[🔍] Ricerca logo per: {clean_event_title}") 
                     logo_url = search_logo_for_event(clean_event_title)
                     logo_attribute = f' tvg-logo="{logo_url}"' if logo_url else ''
      
@@ -805,9 +805,9 @@ def eventi_m3u8_generator_world():
                         if stream: 
                             cleaned_event_id = clean_tvg_id(event_title) # Usa event_title per tvg-id
                             f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n{stream}\n\n')
-                            print(f"[â] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
+                            print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
                         else: 
-                            print(f"[â] {tvg_name} - Nessuno stream trovato") 
+                            print(f"[✗] {tvg_name} - Nessuno stream trovato") 
                     except Exception as e: 
                         print(f"[!] Errore su {tvg_name}: {e}") 
      
@@ -857,11 +857,11 @@ def eventi_m3u8_generator():
         
     def clean_tvg_id(tvg_id):
         """
-        Pulisce il tvg-id rimuovendo caratteri speciali, spazi e convertendo tutto in minuscolo
+        Pulisce il tvg-id rimuovendo caratteri speciali, spazi e convertendo tutto in minuscolo.
         """
         import re
         # Rimuove caratteri speciali comuni mantenendo solo lettere e numeri
-        cleaned = re.sub(r'[^a-zA-Z0-9ÃÂ-ÃÂ¿]', '', tvg_id)
+        cleaned = re.sub(r'[^a-zA-Z0-9À-ÿ]', '', tvg_id)
         return cleaned.lower()
      
     def search_logo_for_event(event_name): 
@@ -873,7 +873,7 @@ def eventi_m3u8_generator():
             # Rimuovi eventuali riferimenti all'orario dal nome dell'evento
             # Cerca pattern come "Team A vs Team B (20:00)" e rimuovi la parte dell'orario
             clean_event_name = re.sub(r'\s*\(\d{1,2}:\d{2}\)\s*$', '', event_name)
-            # Se c'ÃÂ¨ un ':', prendi solo la parte dopo
+            # Se c'è un ':', prendi solo la parte dopo
             if ':' in clean_event_name:
                 clean_event_name = clean_event_name.split(':', 1)[1].strip()
             
@@ -893,10 +893,10 @@ def eventi_m3u8_generator():
                 team1 = teams[0].strip()
                 team2 = teams[1].strip()
                 
-                print(f"[ð] Ricerca logo per Team 1: {team1}")
+                print(f"[🔍] Ricerca logo per Team 1: {team1}")
                 logo1_url = search_team_logo(team1)
                 
-                print(f"[ð] Ricerca logo per Team 2: {team2}")
+                print(f"[🔍] Ricerca logo per Team 2: {team2}")
                 logo2_url = search_team_logo(team2)
                 
                 # Se abbiamo trovato entrambi i loghi, creiamo un'immagine combinata
@@ -914,7 +914,7 @@ def eventi_m3u8_generator():
                         if exists(output_filename):
                             file_age = current_time - os.path.getmtime(output_filename)
                             if file_age <= three_hours_in_seconds:
-                                print(f"[â] Utilizzo immagine combinata esistente: {output_filename}")
+                                print(f"[✓] Utilizzo immagine combinata esistente: {output_filename}")
                                 
                                 # Carica le variabili d'ambiente per GitHub
                                 NOMEREPO = os.getenv("NOMEREPO", "").strip()
@@ -923,7 +923,7 @@ def eventi_m3u8_generator():
                                 # Se le variabili GitHub sono disponibili, restituisci l'URL raw di GitHub
                                 if NOMEGITHUB and NOMEREPO:
                                     github_raw_url = f"https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/main/{output_filename}"
-                                    print(f"[â] URL GitHub generato per logo esistente: {github_raw_url}")
+                                    print(f"[✓] URL GitHub generato per logo esistente: {github_raw_url}")
                                     return github_raw_url
                                 else:
                                     # Altrimenti restituisci il percorso locale
@@ -942,10 +942,10 @@ def eventi_m3u8_generator():
                                 response1.raise_for_status() # Controlla errori HTTP
                                 if 'image' in response1.headers.get('Content-Type', '').lower():
                                     img1 = Image.open(io.BytesIO(response1.content))
-                                    print(f"[â] Logo1 scaricato con successo da: {logo1_url}")
+                                    print(f"[✓] Logo1 scaricato con successo da: {logo1_url}")
                                 else:
-                                    print(f"[!] URL logo1 ({logo1_url}) non Ã¨ un'immagine (Content-Type: {response1.headers.get('Content-Type')}).")
-                                    logo1_url = None # Invalida URL se non Ã¨ un'immagine
+                                    print(f"[!] URL logo1 ({logo1_url}) non è un'immagine (Content-Type: {response1.headers.get('Content-Type')}).")
+                                    logo1_url = None # Invalida URL se non è un'immagine
                             except requests.exceptions.RequestException as e_req:
                                 print(f"[!] Errore scaricando logo1 ({logo1_url}): {e_req}")
                                 logo1_url = None
@@ -963,10 +963,10 @@ def eventi_m3u8_generator():
                                 response2.raise_for_status() # Controlla errori HTTP
                                 if 'image' in response2.headers.get('Content-Type', '').lower():
                                     img2 = Image.open(io.BytesIO(response2.content))
-                                    print(f"[â] Logo2 scaricato con successo da: {logo2_url}")
+                                    print(f"[✓] Logo2 scaricato con successo da: {logo2_url}")
                                 else:
-                                    print(f"[!] URL logo2 ({logo2_url}) non Ã¨ un'immagine (Content-Type: {response2.headers.get('Content-Type')}).")
-                                    logo2_url = None # Invalida URL se non Ã¨ un'immagine
+                                    print(f"[!] URL logo2 ({logo2_url}) non è un'immagine (Content-Type: {response2.headers.get('Content-Type')}).")
+                                    logo2_url = None # Invalida URL se non è un'immagine
                             except requests.exceptions.RequestException as e_req:
                                 print(f"[!] Errore scaricando logo2 ({logo2_url}): {e_req}")
                                 logo2_url = None
@@ -1034,7 +1034,7 @@ def eventi_m3u8_generator():
                         os.makedirs(os.path.dirname(output_filename), exist_ok=True)
                         combined.save(output_filename)
                         
-                        print(f"[â] Immagine combinata creata: {output_filename}")
+                        print(f"[✓] Immagine combinata creata: {output_filename}")
                         
                         # Carica le variabili d'ambiente per GitHub
                         NOMEREPO = os.getenv("NOMEREPO", "").strip()
@@ -1043,7 +1043,7 @@ def eventi_m3u8_generator():
                         # Se le variabili GitHub sono disponibili, restituisci l'URL raw di GitHub
                         if NOMEGITHUB and NOMEREPO:
                             github_raw_url = f"https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/main/{output_filename}"
-                            print(f"[â] URL GitHub generato: {github_raw_url}")
+                            print(f"[✓] URL GitHub generato: {github_raw_url}")
                             return github_raw_url
                         else:
                             # Altrimenti restituisci il percorso locale
@@ -1059,7 +1059,7 @@ def eventi_m3u8_generator():
             if ':' in event_name:
                 # Usa la parte prima dei ":" per la ricerca
                 prefix_name = event_name.split(':', 1)[0].strip()
-                print(f"[ð] Tentativo ricerca logo con prefisso: {prefix_name}")
+                print(f"[🔍] Tentativo ricerca logo con prefisso: {prefix_name}")
                 
                 # Prepara la query di ricerca con il prefisso
                 search_query = urllib.parse.quote(f"{prefix_name} logo")
@@ -1093,14 +1093,14 @@ def eventi_m3u8_generator():
                             # Prendi il primo risultato che sembra un logo (preferibilmente PNG o SVG)
                             for match in matches:
                                 if '.png' in match.lower() or '.svg' in match.lower():
-                                    print(f"[â] Logo trovato con prefisso: {match}")
+                                    print(f"[✓] Logo trovato con prefisso: {match}")
                                     return match
                             # Se non troviamo PNG o SVG, prendi il primo risultato
-                            print(f"[â] Logo trovato con prefisso: {matches[0]}")
+                            print(f"[✓] Logo trovato con prefisso: {matches[0]}")
                             return matches[0]
             
             # Se non riusciamo a identificare le squadre e il prefisso non ha dato risultati, procedi con la ricerca normale
-            print(f"[ð] Ricerca standard per: {clean_event_name}")
+            print(f"[🔍] Ricerca standard per: {clean_event_name}")
             
             
             # Se non riusciamo a identificare le squadre, procedi con la ricerca normale
@@ -1337,7 +1337,7 @@ def eventi_m3u8_generator():
                 f.write(f'#EXTINF:-1 tvg-name="DADDYLIVE" group-title="Eventi Live",DADDYLIVE\n')
                 f.write("https://example.com.m3u8\n\n")
             else:
-                print("[â¹ï¸] Nessun evento trovato, canale DADDYLIVE non aggiunto.")
+                print("[ℹ️] Nessun evento trovato, canale DADDYLIVE non aggiunto.")
 
             for category, channels in categorized_channels.items(): 
                 if not channels: 
@@ -1351,7 +1351,7 @@ def eventi_m3u8_generator():
                     # Cerca un logo per questo evento
                     # Rimuovi l'orario dal titolo dell'evento prima di cercare il logo
                     clean_event_title = re.sub(r'\s*\(\d{1,2}:\d{2}\)\s*$', '', event_title)
-                    print(f"[ð] Ricerca logo per: {clean_event_title}") 
+                    print(f"[🔍] Ricerca logo per: {clean_event_title}") 
                     logo_url = search_logo_for_event(clean_event_title)
                     logo_attribute = f' tvg-logo="{logo_url}"' if logo_url else ''
      
@@ -1360,9 +1360,9 @@ def eventi_m3u8_generator():
                         if stream: 
                             cleaned_event_id = clean_tvg_id(event_title) # Usa event_title per tvg-id
                             f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n{stream}\n\n')
-                            print(f"[â] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
+                            print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
                         else: 
-                            print(f"[â] {tvg_name} - Nessuno stream trovato") 
+                            print(f"[✗] {tvg_name} - Nessuno stream trovato") 
                     except Exception as e: 
                         print(f"[!] Errore su {tvg_name}: {e}") 
      
@@ -1734,7 +1734,7 @@ def epg_eventi_generator_world():
     
                         # Assicura che l'inizio dell'annuncio sia prima della fine
                         if announcement_start_local < announcement_stop_local:
-                            announcement_title = f'IniziaÂ  alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
+                            announcement_title = f'Inizia alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
                             
                             epg_content += f'  <programme start="{announcement_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{announcement_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
                             epg_content += f'    <title lang="it">{announcement_title}</title>\n'
@@ -1744,7 +1744,7 @@ def epg_eventi_generator_world():
                         elif announcement_start_local == announcement_stop_local:
                             print(f"[INFO] Annuncio di durata zero saltato per l'evento '{event_name}' sul canale '{channel_id}'.")
                         else: # announcement_start_local > announcement_stop_local
-                            print(f"[!] Attenzione: L'orario di inizio calcolato per l'annuncio ÃÂ¨ successivo all'orario di fine per l'evento '{event_name}' sul canale '{channel_id}'. Annuncio saltato.")
+                            print(f"[!] Attenzione: L'orario di inizio calcolato per l'annuncio è successivo all'orario di fine per l'evento '{event_name}' sul canale '{channel_id}'. Annuncio saltato.")
     
                         # --- EVENTO PRINCIPALE ---
                         main_event_start_local = event_datetime_local 
@@ -1767,7 +1767,7 @@ def epg_eventi_generator_world():
         try:
             with open(output_file_path, "w", encoding="utf-8") as file:
                 file.write(epg_content)
-            print(f"[â] File EPG XML salvato con successo: {output_file_path}")
+            print(f"[✓] File EPG XML salvato con successo: {output_file_path}")
             return True
         except Exception as e:
             print(f"[!] Errore nel salvataggio del file EPG XML: {e}")
@@ -1793,7 +1793,7 @@ def epg_eventi_generator_world():
         success = save_epg_xml(epg_content, output_file_path)
         
         if success:
-            print(f"[â] Generazione EPG XML completata con successo!")
+            print(f"[✓] Generazione EPG XML completata con successo!")
             return True
         else:
             print(f"[!] Errore durante la generazione EPG XML.")
@@ -1995,7 +1995,7 @@ def epg_eventi_generator():
     
                         # Assicura che l'inizio dell'annuncio sia prima della fine
                         if announcement_start_local < announcement_stop_local:
-                            announcement_title = f'IniziaÂ  alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
+                            announcement_title = f'Inizia alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
                             
                             epg_content += f'  <programme start="{announcement_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{announcement_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
                             epg_content += f'    <title lang="it">{announcement_title}</title>\n'
@@ -2005,7 +2005,7 @@ def epg_eventi_generator():
                         elif announcement_start_local == announcement_stop_local:
                             print(f"[INFO] Annuncio di durata zero saltato per l'evento '{event_name}' sul canale '{channel_id}'.")
                         else: # announcement_start_local > announcement_stop_local
-                            print(f"[!] Attenzione: L'orario di inizio calcolato per l'annuncio ÃÂ¨ successivo all'orario di fine per l'evento '{event_name}' sul canale '{channel_id}'. Annuncio saltato.")
+                            print(f"[!] Attenzione: L'orario di inizio calcolato per l'annuncio è successivo all'orario di fine per l'evento '{event_name}' sul canale '{channel_id}'. Annuncio saltato.")
     
                         # --- EVENTO PRINCIPALE ---
                         main_event_start_local = event_datetime_local 
@@ -2028,7 +2028,7 @@ def epg_eventi_generator():
         try:
             with open(output_file_path, "w", encoding="utf-8") as file:
                 file.write(epg_content)
-            print(f"[â] File EPG XML salvato con successo: {output_file_path}")
+            print(f"[✓] File EPG XML salvato con successo: {output_file_path}")
             return True
         except Exception as e:
             print(f"[!] Errore nel salvataggio del file EPG XML: {e}")
@@ -2054,7 +2054,7 @@ def epg_eventi_generator():
         success = save_epg_xml(epg_content, output_file_path)
         
         if success:
-            print(f"[â] Generazione EPG XML completata con successo!")
+            print(f"[✓] Generazione EPG XML completata con successo!")
             return True
         else:
             print(f"[!] Errore durante la generazione EPG XML.")
@@ -2090,7 +2090,6 @@ def italy_channels():
     LINK_SS = os.getenv("LINK_SKYSTREAMING", "https://skystreaming.yoga").strip()
     LINK_DADDY = os.getenv("LINK_DADDY", "https://daddylive.dad").strip()
     EPG_FILE = "epg.xml"
-    LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"
     DEFAULT_TVG_ICON = ""
     HTTP_TIMEOUT = 20  # Timeout per le richieste HTTP in secondi
@@ -2122,18 +2121,346 @@ def italy_channels():
             print(f"Errore durante la lettura del file EPG: {e}")
             return None
 
-    def fetch_logos(logos_file):
-        logos_dict = {}
-        try:
-            with open(logos_file, "r", encoding="utf-8") as f:
-                for line in f:
-                    match = re.match(r'\s*"(.+?)":\s*"(.+?)",?', line)
-                    if match:
-                        channel_name, logo_url = match.groups()
-                        logos_dict[channel_name.lower()] = logo_url
-        except Exception as e:
-            print(f"Errore durante la lettura del file dei loghi: {e}")
-        return logos_dict
+    def fetch_logos():
+        # Contenuto di logos.txt integrato come dizionario Python
+        logos_data = {
+            "sky uno": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-uno-it.png",
+            "rai 1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png",
+            "rai 2": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-2-it.png",
+            "rai 3": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-3-it.png",
+            "eurosport 1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-1-es.png",
+            "eurosport 2": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-2-es.png",
+            "italia 1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/italia1-it.png",
+            "la 7": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/la7-it.png",
+            "la 7 d": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/la7d-it.png",
+            "rai sport+": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-sport-it.png",
+            "rai sport [live during events only]": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-sport-it.png",
+            "rai premium": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-premium-it.png",
+            "sky sport golf": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-golf-it.png",
+            "sky sport moto gp": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-motogp-it.png",
+            "sky sport tennis": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png",
+            "sky sport f1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png",
+            "sky sport football": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-football-it.png",
+            "sky sport football [live during events only]": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-football-it.png",
+            "sky sport uno": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png",
+            "sky sport arena": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-arena-it.png",
+            "sky cinema collection": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-collection-it.png",
+            "sky cinema uno": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-uno-it.png",
+            "sky cinema action": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-action-it.png",
+            "sky cinema action (backup)": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-action-it.png",
+            "sky cinema comedy": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-comedy-it.png",
+            "sky cinema uno +24": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-uno-plus24-it.png",
+            "sky cinema romance": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-romance-it.png",
+            "sky cinema family": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-family-it.png",
+            "sky cinema due +24": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-due-plus24-it.png",
+            "sky cinema drama": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-drama-it.png",
+            "sky cinema suspense": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-suspense-it.png",
+            "sky sport 24": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-24-it.png",
+            "sky sport 24 [live during events only]": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-24-it.png",
+            "sky sport calcio": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-calcio-it.png",
+            "sky calcio 1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-1-alt-de.png",
+            "sky calcio 2": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-2-alt-de.png",
+            "sky calcio 3": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-3-alt-de.png",
+            "sky calcio 4": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-4-alt-de.png",
+            "sky calcio 5": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-5-alt-de.png",
+            "sky calcio 6": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-6-alt-de.png",
+            "sky calcio 7": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-select-7-alt-de.png",
+            "sky serie": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-serie-it.png",
+            "crime+investigation": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Crime_%2B_Investigation_Logo_10.2019.svg",
+            "20 mediaset": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/20-it.png",
+            "mediaset 20": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/20-it.png",
+            "27 twenty seven": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Twentyseven_logo.svg/260px-Twentyseven_logo.svg.png",
+            "27 twentyseven": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Twentyseven_logo.svg/260px-Twentyseven_logo.svg.png",
+            "canale 5": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/canale5-it.png",
+            "cine 34 mediaset": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cine34-it.png",
+            "cine 34": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cine34-it.png",
+            "discovery focus": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/focus-it.png",
+            "focus": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/focus-it.png",
+            "italia 2": "https://upload.wikimedia.org/wikipedia/it/thumb/c/c5/Logo_Italia2.svg/520px-Logo_Italia2.svg.png",
+            "mediaset italia 2": "https://upload.wikimedia.org/wikipedia/it/thumb/c/c5/Logo_Italia2.svg/520px-Logo_Italia2.svg.png",
+            "mediaset italia": "https://www.italiasera.it/wp-content/uploads/2019/06/Mediaset-640x366.png",
+            "mediaset extra": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/mediaset-extra-it.png",
+            "mediaset 1": "https://play-lh.googleusercontent.com/2-Cl0plYUCxk8bnbeavm4ZOJ_S4Xuwmql_N3_E4OJyf7XK_YUvdNOWgzn8KD-Bur8w0",
+            "mediaset infinity+ 1": "https://play-lh.googleusercontent.com/2-Cl0plYUCxk8bnbeavm4ZOJ_S4Xuwmql_N3_E4OJyf7XK_YUvdNOWgzn8KD-Bur8w0",
+            "mediaset infinity+ 2": "https://play-lh.googleusercontent.com/2-Cl0plYUCxk8bnbeavm4ZOJ_S4Xuwmql_N3_E4OJyf7XK_YUvdNOWgzn8KD-Bur8w0",
+            "mediaset infinity+ 5": "https://play-lh.googleusercontent.com/2-Cl0plYUCxk8bnbeavm4ZOJ_S4Xuwmql_N3_E4OJyf7XK_YUvdNOWgzn8KD-Bur8w0",
+            "mediaset iris": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/iris-it.png",
+            "iris": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/iris-it.png",
+            "rete 4": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rete4-it.png",
+            "sport italia (backup)": "https://play-lh.googleusercontent.com/0IcWROAOpuEcMf2qbOBNQYhrAPUuSmw-zv0f867kUxKSwSTD_chyCDuBP2PScIyWI9k",
+            "sport italia": "https://play-lh.googleusercontent.com/0IcWROAOpuEcMf2qbOBNQYhrAPUuSmw-zv0f867kUxKSwSTD_chyCDuBP2PScIyWI9k",
+            "sportitalia plus": "https://www.capitaladv.eu/wp-content/uploads/2020/07/LOGO-SPORTITALIA-PLUS-HD_2-1.png",
+            "sport italia solo calcio [live during events only]": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SI_Solo_Calcio_logo_%282019%29.svg/1200px-SI_Solo_Calcio_logo_%282019%29.svg.png",
+            "sportitalia solocalcio": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SI_Solo_Calcio_logo_%282019%29.svg/1200px-SI_Solo_Calcio_logo_%282019%29.svg.png",
+            "dazn 1": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Dazn-logo.png",
+            "dazn2": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Dazn-logo.png",
+            "motortrend": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Motor_Trend_logo.svg/2560px-Motor_Trend_logo.svg.png",
+            "sky sport max": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-max-it.png",
+            "sky sport nba": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-nba-it.png",
+            "sky sport serie a": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-serie-a-it.png",
+            "sky sports f1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png",
+            "sky super tennis": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png",
+            "tennis channel": "https://images.tennis.com/image/upload/t_16-9_768/v1620828532/tenniscom-prd/assets/Fallback/Tennis_Fallback_v6_f5tjzv.jpg",
+            "super tennis": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/super-tennis-it.png",
+            "tv 8": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/tv8-it.png",
+            "sky primafila 1": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 2": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 3": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 4": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 5": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 6": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 7": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 8": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 9": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 10": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 11": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 12": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 13": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 14": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 15": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 16": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 17": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky primafila 18": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png",
+            "sky cinema due": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-due-it.png",
+            "sky atlantic": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-atlantic-it.png",
+            "nat geo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-it.png",
+            "discovery nove": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/nove-it.png",
+            "discovery channel": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/discovery-channel-it.png",
+            "real time": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/real-time-it.png",
+            "rai 5": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-5-it.png",
+            "rai gulp": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-gulp-it.png",
+            "rai italia": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rai_Italia_-_Logo_2017.svg/1024px-Rai_Italia_-_Logo_2017.svg.png",
+            "rai movie": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-movie-it.png",
+            "rai news 24": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-news-24-it.png",
+            "rai scuola": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-scuola-it.png",
+            "rai storia": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-storia-it.png",
+            "rai yoyo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-yoyo-it.png",
+            "rai 4": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-4-it.png",
+            "rai 4k": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Rai_4K_-_Logo_2017.svg/1200px-Rai_4K_-_Logo_2017.svg.png",
+            "hgtv": "https://d204lf4nuskf6u.cloudfront.net/italy-images/c2cbeaabb81be73e81c7f4291cf798e3.png?k=2nWZhtOSUQdq2s2ItEDH5%2BQEPdq1khUY8YJSK0%2BNV90dhkyaUQQ82V1zGPD7O5%2BS",
+            "top crime": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/top-crime-it.png",
+            "cielo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cielo-it.png",
+            "dmax": "https://cdn.cookielaw.org/logos/50417659-aa29-4f7f-b59d-f6e887deed53/a32be519-de41-40f4-abed-d2934ba6751b/9a44af24-5ca6-4098-aa95-594755bd7b2d/dmax_logo.png",
+            "food network": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Food_Network_-_Logo_2016.png",
+            "giallo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/giallo-it.png",
+            "history": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/history-channel-it.png",
+            "la 5": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/la5-it.png",
+            # "la 7 d" duplicato, mantenendo il primo. Se necessario, gestire diversamente.
+            "sky arte": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-arte-it.png",
+            "sky documentaries": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-documentaries-it.png",
+            "sky nature": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-nature-it.png",
+            "warner tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Warner_TV_Italy.svg/1200px-Warner_TV_Italy.svg.png",
+            "fox": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/fox-it.png",
+            "nat geo wild": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-wild-it.png",
+            "animal planet": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/2560px-2018_Animal_Planet_logo.svg.png",
+            "boing": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/boing-it.png",
+            "k2": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/k2-it.png",
+            "discovery k2": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/k2-it.png",
+            "nick jr": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/nick-jr-it.png",
+            "nickelodeon": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/nickelodeon-it.png",
+            "premium crime": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/premium-crime-it.png",
+            "rakuten action movies": "https://img.utdstc.com/icon/7f6/a4a/7f6a4a47aa35e90d889cb8e71ed9a6930fe5832219371761736e87e880f85a5f:200",
+            "rakuten comedy movies": "https://img.utdstc.com/icon/7f6/a4a/7f6a4a47aa35e90d889cb8e71ed9a6930fe5832219371761736e87e880f85a5f:200",
+            "rakuten drama": "https://img.utdstc.com/icon/7f6/a4a/7f6a4a47aa35e90d889cb8e71ed9a6930fe5832219371761736e87e880f85a5f:200",
+            "rakuten family": "https://img.utdstc.com/icon/7f6/a4a/7f6a4a47aa35e90d889cb8e71ed9a6930fe5832219371761736e87e880f85a5f:200",
+            "rakuten top free": "https://img.utdstc.com/icon/7f6/a4a/7f6a4a47aa35e90d889cb8e71ed9a6930fe5832219371761736e87e880f85a5f:200",
+            "rakuten tv shows": "https://img.utdstc.com/icon/7f6/a4a/7f6a4a47aa35e90d889cb8e71ed9a6930fe5832219371761736e87e880f85a5f:200",
+            "boing plus": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Boing_Plus_logo_2020.svg/1200px-Boing_Plus_logo_2020.svg.png",
+            "wwe channel": "https://upload.wikimedia.org/wikipedia/en/8/8c/WWE_Network_logo.jpeg",
+            "rsi la 2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/RSI_La_2_2012.svg/1200px-RSI_La_2_2012.svg.png",
+            "rsi la 1": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/RSI_La_1_2012.svg/1200px-RSI_La_1_2012.svg.png",
+            "cartoon network": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoon-network-it.png",
+            "sky tg 24": "https://play-lh.googleusercontent.com/0RJjBW8_r64dWLAbG7kUVrkESbBr9Ukx30pDI83e5_o1obv2MTC7KSpBAIhhXvJAkXE",
+            "tg com 24": "https://yt3.hgoogleusercontent.com/ytc/AIdro_kVh4SupZFtHrALXp9dRWD9aahJOUfl8rhSF8VroefSLg=s900-c-k-c0x00ffffff-no-rj",
+            "tgcom 24": "https://yt3.hgoogleusercontent.com/ytc/AIdro_kVh4SupZFtHrALXp9dRWD9aahJOUfl8rhSF8VroefSLg=s900-c-k-c0x00ffffff-no-rj",
+            "cartoonito": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png",
+            "super!": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Super%21_logo_2021.svg/1024px-Super%21_logo_2021.svg.png",
+            "deejay tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/deejay-tv-it.png",
+            "cartoonito (backup)": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png",
+            "frisbee": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/frisbee-it.png",
+            "catfish": "https://upload.wikimedia.org/wikipedia/commons/4/46/Catfish%2C_the_TV_Show_Logo.PNG", # "tv7 news" era attaccato qui, l'ho rimosso, sembrava un errore di battitura
+            "disney+ film": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png",
+            "comedy central": "https://yt3.googleusercontent.com/FPzu1EWCI54fIh2j9JEp0NOzwoeugjL4sZTQCdoxoQY1U4QHyKx2L3wPSw27IueuZGchIxtKfv8=s900-c-k-c0x00ffffff-no-rj",
+            "arte network": "https://www.arte.tv/sites/corporate/wp-content/themes/arte-entreprise/img/arte_logo.png",
+            "aurora arte": "https://www.auroraarte.it/wp-content/uploads/2023/11/AURORA-ARTE-brand.png",
+            "telearte": "https://www.teleartetv.it/web/wp-content/uploads/2023/04/logo_TA.jpg",
+            "sky sport motogp": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-motogp-hd-it.png",
+            "sky sport": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/sky-sport-it.png",
+            "rai sport": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/rai-sport-it.png",
+            "rtv san marino sport": "https://static.wikia.nocookie.net/internationaltelevision/images/7/79/San_Marino_RTV_Sport_-_logo.png/revision/latest?cb=20221207153729",
+            "rtv sport": "https://logowik.com/content/uploads/images/san-marino-rtv-sport-20211731580347.logowik.com.webp",
+            "trsport": "https://teleromagna.it/Images/logo-tr-sport.jpg",
+            "aci sport tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/aci-sport-tv-it.png",
+            "euronews": "https://play-lh.googleusercontent.com/Mi8GAQIp3x94VcvbxZNsK-CTNhHy1zmo51pmME5KkkK4WgN4aQhM1FlNgLZUMD4VAXhL",
+            "tg norba 24": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/tg-norba-24-it.png",
+            "tv7 news": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStj45lIWvQ0KFzv6jyIP9vOZgPnWQirEl6dw&s",
+            "milan tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/milan-tv-it.png",
+            "rtl 102.5": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/rtl-1025-it.png",
+            "la c tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/lac-tv-it.png?raw=true",
+            "italian fishing tv": "https://www.upmagazinearezzo.it/atladv/wp-content/uploads/2017/07/atlantide-adv-logo-italian-fishing-tv.jpg",
+            "rtv san marino": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/rtv-san-marino-it.png",
+            "antenna sud": "https://www.antennasud.com/media/2022/08/cropped-LOGO_ANTENNA_SUD_ROSSO_FORATO.png",
+            "senato tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/senato-tv-it.png?raw=true",
+            "rete oro": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkE5wuUMIVAtANMfpSL4T5bIO73owXBhpvEg&s",
+            "caccia": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/caccia-it.png?raw=true",
+            "111 tv": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDr-HrHBtGsogIKps_qWVME_l5axKwINoq2Q&s",
+            "lazio tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/lazio-style-channel-it.png?raw=true",
+            "padre pio tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/padre-pio-tv-it.png?raw=true",
+            "inter tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/inter-tv-it.png?raw=true",
+            "kiss kiss italia": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-kiss-kiss-italia-it.png?raw=true",
+            "12 tv parma": "https://www.12tvparma.it/wp-content/uploads/2021/11/ogg-image.jpg",
+            "canale 21 extra": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcfjFIqjwxnG9AbEhJ6gwKb6IprmlFnF9aQ&s",
+            "videolina": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/videolina-it.png?raw=true",
+            "tv 2000": "https://upload.wikimedia.org/wikipedia/it/0/0d/Logo_di_TV2000.png",
+            "byoblu": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaMdUB8WEdsRVi_WZLxoi79pqlRef4s9Zehg&s",
+            "kiss kiss napoli": "https://kisskissnapoli.it/wp-content/uploads/2022/03/cropped-logo-kisskiss-napoli.png",
+            "kiss kiss": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-kiss-kiss-tv-it.png?raw=true",
+            "caccia e pesca": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/caccia-pesca-it.png?raw=true",
+            "pesca": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/pesca-it.png?raw=true",
+            "canale 7": "https://upload.wikimedia.org/wikipedia/commons/2/24/Canale_7.png",
+            "crime+inv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/crime-and-investigation-it.png?raw=true",
+            "cafe 24": "https://play-lh.googleusercontent.com/DW0Tvz72-8XZ7rEBVh1jBzwYE1fZhTaowuuxN75Jl8yBtnFkySH1z2T2b7OPlotmHeQ",
+            "antenna 2": "https://www.omceo.bg.it/images/loghi/antenna-2.png",
+            "avengers grimm channel": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN8by3YXjCGJQaxT6b-cgZ872BjY_NLIrALA&s",
+            "classica": "https://upload.wikimedia.org/wikipedia/commons/4/4e/CLA_HD_Logo-CENT-300ppi_CMYK.jpg",
+            "70 80 hits": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WEMBuK9zFW2nr_clM7noNGaUwp5fxRrmJA&s",
+            "cusano italia tv": "https://play-lh.googleusercontent.com/c2HegRLQmaQFJXROyFH-phglfaZzQ-vikbZ464ZVJGfW8kX9jQuLACb2TIlydv1apsg",
+            "espansione tv": "https://massimoemanuelli.com/wp-content/uploads/2017/10/etv-logo-attuale.png?w=640",
+            "tva vicenza": "https://massimoemanuelli.com/wp-content/uploads/2017/10/tva-vi-2.png",
+            "m2o": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Radio_m2o_-_Logo_2019.svg/1200px-Radio_m2o_-_Logo_2019.svg.png",
+            "televenezia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0xhoeVg7nRLPp8GnPkFzLUWvJ5WolvU-iYw&s",
+            "a3": "https://yt3.googleusercontent.com/3zkPKViC7G2rHWbBpYzSL6dFM9OMFBqIC6JrT-mM73EQsERHMqx4sPzWpBD8nfEqgf_uSHi124Y=s900-c-k-c0x00ffffff-no-rj",
+            "alto adige tv": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSdt3E_MmezXRKr7QOUEr0leEcErbaNGqbog&s",
+            "cremona 1": "https://www.arvedi.it/fileadmin/user_upload/istituzionale/gruppo-arvedi-e-informazione-logo-Cremona1.png",
+            "gold tv": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSjSJx2Wah0-hfWbBn4_C79K5I0600lcD8zw&s",
+            "france 24": "https://github.com/tv-logo/tv-logos/blob/main/countries/france/france-24-fr.png?raw=true",
+            "iunior tv": "https://upload.wikimedia.org/wikipedia/commons/9/94/Iunior_tv.png",
+            "canale 2": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/canale-italia-2-it.png?raw=true",
+            "pesca e caccia": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/caccia-pesca-it.png?raw=true",
+            "qvc": "https://github.com/tv-logo/tv-logos/blob/main/countries/germany/qvc-de.png?raw=true",
+            "tele chiara": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Telechiara-logo.png",
+            "bergamo tv": "https://www.opq.it/wp-content/uploads/BergamoTV.png",
+            "italia 3": "https://static.wikia.nocookie.net/dreamlogos/images/4/4e/Italia_3_2013.png/revision/latest?cb=20200119124403",
+            "primocanale": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/primocanale-it.png?raw=true",
+            "rei tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/rei-tv-it.png?raw=true",
+            "rete veneta": "https://upload.wikimedia.org/wikipedia/it/d/df/Logo_Rete_Veneta.png",
+            "telearena": "https://upload.wikimedia.org/wikipedia/commons/6/60/TeleArena_logo.png",
+            "reggio tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Reggio_TV_logo.png/640px-Reggio_TV_logo.png",
+            "tv2000": "https://upload.wikimedia.org/wikipedia/it/0/0d/Logo_di_TV2000.png", # Duplicato di "tv 2000"
+            "retebiella tv": "https://alpitv.com/wp-content/uploads/2022/01/logo.png",
+            "videostar tv": "https://www.videostartv.eu/images/videostar.png",
+            "canale 8": "https://upload.wikimedia.org/wikipedia/it/thumb/6/6d/TV8_Logo_2016.svg/1200px-TV8_Logo_2016.svg.png",
+            "juwelo italia": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Juwelo_TV.svg",
+            "rtc telecalabria": "https://play-lh.googleusercontent.com/7PzluYVAEVOCNzGYGkewkKI3PA0PkCKAc9KUZGfYzAbZnQLnlPAE5iQBMZEUi7ZKwJc",
+            "tele mia": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Telemia.png",
+            "bloomberg tv 4k": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bloomberg-television-us.png?raw=true",
+            "tele abruzzo": "https://www.abruzzi.tv/logo-abruzzi.png",
+            "fashiontv": "https://github.com/tv-logo/tv-logos/blob/main/countries/international/fashion-tv-int.png?raw=true",
+            "quarta rete": "https://quartarete.tv/wp-content/uploads/2022/06/Logo-Quartarete-ok.png",
+            "fashion tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/international/fashion-tv-int.png?raw=true", # Duplicato di "fashiontv"
+            "love fm tv": "https://www.lovefm.it/themes/default/assets/img_c/logo-love-new.png",
+            "telerama": "https://upload.wikimedia.org/wikipedia/commons/b/b1/T%C3%A9l%C3%A9rama_logo.png",
+            "teletubbies": "https://banner2.cleanpng.com/20180606/qrg/aa9vorpin.webp",
+            "primo canale": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/primocanale-it.png?raw=true", # Duplicato di "primocanale"
+            "lira tv": "https://liratv.es/wp-content/uploads/2021/07/LIRA-TV-1.png",
+            "la tr3": "https://www.tvdream.net/img/latr3.png",
+            "tele liguria sud": "https://www.teleliguriasud.it/sito/wp-content/uploads/2024/10/LOGO-RETINA.png",
+            "la nuova tv": "https://play-lh.googleusercontent.com/Ck_esrelbBPGT2rsTtvuvciOBHA0f5b-VExXvBf-NP9fegvHhEuN9MIx7pgdv1WlW8o",
+            "top calcio 24": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHW5VLQDGnNMVZszgWZRqnBSjPUTgAcUltQ&s",
+            "fm italia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJ5HlBu4jXOrC4iA-giQNzXa9zm42bS-yrA&s",
+            "supersix lombardia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ebhZMV4eYibx6UpVDOt1KOlmhOPYBh0gKw&s",
+            "prima tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Prima_TV_Logo_2022.svg/800px-Prima_TV_Logo_2022.svg.png",
+            "camera dei deputati": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/camera-dei-deputati-it.png?raw=true",
+            "tele venezia": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0xhoeVg7nRLPp8GnPkFzLUWvJ5WolvU-iYw&s", # Duplicato di "televenezia"
+            "telemolise": "https://m.media-amazon.com/images/I/61yiY3jR+kL.png",
+            "esperia tv 18": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/ESPERIATV18_verde.png/260px-ESPERIATV18_verde.png",
+            "onda novara tv": "https://gag-fondazionedeagostini.s3.amazonaws.com/wp-content/uploads/2023/03/logo-Onda-Novara-TV-Ufficiale-1.png",
+            "carina tv": "https://radiocarina.it/wp-content/uploads/2024/01/RadioCarina-Vers.2.png",
+            "teleromagna": "https://teleromagna.it/images/teleromagna-logo.png",
+            "elive tv brescia": "https://upload.wikimedia.org/wikipedia/commons/e/ec/%C3%88_live_Brescia_logo.png",
+            "bellla & monella tv": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Logo_Ufficiale_Radio_Bellla_%26_Monella.png",
+            "videotolentino": "https://yt3.googleusercontent.com/ytc/AIdro_kAZM1WRzE6qfQx90xPJ3v1Jz1gaJwn6BbrZcewu6eTcQ=s900-c-k-c0x00ffffff-no-rj",
+            "super tv brescia": "https://bresciasat.it/assets/front/img/logo3.png",
+            "umbria tv": "https://upload.wikimedia.org/wikipedia/commons/0/09/Umbria_TV_wordmark%2C_ca._2020.png",
+            "qvc italia": "https://github.com/tv-logo/tv-logos/blob/main/countries/germany/qvc-de.png?raw=true", # Duplicato di "qvc"
+            "rttr": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/rttr-it.png?raw=true",
+            "onda tv": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Og_2yYQhg-ersjEG5xZ99bri_Di4l5dlyw&s",
+            "rttr tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/rttr-it.png?raw=true", # Duplicato di "rttr"
+            "teleboario": "https://i.ytimg.com/vi/vNB5TJBjA3U/sddefault.jpg",
+            "video novara": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1PvoHpnx0hNKtt435CUaJza2e_qsm5B87Cg&s",
+            "fano tv": "https://prolocopesarourbino.it/wp-content/uploads/2019/07/FANO-TV.jpg",
+            # "tva vicenza" duplicato
+            "etv marche": "https://etvmarche.it/wp-content/uploads/2021/05/Logo-Marche-BLU.png",
+            "granducato": "https://www.telegranducato.it/wp-content/uploads/img_struttura_sito/logo_granducato_ridotto.png",
+            "maria+vision italia": "",
+            "star comedy": "https://github.com/tv-logo/tv-logos/blob/main/countries/portugal/star-comedy-pt.png?raw=true",
+            "telecolor": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/telecolore-it.png?raw=true",
+            "telequattro": "https://telequattro.medianordest.it/wp-content/uploads/2020/10/T4Logo.png",
+            "tele tusciasabina 2000": "https://yt3.googleusercontent.com/ytc/AIdro_lp10Brud3JZex6CgE4M9c-XcKFY4MrRhcFe9PUn-N4SD4=s900-c-k-c0x00ffffff-no-rj",
+            "stereo 5 tv": "https://www.stereo5.it/2022/wp-content/uploads/2023/02/LOGO-NUOVO-2023-2.png",
+            # "tele chiara" duplicato
+            "televideo agrigento": "https://lh3.googleusercontent.com/proxy/UNXKnLrwdDNoio4peXah3Pz81kI5Cv2FzJo82TPzn4seN-JZ3tovuVe45XSRBkIyMOfrrZ3bnWaMsTi80Xj40Q",
+            "vco azzurra tv": "https://upload.wikimedia.org/wikipedia/commons/9/91/Logo_VCO_Azzurra_TV.png",
+            "company tv": "https://www.trendcomunicazione.com/wp-content/uploads/2018/11/20180416-logo-tv-bokka-300x155.png",
+            "tele pavia": "https://www.milanopavia.tv/wp-content/uploads/2020/01/logoMilanoPaviaTV.png",
+            "uninettuno": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYRpKemP5FC0RLOQVhc9kPU71aJW9Tj9DU8g&s",
+            "star life": "https://github.com/tv-logo/tv-logos/blob/main/countries/argentina/star-life-ar.png?raw=true",
+            "vera tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/vera-tv-it.png?raw=true",
+            "arancia tv": "",
+            "entella tv": "https://m.media-amazon.com/images/I/81omr2rZ8+L.png",
+            "euro tv": "https://upload.wikimedia.org/wikipedia/it/9/93/Eurotv.png",
+            "peer tv alto adige": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/6e7dee025526c334b9280153c418e10e.webp",
+            "esperia tv": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_ESPERIAtv.png",
+            "tele friuli": "https://www.telefriuli.it/wp-content/uploads/2022/11/logo_telefriuli_positivo.png",
+            "rtp": "https://upload.wikimedia.org/wikipedia/commons/7/7c/RTP.png",
+            "icaro tv": "https://www.gruppoicaro.it/wp-content/uploads/2020/05/icarotv.png",
+            "telea tv": "https://www.tvdream.net/img/telea-tv.png",
+            "telemantova": "https://www.telemantova.it/gfx/lib/ath-v1/logos/tmn/plain.svg?20241007",
+            "bloomberg tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bloomberg-television-us.png?raw=true", # Duplicato di "bloomberg tv 4k" (URL identico)
+            "super j": "https://e7.pngegg.com/pngimages/439/74/png-clipart-superman-superhero-drawing-super-man-font-superhero-heart.png",
+            "uninettuno university tv": "https://www.laureaonlinegiurisprudenza.it/wp-content/uploads/2019/09/Logo-Uninettuno.png",
+            "rds social tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/RDS-Logo.png/260px-RDS-Logo.png",
+            "rete tv italia": "https://www.retetvitalia.it/news/wp-content/uploads/2019/07/cropped-RTI-L.png",
+            "fm italia tv": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJ5HlBu4jXOrC4iA-giQNzXa9zm42bS-yrA&s", # Duplicato di "fm italia"
+            "telenord": "https://upload.wikimedia.org/wikipedia/it/a/a8/Telenord.png",
+            "equ tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/equ-tv-it.png?raw=true",
+            "orler tv": "https://www.tvdream.net/img/orlertv.png",
+            "rmc 101": "https://upload.wikimedia.org/wikipedia/commons/f/fc/LogoRMC101.png",
+            "telebari": "https://www.aaroiemac.it/notizie/wp-content/uploads/2018/11/1524066248-telebari.png",
+            "telepace trento": "https://www.tvdream.net/img/telepace-trento.png",
+            "trentino tv": "https://www.trentinotv.it/images/resource/logo-trentino.png",
+            "tv qui": "https://www.tvdream.net/img/tvqui-modena-cover.jpg",
+            "tv 33": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0013/3844/brand.gif?itok=54JkEUiu",
+            "trm h24": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/trm-h24-it.png?raw=true",
+            "tt teletutto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQpzqT0DLXv-md7VU-fTF5BeaEashocwHUdw&s",
+            "teletricolore": "https://www.teletricolore.it/wp-content/uploads/2018/02/logo.png",
+            "globus television": "https://ennapress.it/wp-content/uploads/2020/10/globus.png",
+            "rtr 99 tv": "https://www.tvdream.net/img/rtr99-cover.jpg",
+            "tele romagna": "https://teleromagna.it/images/teleromagna-logo.png", # Duplicato di "teleromagna"
+            "telecitta": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Logo_Telecitt%C3%A0.svg/800px-Logo_Telecitt%C3%A0.svg.png",
+            "rds social": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/RDS-Logo.png/260px-RDS-Logo.png", # Duplicato di "rds social tv"
+            "super tv aristanis": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFBXh88zZx4IvyQKyYd5Hu2yeytO42zNQ4zA&s",
+            "tv yes": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/tv-yes-it.png?raw=true",
+            "quadrifoglio tv": "https://i.imgur.com/GfzpwKD.png",
+            "telemistretta": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6reG7R24hdOigLSXg2G5oKcPqKt8cBc0jQ&s",
+            "tele sirio": "https://www.telesirio.it/images/logo.png",
+            "tvrs": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/tvrs-it.png?raw=true",
+            "tele tricolore": "https://www.teletricolore.it/wp-content/uploads/2018/02/logo.png", # Duplicato di "teletricolore"
+            "telepace": "https://e7.pngegg.com/pngimages/408/890/png-clipart-telepace-high-definition-television-hot-bird-%C4%8Ct1-albero-della-vita-television-text.png",
+            "baby tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/spain/baby-tv-es.png?raw=true",
+            "mtv hits": "https://github.com/tv-logo/tv-logos/blob/main/countries/serbia/mtv-hits-rs.png?raw=true",
+            "radio freccia": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-freccia-it.png?raw=true",
+            "bella radio tv": "https://i0.wp.com/bellaradio.it/wp-content/uploads/2020/01/Bella-2020-3.png?fit=3000%2C3000&ssl=1",
+            "ol3 radio": "https://pbs.twimg.com/profile_images/570326948497195008/Wf6DPfFP_400x400.jpeg",
+            "51 radio tv": "https://tvtvtv.ru/icons/51_tv.png",
+            "radionorba tv": "https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-norba-tv-it.png?raw=true",
+            "euro indie music chart tv": "https://m.media-amazon.com/images/I/61Wa4RqJVJL.png",
+            "tele radio sciacca": "https://pbs.twimg.com/profile_images/613988173203423232/rWCQ9j6h_400x400.png",
+            "radio capital": "https://static.wikia.nocookie.net/logopedia/images/1/1e/Radio_Capital_-_Logo_2019.svg.png/revision/latest?cb=20190815181629",
+            "radio 51": "https://tvtvtv.ru/icons/51_tv.png" # Duplicato di "51 radio tv"
+        }
+        # Converti tutte le chiavi in minuscolo per una corrispondenza case-insensitive
+        return {k.lower(): v for k, v in logos_data.items()}
 
     def normalize_channel_name(name):
         name = re.sub(r"\s+", "", name.strip().lower())
@@ -2286,7 +2613,7 @@ def italy_channels():
                     lower_channel_name = channel_name_raw.lower()
 
                     if channel_id in seen_daddy_channel_ids:
-                        print(f"Skipping Daddylive channel '{channel_name_raw}' (ID: {channel_id}) perchÃ© l'ID Ã¨ giÃ  stato processato.")
+                        print(f"Skipping Daddylive channel '{channel_name_raw}' (ID: {channel_id}) perché l'ID è già stato processato.")
                         continue # Passa al prossimo item
 
                     # Filtro primario: deve contenere "italy"
@@ -2295,7 +2622,7 @@ def italy_channels():
                         for marker in non_italian_markers:
                             if marker in lower_channel_name:
                                 is_confirmed_non_italian_by_marker = True
-                                print(f"Skipping Daddylive channel '{channel_name_raw}' (ID: {channel_id}) perchÃ©, pur contenendo 'italy', ha anche un marcatore non italiano: '{marker}'")
+                                print(f"Skipping Daddylive channel '{channel_name_raw}' (ID: {channel_id}) perché, pur contenendo 'italy', ha anche un marcatore non italiano: '{marker}'")
                                 break
                         
                         if not is_confirmed_non_italian_by_marker:
@@ -2366,7 +2693,7 @@ def italy_channels():
         if epg_root is None:
             print("Impossibile recuperare il file EPG, procedura interrotta.")
             return
-        logos_dict = fetch_logos(LOGOS_FILE)
+        logos_dict = fetch_logos()
         channel_id_map = create_channel_id_map(epg_root)
         
         all_fetched_channels = [] # ConterrÃ  tuple (nome_canale, url_stream)
