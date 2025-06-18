@@ -1,5 +1,5 @@
 #EXTM3U
-#PLAYLIST:Lista Film (7816 Film)
+#PLAYLIST:Lista Film (3364 Film Verificati)
 
 #EXTINF:-1 tvg-id="1097311" tvg-name="Echo Valley (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/4akm5FQdZFfNpYGgVyOEXi72eby.jpg" type="movie" group-title="Film Popolari",Echo Valley (2025) [Thriller, Dramma] ⭐6.7
 https://vixsrc.to/movie/1097311?lang=it
@@ -196,7 +196,7 @@ https://vixsrc.to/movie/1272149?lang=it
 #EXTINF:-1 tvg-id="1203329" tvg-name="The Witcher: Le sirene degli abissi (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/9ra36L7EKuprstMXuZW0W1rrHT5.jpg" type="movie" group-title="Animazione",The Witcher: Le sirene degli abissi (2025) [Animazione, Fantasy, Azione] ⭐6.9
 https://vixsrc.to/movie/1203329?lang=it
 
-#EXTINF:-1 tvg-id="1226406" tvg-name="Colpi d'amore (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/lJdKd3ArMzIEYeZRd5TRyfXTY6z.jpg" type="movie" group-title="Film Al Cinema",Colpi d'amore (2025) [Azione, Commedia, Romance] ⭐5.9
+#EXTINF:-1 tvg-id="1226406" tvg-name="Colpi d'amore (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/lJdKd3ArMzIEYeZRd5TRyfXTY6z.jpg" type="movie" group-title="Film Popolari",Colpi d'amore (2025) [Azione, Commedia, Romance] ⭐5.9
 https://vixsrc.to/movie/1226406?lang=it
 
 #EXTINF:-1 tvg-id="1212142" tvg-name="Kinda Pregnant (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/k2Lq3rCJ7P9gk5Df9of9kqr9IJM.jpg" type="movie" group-title="Commedia",Kinda Pregnant (2025) [Commedia, Romance] ⭐5.6
@@ -205,7 +205,7 @@ https://vixsrc.to/movie/1212142?lang=it
 #EXTINF:-1 tvg-id="1186940" tvg-name="Viva a Vida (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/fIjIEZ8ug2pLGbV2JiKytZyj2NG.jpg" type="movie" group-title="Film Popolari",Viva a Vida (2025) [Commedia, Dramma, Romance] ⭐5.0
 https://vixsrc.to/movie/1186940?lang=it
 
-#EXTINF:-1 tvg-id="1255788" tvg-name="The Gardener (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/qxqwLXgd4vjouSsxKXbGhQyjwoa.jpg" type="movie" group-title="Azione",The Gardener (2025) [Azione, Commedia] ⭐6.2
+#EXTINF:-1 tvg-id="1255788" tvg-name="The Gardener (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/qxqwLXgd4vjouSsxKXbGhQyjwoa.jpg" type="movie" group-title="Film Popolari",The Gardener (2025) [Azione, Commedia] ⭐6.2
 https://vixsrc.to/movie/1255788?lang=it
 
 #EXTINF:-1 tvg-id="996821" tvg-name="Un matrimonio di troppo (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/d09UoWAKny4QR5xItRJg5EKsXNI.jpg" type="movie" group-title="Commedia",Un matrimonio di troppo (2025) [Commedia] ⭐5.9
@@ -214,7 +214,7 @@ https://vixsrc.to/movie/996821?lang=it
 #EXTINF:-1 tvg-id="774370" tvg-name="Dog Man (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/izN8C6fPgU2iQuFqVknviFEGsnd.jpg" type="movie" group-title="Famiglia",Dog Man (2025) [Famiglia, Commedia, Avventura, Animazione] ⭐7.8
 https://vixsrc.to/movie/774370?lang=it
 
-#EXTINF:-1 tvg-id="1323784" tvg-name="Mala influencia (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/oogmlZekRCHP0JDhHKDZIyDIfpP.jpg" type="movie" group-title="Thriller",Mala influencia (2025) [Thriller, Dramma, Romance] ⭐5.7
+#EXTINF:-1 tvg-id="1323784" tvg-name="Mala influencia (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/oogmlZekRCHP0JDhHKDZIyDIfpP.jpg" type="movie" group-title="Film Popolari",Mala influencia (2025) [Thriller, Dramma, Romance] ⭐5.7
 https://vixsrc.to/movie/1323784?lang=it
 
 #EXTINF:-1 tvg-id="1126166" tvg-name="Flight Risk - Trappola ad alta quota (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/eih55jl5HUmwjM3tS7Ys67W7OKf.jpg" type="movie" group-title="Film Popolari",Flight Risk - Trappola ad alta quota (2025) [Azione, Thriller] ⭐6.1
@@ -226,13 +226,13 @@ https://vixsrc.to/movie/1084199?lang=it
 #EXTINF:-1 tvg-id="1410082" tvg-name="Sniper: L’ultimo baluardo (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/TVvIyCsFCmLk9MRLbAZi4X8f32.jpg" type="movie" group-title="Azione",Sniper: L’ultimo baluardo (2025) [Azione, Thriller] ⭐6.7
 https://vixsrc.to/movie/1410082?lang=it
 
-#EXTINF:-1 tvg-id="926670" tvg-name="Henry Danger - Il film (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/zdpTiWvFUVLBURzsjMd8nJme4FG.jpg" type="movie" group-title="Azione",Henry Danger - Il film (2025) [Azione, Commedia, Famiglia, Fantascienza] ⭐7.8
+#EXTINF:-1 tvg-id="926670" tvg-name="Henry Danger - Il film (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/zdpTiWvFUVLBURzsjMd8nJme4FG.jpg" type="movie" group-title="Film Popolari",Henry Danger - Il film (2025) [Azione, Commedia, Famiglia, Fantascienza] ⭐7.8
 https://vixsrc.to/movie/926670?lang=it
 
 #EXTINF:-1 tvg-id="1280672" tvg-name="One of Them Days (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/ccn6bFUA5DECjA3Lo0CuJqGNQCv.jpg" type="movie" group-title="Commedia",One of Them Days (2025) [Commedia] ⭐6.7
 https://vixsrc.to/movie/1280672?lang=it
 
-#EXTINF:-1 tvg-id="993710" tvg-name="Back in Action (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/3L3l6LsiLGHkTG4RFB2aBA6BttB.jpg" type="movie" group-title="Azione",Back in Action (2025) [Azione, Commedia] ⭐6.4
+#EXTINF:-1 tvg-id="993710" tvg-name="Back in Action (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/3L3l6LsiLGHkTG4RFB2aBA6BttB.jpg" type="movie" group-title="Film Popolari",Back in Action (2025) [Azione, Commedia] ⭐6.4
 https://vixsrc.to/movie/993710?lang=it
 
 #EXTINF:-1 tvg-id="710295" tvg-name="Wolf Man (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/vceqBdM2070ZQ7HBYVf96gyY9Hh.jpg" type="movie" group-title="Horror",Wolf Man (2025) [Horror, Thriller] ⭐6.4
@@ -244,7 +244,7 @@ https://vixsrc.to/movie/1114894?lang=it
 #EXTINF:-1 tvg-id="1388694" tvg-name="The Calendar Killer (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/5Vu4OmTElEKtMbWi8WUfbch7xg.jpg" type="movie" group-title="Crime",The Calendar Killer (2025) [Crime, Thriller] ⭐6.2
 https://vixsrc.to/movie/1388694?lang=it
 
-#EXTINF:-1 tvg-id="1020414" tvg-name="Peter Pan - Incubo nell'isola che non c'è (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/nxqotbS5zpjX2opN9IJM6x4lYHJ.jpg" type="movie" group-title="Horror",Peter Pan - Incubo nell'isola che non c'è (2025) [Horror, Thriller, Fantasy] ⭐5.7
+#EXTINF:-1 tvg-id="1020414" tvg-name="Peter Pan - Incubo nell'isola che non c'è (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/nxqotbS5zpjX2opN9IJM6x4lYHJ.jpg" type="movie" group-title="Film Popolari",Peter Pan - Incubo nell'isola che non c'è (2025) [Horror, Thriller, Fantasy] ⭐5.7
 https://vixsrc.to/movie/1020414?lang=it
 
 #EXTINF:-1 tvg-id="1386877" tvg-name="Io sono la fine del mondo (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/eyyAmXTFLYJY0WMZWYCr5bbOtsC.jpg" type="movie" group-title="Commedia",Io sono la fine del mondo (2025) [Commedia] ⭐5.2
@@ -262,7 +262,7 @@ https://vixsrc.to/movie/1397854?lang=it
 #EXTINF:-1 tvg-id="1401905" tvg-name="Don't Die: l'uomo che vuole vivere per sempre (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/2M0CF7UsbpQ45xGuVRhExAhUWBj.jpg" type="movie" group-title="Documentario",Don't Die: l'uomo che vuole vivere per sempre (2025) [Documentario] ⭐6.2
 https://vixsrc.to/movie/1401905?lang=it
 
-#EXTINF:-1 tvg-id="1059073" tvg-name="Winter Spring Summer or Fall (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/mEPi5ISa5RmzpzeDfwkhX0CcNsf.jpg" type="movie" group-title="Romance",Winter Spring Summer or Fall (2024) [Romance, Commedia, Dramma] ⭐7.3
+#EXTINF:-1 tvg-id="1059073" tvg-name="Winter Spring Summer or Fall (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/mEPi5ISa5RmzpzeDfwkhX0CcNsf.jpg" type="movie" group-title="Film Popolari",Winter Spring Summer or Fall (2024) [Romance, Commedia, Dramma] ⭐7.3
 https://vixsrc.to/movie/1059073?lang=it
 
 #EXTINF:-1 tvg-id="1156593" tvg-name="È colpa tua? (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/cKwId4BiGtYPIUCYtKxVphtclrt.jpg" type="movie" group-title="Film Popolari",È colpa tua? (2024) [Romance, Dramma] ⭐7.1
@@ -274,7 +274,7 @@ https://vixsrc.to/movie/1097549?lang=it
 #EXTINF:-1 tvg-id="426063" tvg-name="Nosferatu (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/lgQq6jyD9CABcFoi3dUImW7NDak.jpg" type="movie" group-title="Film Al Cinema",Nosferatu (2024) [Dramma, Horror, Fantasy] ⭐6.7
 https://vixsrc.to/movie/426063?lang=it
 
-#EXTINF:-1 tvg-id="549509" tvg-name="The Brutalist (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/LfI6QwtR7HTguzvjLESpc6qNK6.jpg" type="movie" group-title="Dramma",The Brutalist (2024) [Dramma] ⭐7.0
+#EXTINF:-1 tvg-id="549509" tvg-name="The Brutalist (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/LfI6QwtR7HTguzvjLESpc6qNK6.jpg" type="movie" group-title="Film Popolari",The Brutalist (2024) [Dramma] ⭐7.0
 https://vixsrc.to/movie/549509?lang=it
 
 #EXTINF:-1 tvg-id="939243" tvg-name="Sonic 3 - Il film (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/hArbAOlNZX0qfd2Udpr6RCTflpg.jpg" type="movie" group-title="Film Popolari",Sonic 3 - Il film (2024) [Azione, Fantascienza, Commedia, Famiglia] ⭐7.7
@@ -322,7 +322,7 @@ https://vixsrc.to/movie/1201753?lang=it
 #EXTINF:-1 tvg-id="1005331" tvg-name="Carry-On (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/q704jwgYNZjpKEmzQazDEVwVUya.jpg" type="movie" group-title="Thriller",Carry-On (2024) [Thriller, Azione] ⭐6.9
 https://vixsrc.to/movie/1005331?lang=it
 
-#EXTINF:-1 tvg-id="970450" tvg-name="Werewolves (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/xZv09zZ3Rhe84JFmJB7dzb7iSeJ.jpg" type="movie" group-title="Film Al Cinema",Werewolves (2024) [Azione, Horror, Thriller] ⭐6.1
+#EXTINF:-1 tvg-id="970450" tvg-name="Werewolves (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/xZv09zZ3Rhe84JFmJB7dzb7iSeJ.jpg" type="movie" group-title="Film Popolari",Werewolves (2024) [Azione, Horror, Thriller] ⭐6.1
 https://vixsrc.to/movie/970450?lang=it
 
 #EXTINF:-1 tvg-id="1038263" tvg-name="Maria (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/zwJjRrAimyaTgebCpkWEKSD0ui8.jpg" type="movie" group-title="Storia",Maria (2024) [Storia, Dramma, Musica] ⭐6.5
@@ -625,10 +625,10 @@ https://vixsrc.to/movie/1186532?lang=it
 #EXTINF:-1 tvg-id="1008953" tvg-name="Incoming - I nuovi arrivati (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/i8tXgXoOtBz5CWHPbw401V9Ql5M.jpg" type="movie" group-title="Commedia",Incoming - I nuovi arrivati (2024) [Commedia] ⭐6.2
 https://vixsrc.to/movie/1008953?lang=it
 
-#EXTINF:-1 tvg-id="957452" tvg-name="The Crow - Il corvo (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/qbkiTNW61pIV3sWuIpRRthWWiXE.jpg" type="movie" group-title="Azione",The Crow - Il corvo (2024) [Azione, Fantasy, Horror] ⭐5.8
+#EXTINF:-1 tvg-id="957452" tvg-name="The Crow - Il corvo (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/qbkiTNW61pIV3sWuIpRRthWWiXE.jpg" type="movie" group-title="Film Popolari",The Crow - Il corvo (2024) [Azione, Fantasy, Horror] ⭐5.8
 https://vixsrc.to/movie/957452?lang=it
 
-#EXTINF:-1 tvg-id="840705" tvg-name="Blink Twice (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/78z5K6xXTAWtLqpbyIJxxyaFMJi.jpg" type="movie" group-title="Mistero",Blink Twice (2024) [Mistero, Thriller] ⭐6.7
+#EXTINF:-1 tvg-id="840705" tvg-name="Blink Twice (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/78z5K6xXTAWtLqpbyIJxxyaFMJi.jpg" type="movie" group-title="Film Popolari",Blink Twice (2024) [Mistero, Thriller] ⭐6.7
 https://vixsrc.to/movie/840705?lang=it
 
 #EXTINF:-1 tvg-id="974950" tvg-name="Emilia Pérez (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/l3rR9vgWFup3QCOWJ21UUohqkIA.jpg" type="movie" group-title="Dramma",Emilia Pérez (2024) [Dramma, Thriller] ⭐6.6
@@ -739,13 +739,13 @@ https://vixsrc.to/movie/1084736?lang=it
 #EXTINF:-1 tvg-id="987686" tvg-name="A Family Affair (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/9FRD7MHYcfkxDfxKkATTP3cR9A8.jpg" type="movie" group-title="Romance",A Family Affair (2024) [Romance, Commedia] ⭐5.8
 https://vixsrc.to/movie/987686?lang=it
 
-#EXTINF:-1 tvg-id="762441" tvg-name="A Quiet Place - Giorno 1 (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/2VxStGPKuixAEdF2imhW2zcu0hD.jpg" type="movie" group-title="Horror",A Quiet Place - Giorno 1 (2024) [Horror, Fantascienza, Thriller] ⭐6.7
+#EXTINF:-1 tvg-id="762441" tvg-name="A Quiet Place - Giorno 1 (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/2VxStGPKuixAEdF2imhW2zcu0hD.jpg" type="movie" group-title="Film Popolari",A Quiet Place - Giorno 1 (2024) [Horror, Fantascienza, Thriller] ⭐6.7
 https://vixsrc.to/movie/762441?lang=it
 
 #EXTINF:-1 tvg-id="932086" tvg-name="Horizon: An American Saga - Capitolo 1 (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/fxcjfrM7RwTblLOWmIGM0DKyr8i.jpg" type="movie" group-title="Western",Horizon: An American Saga - Capitolo 1 (2024) [Western, Dramma] ⭐6.9
 https://vixsrc.to/movie/932086?lang=it
 
-#EXTINF:-1 tvg-id="1147710" tvg-name="Dirottamento 1971 (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/pLEenJ0I1XqySVezRdETf2n2w7H.jpg" type="movie" group-title="Azione",Dirottamento 1971 (2024) [Azione, Thriller, Crime] ⭐6.5
+#EXTINF:-1 tvg-id="1147710" tvg-name="Dirottamento 1971 (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/pLEenJ0I1XqySVezRdETf2n2w7H.jpg" type="movie" group-title="Film Popolari",Dirottamento 1971 (2024) [Azione, Thriller, Crime] ⭐6.5
 https://vixsrc.to/movie/1147710?lang=it
 
 #EXTINF:-1 tvg-id="1051891" tvg-name="Thelma (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/gaZcFvN19AIjTB5YgOEWMuHSvek.jpg" type="movie" group-title="Azione",Thelma (2024) [Azione, Commedia, Avventura, Dramma] ⭐6.9
@@ -844,10 +844,10 @@ https://vixsrc.to/movie/1010600?lang=it
 #EXTINF:-1 tvg-id="834562" tvg-name="Poolman (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/vVz4Rh4j6FQTq9eva3xEvCMumAh.jpg" type="movie" group-title="Mistero",Poolman (2024) [Mistero, Commedia] ⭐4.2
 https://vixsrc.to/movie/834562?lang=it
 
-#EXTINF:-1 tvg-id="653346" tvg-name="Il regno del pianeta delle scimmie (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/miqv45mrWKpJvwnwiAix8F820e0.jpg" type="movie" group-title="Fantascienza",Il regno del pianeta delle scimmie (2024) [Fantascienza, Avventura, Azione, Dramma, Thriller] ⭐7.1
+#EXTINF:-1 tvg-id="653346" tvg-name="Il regno del pianeta delle scimmie (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/miqv45mrWKpJvwnwiAix8F820e0.jpg" type="movie" group-title="Film Popolari",Il regno del pianeta delle scimmie (2024) [Fantascienza, Avventura, Azione, Dramma, Thriller] ⭐7.1
 https://vixsrc.to/movie/653346?lang=it
 
-#EXTINF:-1 tvg-id="639720" tvg-name="IF - Gli amici immaginari (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/s35mkAIvJWdXGEtKJ8UmOU6vIQO.jpg" type="movie" group-title="Commedia",IF - Gli amici immaginari (2024) [Commedia, Fantasy, Famiglia] ⭐7.1
+#EXTINF:-1 tvg-id="639720" tvg-name="IF - Gli amici immaginari (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/s35mkAIvJWdXGEtKJ8UmOU6vIQO.jpg" type="movie" group-title="Film Popolari",IF - Gli amici immaginari (2024) [Commedia, Fantasy, Famiglia] ⭐7.1
 https://vixsrc.to/movie/639720?lang=it
 
 #EXTINF:-1 tvg-id="1093231" tvg-name="La madre della sposa (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/5tTr614aOldDJqyhzoATCtHv5CM.jpg" type="movie" group-title="Romance",La madre della sposa (2024) [Romance, Commedia] ⭐5.9
@@ -859,7 +859,7 @@ https://vixsrc.to/movie/1049574?lang=it
 #EXTINF:-1 tvg-id="858017" tvg-name="Ho visto la TV brillare (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/7QVydbYBG4bakIIJJAiJoqVMolk.jpg" type="movie" group-title="Dramma",Ho visto la TV brillare (2024) [Dramma, Horror] ⭐6.0
 https://vixsrc.to/movie/858017?lang=it
 
-#EXTINF:-1 tvg-id="843527" tvg-name="L'idea che ho di te (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/Y5P4Q3q8nrruZ9aD3wXeJS2Plg.jpg" type="movie" group-title="Romance",L'idea che ho di te (2024) [Romance, Dramma, Commedia] ⭐7.4
+#EXTINF:-1 tvg-id="843527" tvg-name="L'idea che ho di te (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/Y5P4Q3q8nrruZ9aD3wXeJS2Plg.jpg" type="movie" group-title="Film Popolari",L'idea che ho di te (2024) [Romance, Dramma, Commedia] ⭐7.4
 https://vixsrc.to/movie/843527?lang=it
 
 #EXTINF:-1 tvg-id="1156966" tvg-name="Sei nell'anima (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/oUANCs4IoJ6mAaDY8M38dqBbh1k.jpg" type="movie" group-title="Musica",Sei nell'anima (2024) [Musica, Dramma, Storia] ⭐6.8
@@ -889,10 +889,10 @@ https://vixsrc.to/movie/1061990?lang=it
 #EXTINF:-1 tvg-id="934632" tvg-name="Rebel Moon - Parte 2: La sfregiatrice (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/jxxv8VOTIPimq7RclxNKzi9zvgj.jpg" type="movie" group-title="Fantascienza",Rebel Moon - Parte 2: La sfregiatrice (2024) [Fantascienza, Azione, Avventura] ⭐6.1
 https://vixsrc.to/movie/934632?lang=it
 
-#EXTINF:-1 tvg-id="937287" tvg-name="Challengers (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/wWY4eJHRKKds2i0SNv8rDGPlFXM.jpg" type="movie" group-title="Dramma",Challengers (2024) [Dramma, Romance] ⭐7.0
+#EXTINF:-1 tvg-id="937287" tvg-name="Challengers (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/wWY4eJHRKKds2i0SNv8rDGPlFXM.jpg" type="movie" group-title="Film Popolari",Challengers (2024) [Dramma, Romance] ⭐7.0
 https://vixsrc.to/movie/937287?lang=it
 
-#EXTINF:-1 tvg-id="799583" tvg-name="Il ministero della guerra sporca (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/n9hYoffqaciZ8e68Y1FsbHuAisX.jpg" type="movie" group-title="Azione",Il ministero della guerra sporca (2024) [Azione, Commedia, Guerra] ⭐7.1
+#EXTINF:-1 tvg-id="799583" tvg-name="Il ministero della guerra sporca (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/n9hYoffqaciZ8e68Y1FsbHuAisX.jpg" type="movie" group-title="Film Popolari",Il ministero della guerra sporca (2024) [Azione, Commedia, Guerra] ⭐7.1
 https://vixsrc.to/movie/799583?lang=it
 
 #EXTINF:-1 tvg-id="567811" tvg-name="10 Lives - Un gatto fortunato (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/gyuCpWMXQM1rwi6qioYdrqy72uZ.jpg" type="movie" group-title="Animazione",10 Lives - Un gatto fortunato (2024) [Animazione, Commedia, Famiglia, Fantasy] ⭐7.8
@@ -913,7 +913,7 @@ https://vixsrc.to/movie/1105407?lang=it
 #EXTINF:-1 tvg-id="998846" tvg-name="Back to Black (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/3DqEdwo72R5GPSMLeNR3CJ4h9JV.jpg" type="movie" group-title="Musica",Back to Black (2024) [Musica, Storia, Dramma] ⭐6.7
 https://vixsrc.to/movie/998846?lang=it
 
-#EXTINF:-1 tvg-id="929590" tvg-name="Civil War (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/vST6kIlOO2fJLtkonUErSpU83pk.jpg" type="movie" group-title="Guerra",Civil War (2024) [Guerra, Azione, Dramma] ⭐6.9
+#EXTINF:-1 tvg-id="929590" tvg-name="Civil War (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/vST6kIlOO2fJLtkonUErSpU83pk.jpg" type="movie" group-title="Film Popolari",Civil War (2024) [Guerra, Azione, Dramma] ⭐6.9
 https://vixsrc.to/movie/929590?lang=it
 
 #EXTINF:-1 tvg-id="981063" tvg-name="Prima dell'alba (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/pX0hiewh2WqelUutE9BwA0XcTmh.jpg" type="movie" group-title="Guerra",Prima dell'alba (2024) [Guerra, Dramma, Storia] ⭐6.9
@@ -937,7 +937,7 @@ https://vixsrc.to/movie/1029330?lang=it
 #EXTINF:-1 tvg-id="984324" tvg-name="Vite vendute (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/zfip5BzeP4Ztws7Hvu7EAGj4WId.jpg" type="movie" group-title="Azione",Vite vendute (2024) [Azione] ⭐6.2
 https://vixsrc.to/movie/984324?lang=it
 
-#EXTINF:-1 tvg-id="823464" tvg-name="Godzilla e Kong - Il nuovo impero (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/2iezS60gl7L1jauBSTSy9davvlK.jpg" type="movie" group-title="Azione",Godzilla e Kong - Il nuovo impero (2024) [Azione, Avventura, Fantascienza] ⭐7.1
+#EXTINF:-1 tvg-id="823464" tvg-name="Godzilla e Kong - Il nuovo impero (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/2iezS60gl7L1jauBSTSy9davvlK.jpg" type="movie" group-title="Film Popolari",Godzilla e Kong - Il nuovo impero (2024) [Azione, Avventura, Fantascienza] ⭐7.1
 https://vixsrc.to/movie/823464?lang=it
 
 #EXTINF:-1 tvg-id="1079485" tvg-name="Winnie the Pooh - Tutto sangue e niente miele (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/tNLVAas9RSFHOlrIBxAAkrOm8yO.jpg" type="movie" group-title="Horror",Winnie the Pooh - Tutto sangue e niente miele (2024) [Horror, Thriller] ⭐6.0
@@ -1141,7 +1141,7 @@ https://vixsrc.to/movie/1072790?lang=it
 #EXTINF:-1 tvg-id="850165" tvg-name="The Warrior - The Iron Claw (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/7axDEmjtBA4sVZhSmgp7ZBwkUek.jpg" type="movie" group-title="Storia",The Warrior - The Iron Claw (2023) [Storia, Dramma] ⭐7.5
 https://vixsrc.to/movie/850165?lang=it
 
-#EXTINF:-1 tvg-id="572802" tvg-name="Aquaman e il regno perduto (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/yv77pBEJa3yKvv3qRQHJZfu1jci.jpg" type="movie" group-title="Azione",Aquaman e il regno perduto (2023) [Azione, Avventura, Fantasy] ⭐6.6
+#EXTINF:-1 tvg-id="572802" tvg-name="Aquaman e il regno perduto (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/yv77pBEJa3yKvv3qRQHJZfu1jci.jpg" type="movie" group-title="Film Popolari",Aquaman e il regno perduto (2023) [Azione, Avventura, Fantasy] ⭐6.6
 https://vixsrc.to/movie/572802?lang=it
 
 #EXTINF:-1 tvg-id="660360" tvg-name="Noryang: La battaglia finale (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/WqgLrAbPnEfgn7WP7J2IvL1Z9V.jpg" type="movie" group-title="Guerra",Noryang: La battaglia finale (2023) [Guerra, Azione, Storia, Dramma] ⭐6.3
@@ -1156,7 +1156,7 @@ https://vixsrc.to/movie/906126?lang=it
 #EXTINF:-1 tvg-id="848326" tvg-name="Rebel Moon - Parte 1: Figlia del fuoco (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/iPaU3xGg3bEck3LJora4T64XTVN.jpg" type="movie" group-title="Fantascienza",Rebel Moon - Parte 1: Figlia del fuoco (2023) [Fantascienza, Azione, Avventura] ⭐6.2
 https://vixsrc.to/movie/848326?lang=it
 
-#EXTINF:-1 tvg-id="1029575" tvg-name="The Family Plan (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/9LAjGL88QH5tpcq9veT7gG3ildP.jpg" type="movie" group-title="Azione",The Family Plan (2023) [Azione, Commedia, Famiglia] ⭐7.3
+#EXTINF:-1 tvg-id="1029575" tvg-name="The Family Plan (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/9LAjGL88QH5tpcq9veT7gG3ildP.jpg" type="movie" group-title="Film Popolari",The Family Plan (2023) [Azione, Commedia, Famiglia] ⭐7.3
 https://vixsrc.to/movie/1029575?lang=it
 
 #EXTINF:-1 tvg-id="365620" tvg-name="Ferrari (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/a3HvZHhXt2NdTlMUT7p5LPoHGZp.jpg" type="movie" group-title="Storia",Ferrari (2023) [Storia, Dramma] ⭐6.4
@@ -1189,7 +1189,7 @@ https://vixsrc.to/movie/763144?lang=it
 #EXTINF:-1 tvg-id="940551" tvg-name="Prendi il volo (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/6okaZf03sPiVWssrAzAW1fHo8Wq.jpg" type="movie" group-title="Famiglia",Prendi il volo (2023) [Famiglia, Commedia, Avventura, Animazione] ⭐7.4
 https://vixsrc.to/movie/940551?lang=it
 
-#EXTINF:-1 tvg-id="787699" tvg-name="Wonka (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/d81h1ux3kDgvX8z8hhrdRqJToog.jpg" type="movie" group-title="Commedia",Wonka (2023) [Commedia, Famiglia, Fantasy] ⭐7.1
+#EXTINF:-1 tvg-id="787699" tvg-name="Wonka (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/d81h1ux3kDgvX8z8hhrdRqJToog.jpg" type="movie" group-title="Film Popolari",Wonka (2023) [Commedia, Famiglia, Fantasy] ⭐7.1
 https://vixsrc.to/movie/787699?lang=it
 
 #EXTINF:-1 tvg-id="838240" tvg-name="Il mio amico Robot (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/mrzBhga3f8jXahwLYyiflmqAhOS.jpg" type="movie" group-title="Animazione",Il mio amico Robot (2023) [Animazione, Dramma, Commedia, Fantascienza] ⭐8.0
@@ -1276,7 +1276,7 @@ https://vixsrc.to/movie/609681?lang=it
 #EXTINF:-1 tvg-id="964960" tvg-name="Il gusto delle cose (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/14ZaG2JwpCDruYZD4rAmW7M4KJ8.jpg" type="movie" group-title="Romance",Il gusto delle cose (2023) [Romance, Dramma] ⭐7.1
 https://vixsrc.to/movie/964960?lang=it
 
-#EXTINF:-1 tvg-id="940721" tvg-name="Godzilla Minus One (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/AhO2e2EWYYZk4zxxeynriCufixo.jpg" type="movie" group-title="Fantascienza",Godzilla Minus One (2023) [Fantascienza, Horror, Azione] ⭐7.6
+#EXTINF:-1 tvg-id="940721" tvg-name="Godzilla Minus One (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/AhO2e2EWYYZk4zxxeynriCufixo.jpg" type="movie" group-title="Film Popolari",Godzilla Minus One (2023) [Fantascienza, Horror, Azione] ⭐7.6
 https://vixsrc.to/movie/940721?lang=it
 
 #EXTINF:-1 tvg-id="898713" tvg-name="Rustin (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/lCawCmTJhKT7c2ZOzLBTXDIR8JS.jpg" type="movie" group-title="Dramma",Rustin (2023) [Dramma, Storia] ⭐6.6
@@ -1312,7 +1312,7 @@ https://vixsrc.to/movie/1154598?lang=it
 #EXTINF:-1 tvg-id="1026227" tvg-name="C'è ancora domani (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/hc9SHN0vB6iyr6MBYI6bKrpDHvJ.jpg" type="movie" group-title="Dramma",C'è ancora domani (2023) [Dramma, Commedia, Storia] ⭐8.1
 https://vixsrc.to/movie/1026227?lang=it
 
-#EXTINF:-1 tvg-id="507089" tvg-name="Five Nights at Freddy's (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/mmxEjGy1wHy4Frf8Uk1k7mdbW6A.jpg" type="movie" group-title="Horror",Five Nights at Freddy's (2023) [Horror, Thriller] ⭐7.4
+#EXTINF:-1 tvg-id="507089" tvg-name="Five Nights at Freddy's (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/mmxEjGy1wHy4Frf8Uk1k7mdbW6A.jpg" type="movie" group-title="Film Popolari",Five Nights at Freddy's (2023) [Horror, Thriller] ⭐7.4
 https://vixsrc.to/movie/507089?lang=it
 
 #EXTINF:-1 tvg-id="1173558" tvg-name="I vantaggi del tradimento (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/ol4oYXjxjX7n9RoO6Y0ysqF6uOo.jpg" type="movie" group-title="Dramma",I vantaggi del tradimento (2023) [Dramma, Mistero, Romance] ⭐6.3
@@ -1357,7 +1357,7 @@ https://vixsrc.to/movie/763165?lang=it
 #EXTINF:-1 tvg-id="1027073" tvg-name="L'ultima vendetta (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/r8wd4T8VSjZtoNPMES7cVGZipuJ.jpg" type="movie" group-title="Azione",L'ultima vendetta (2023) [Azione, Thriller] ⭐6.5
 https://vixsrc.to/movie/1027073?lang=it
 
-#EXTINF:-1 tvg-id="961268" tvg-name="Ballerina (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/1pONBdB0UIJakYHVvVPPJ2siUzn.jpg" type="movie" group-title="Azione",Ballerina (2023) [Azione, Thriller] ⭐7.0
+#EXTINF:-1 tvg-id="961268" tvg-name="Ballerina (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/1pONBdB0UIJakYHVvVPPJ2siUzn.jpg" type="movie" group-title="Film Popolari",Ballerina (2023) [Azione, Thriller] ⭐7.0
 https://vixsrc.to/movie/961268?lang=it
 
 #EXTINF:-1 tvg-id="744857" tvg-name="When Evil Lurks (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/e1K5ESnTmRzj0YaUIRrIfShtTe4.jpg" type="movie" group-title="Horror",When Evil Lurks (2023) [Horror, Thriller] ⭐7.3
@@ -1462,13 +1462,13 @@ https://vixsrc.to/movie/1001811?lang=it
 #EXTINF:-1 tvg-id="937746" tvg-name="Io capitano (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/iP6WtSOhlClcIxRUgbTpeFO2rMe.jpg" type="movie" group-title="Avventura",Io capitano (2023) [Avventura, Dramma] ⭐7.8
 https://vixsrc.to/movie/937746?lang=it
 
-#EXTINF:-1 tvg-id="968051" tvg-name="The Nun II (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/rXgVbKkQZr5Bfy8M6IWwIs0TSum.jpg" type="movie" group-title="Horror",The Nun II (2023) [Horror] ⭐6.7
+#EXTINF:-1 tvg-id="968051" tvg-name="The Nun II (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/rXgVbKkQZr5Bfy8M6IWwIs0TSum.jpg" type="movie" group-title="Film Popolari",The Nun II (2023) [Horror] ⭐6.7
 https://vixsrc.to/movie/968051?lang=it
 
 #EXTINF:-1 tvg-id="1018332" tvg-name="L'ammutinamento del Caine - Corte Marziale (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/rCbJZWsXLj85Nw3oUfO9ZW5vdeB.jpg" type="movie" group-title="Dramma",L'ammutinamento del Caine - Corte Marziale (2023) [Dramma, Guerra] ⭐6.8
 https://vixsrc.to/movie/1018332?lang=it
 
-#EXTINF:-1 tvg-id="926393" tvg-name="The Equalizer 3 - Senza tregua (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/yH8UxT5OytOwA3Tu8GENrJI5Uwr.jpg" type="movie" group-title="Azione",The Equalizer 3 - Senza tregua (2023) [Azione, Thriller, Crime] ⭐7.3
+#EXTINF:-1 tvg-id="926393" tvg-name="The Equalizer 3 - Senza tregua (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/yH8UxT5OytOwA3Tu8GENrJI5Uwr.jpg" type="movie" group-title="Film Popolari",The Equalizer 3 - Senza tregua (2023) [Azione, Thriller, Crime] ⭐7.3
 https://vixsrc.to/movie/926393?lang=it
 
 #EXTINF:-1 tvg-id="814776" tvg-name="Bottoms (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/jeyTQrNEpyE1LZIgVlswYh3sc34.jpg" type="movie" group-title="Commedia",Bottoms (2023) [Commedia] ⭐6.8
@@ -1510,7 +1510,7 @@ https://vixsrc.to/movie/889675?lang=it
 #EXTINF:-1 tvg-id="1072371" tvg-name="Jules (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/yMOWu8rpZPiBI0j8MInBTtNO0vU.jpg" type="movie" group-title="Commedia",Jules (2023) [Commedia, Fantascienza, Dramma] ⭐7.2
 https://vixsrc.to/movie/1072371?lang=it
 
-#EXTINF:-1 tvg-id="980489" tvg-name="Gran Turismo - La storia di un sogno impossibile (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/34moeAXmzjYgDq73yzy1kuYe4di.jpg" type="movie" group-title="Avventura",Gran Turismo - La storia di un sogno impossibile (2023) [Avventura, Azione, Dramma] ⭐7.8
+#EXTINF:-1 tvg-id="980489" tvg-name="Gran Turismo - La storia di un sogno impossibile (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/34moeAXmzjYgDq73yzy1kuYe4di.jpg" type="movie" group-title="Film Popolari",Gran Turismo - La storia di un sogno impossibile (2023) [Avventura, Azione, Dramma] ⭐7.8
 https://vixsrc.to/movie/980489?lang=it
 
 #EXTINF:-1 tvg-id="635910" tvg-name="Demeter - Il risveglio di Dracula (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/za4GWi146vtlHzq56qZOzHuQl3r.jpg" type="movie" group-title="Horror",Demeter - Il risveglio di Dracula (2023) [Horror, Fantasy] ⭐6.8
@@ -1606,7 +1606,7 @@ https://vixsrc.to/movie/561717?lang=it
 #EXTINF:-1 tvg-id="1083862" tvg-name="Resident Evil - L'isola della morte (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/cqrn9LHqQ3LF81RkM8ZC4EPRzYQ.jpg" type="movie" group-title="Animazione",Resident Evil - L'isola della morte (2023) [Animazione, Horror, Azione, Fantascienza] ⭐7.3
 https://vixsrc.to/movie/1083862?lang=it
 
-#EXTINF:-1 tvg-id="884605" tvg-name="Fidanzata in affitto (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/2HpLrqxZXKpuxTQpyAo7Cdf5AF4.jpg" type="movie" group-title="Commedia",Fidanzata in affitto (2023) [Commedia, Romance] ⭐6.7
+#EXTINF:-1 tvg-id="884605" tvg-name="Fidanzata in affitto (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/2HpLrqxZXKpuxTQpyAo7Cdf5AF4.jpg" type="movie" group-title="Film Popolari",Fidanzata in affitto (2023) [Commedia, Romance] ⭐6.7
 https://vixsrc.to/movie/884605?lang=it
 
 #EXTINF:-1 tvg-id="1008392" tvg-name="The Blackening (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/n2aS9FE0C3VUHtSb3Ak41aU9K3y.jpg" type="movie" group-title="Horror",The Blackening (2023) [Horror, Commedia] ⭐6.0
@@ -1654,7 +1654,7 @@ https://vixsrc.to/movie/717930?lang=it
 #EXTINF:-1 tvg-id="801112" tvg-name="Rapito (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/tFGQpFRzj9imHe3sKEph8b3e4LT.jpg" type="movie" group-title="Dramma",Rapito (2023) [Dramma, Storia] ⭐7.3
 https://vixsrc.to/movie/801112?lang=it
 
-#EXTINF:-1 tvg-id="447277" tvg-name="La sirenetta (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/bceSxsNsgU8JbPjerAtGPmJJyFt.jpg" type="movie" group-title="Avventura",La sirenetta (2023) [Avventura, Famiglia, Fantasy, Romance] ⭐6.3
+#EXTINF:-1 tvg-id="447277" tvg-name="La sirenetta (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/bceSxsNsgU8JbPjerAtGPmJJyFt.jpg" type="movie" group-title="Film Popolari",La sirenetta (2023) [Avventura, Famiglia, Fantasy, Romance] ⭐6.3
 https://vixsrc.to/movie/447277?lang=it
 
 #EXTINF:-1 tvg-id="385687" tvg-name="Fast X (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/hC6mLdlgpFU63FOduX80xaGevGj.jpg" type="movie" group-title="Film Popolari",Fast X (2023) [Azione, Crime, Thriller, Avventura, Mistero] ⭐7.0
@@ -1675,7 +1675,7 @@ https://vixsrc.to/movie/552688?lang=it
 #EXTINF:-1 tvg-id="758336" tvg-name="Love Again (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/85z02NZ32wUF9iQm5PJdiQkmTjP.jpg" type="movie" group-title="Romance",Love Again (2023) [Romance, Dramma, Commedia] ⭐6.7
 https://vixsrc.to/movie/758336?lang=it
 
-#EXTINF:-1 tvg-id="447365" tvg-name="Guardiani della Galassia: Volume 3 (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/jY4MHLeiKmLZFwdMyWcJyDe7eC4.jpg" type="movie" group-title="Fantascienza",Guardiani della Galassia: Volume 3 (2023) [Fantascienza, Avventura, Azione, Commedia] ⭐7.9
+#EXTINF:-1 tvg-id="447365" tvg-name="Guardiani della Galassia: Volume 3 (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/jY4MHLeiKmLZFwdMyWcJyDe7eC4.jpg" type="movie" group-title="Film Popolari",Guardiani della Galassia: Volume 3 (2023) [Fantascienza, Avventura, Azione, Commedia] ⭐7.9
 https://vixsrc.to/movie/447365?lang=it
 
 #EXTINF:-1 tvg-id="455476" tvg-name="I Cavalieri dello zodiaco (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/n3jVNAEegUKu2qIsGysDP1Ba7EQ.jpg" type="movie" group-title="Fantasy",I Cavalieri dello zodiaco (2023) [Fantasy, Azione, Avventura, Fantascienza] ⭐6.4
@@ -1705,7 +1705,7 @@ https://vixsrc.to/movie/812635?lang=it
 #EXTINF:-1 tvg-id="882569" tvg-name="The Covenant (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/lXj9JHKDTImSemOykGaHHEAh8zS.jpg" type="movie" group-title="Guerra",The Covenant (2023) [Guerra, Azione, Thriller] ⭐7.8
 https://vixsrc.to/movie/882569?lang=it
 
-#EXTINF:-1 tvg-id="868759" tvg-name="Ghosted (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/liLN69YgoovHVgmlHJ876PKi5Yi.jpg" type="movie" group-title="Azione",Ghosted (2023) [Azione, Commedia, Romance] ⭐6.9
+#EXTINF:-1 tvg-id="868759" tvg-name="Ghosted (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/liLN69YgoovHVgmlHJ876PKi5Yi.jpg" type="movie" group-title="Film Popolari",Ghosted (2023) [Azione, Commedia, Romance] ⭐6.9
 https://vixsrc.to/movie/868759?lang=it
 
 #EXTINF:-1 tvg-id="798286" tvg-name="Beau ha paura (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/xixQ5abpEF0qyvuTcRsND0tmwsv.jpg" type="movie" group-title="Commedia",Beau ha paura (2023) [Commedia, Avventura, Fantasy] ⭐6.7
@@ -1786,7 +1786,7 @@ https://vixsrc.to/movie/776835?lang=it
 #EXTINF:-1 tvg-id="862552" tvg-name="Muti (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/mwlxUudgitPgsMTN7V8AFiBU1Yx.jpg" type="movie" group-title="Mistero",Muti (2023) [Mistero, Thriller, Azione, Dramma] ⭐5.8
 https://vixsrc.to/movie/862552?lang=it
 
-#EXTINF:-1 tvg-id="934433" tvg-name="Scream VI (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/iz0rgk4HReWQvSdRkYdchmrHmm5.jpg" type="movie" group-title="Horror",Scream VI (2023) [Horror, Crime, Thriller] ⭐7.0
+#EXTINF:-1 tvg-id="934433" tvg-name="Scream VI (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/iz0rgk4HReWQvSdRkYdchmrHmm5.jpg" type="movie" group-title="Film Popolari",Scream VI (2023) [Horror, Crime, Thriller] ⭐7.0
 https://vixsrc.to/movie/934433?lang=it
 
 #EXTINF:-1 tvg-id="700391" tvg-name="65 - Fuga dalla Terra (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/rB16rsQjM5M2iwWgZAJXWvbIlOn.jpg" type="movie" group-title="Azione",65 - Fuga dalla Terra (2023) [Azione, Avventura, Fantascienza] ⭐6.0
@@ -1873,7 +1873,7 @@ https://vixsrc.to/movie/739405?lang=it
 #EXTINF:-1 tvg-id="967874" tvg-name="Io sono tuo padre (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/rnuAdd1cDK8ZeHvzmcgqQ0Ibw2H.jpg" type="movie" group-title="Guerra",Io sono tuo padre (2023) [Guerra, Dramma, Storia] ⭐6.0
 https://vixsrc.to/movie/967874?lang=it
 
-#EXTINF:-1 tvg-id="536554" tvg-name="M3GAN (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/2WZ0VOUgSxLFebXTqrtjZGt8TnF.jpg" type="movie" group-title="Fantascienza",M3GAN (2022) [Fantascienza, Horror] ⭐7.0
+#EXTINF:-1 tvg-id="536554" tvg-name="M3GAN (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/2WZ0VOUgSxLFebXTqrtjZGt8TnF.jpg" type="movie" group-title="Film Popolari",M3GAN (2022) [Fantascienza, Horror] ⭐7.0
 https://vixsrc.to/movie/536554?lang=it
 
 #EXTINF:-1 tvg-id="937278" tvg-name="Non così vicino (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/hbcDX7WgmcCAP7tUAhgqqnrQQPJ.jpg" type="movie" group-title="Commedia",Non così vicino (2022) [Commedia, Dramma] ⭐7.8
@@ -1996,7 +1996,7 @@ https://vixsrc.to/movie/829799?lang=it
 #EXTINF:-1 tvg-id="948276" tvg-name="Proiettile vagante 2 (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/RpRnr03zdLp4UTgqZuNPFgxNo0.jpg" type="movie" group-title="Azione",Proiettile vagante 2 (2022) [Azione, Crime, Thriller] ⭐6.5
 https://vixsrc.to/movie/948276?lang=it
 
-#EXTINF:-1 tvg-id="505642" tvg-name="Black Panther: Wakanda Forever (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/adnWl3j5as3BDYDwIWliHHZ2vgt.jpg" type="movie" group-title="Azione",Black Panther: Wakanda Forever (2022) [Azione, Avventura, Fantascienza] ⭐7.1
+#EXTINF:-1 tvg-id="505642" tvg-name="Black Panther: Wakanda Forever (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/adnWl3j5as3BDYDwIWliHHZ2vgt.jpg" type="movie" group-title="Film Popolari",Black Panther: Wakanda Forever (2022) [Azione, Avventura, Fantascienza] ⭐7.1
 https://vixsrc.to/movie/505642?lang=it
 
 #EXTINF:-1 tvg-id="555604" tvg-name="Pinocchio di Guillermo del Toro (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/tt8l8Iz3pWdlmC0HWNND9EkmInU.jpg" type="movie" group-title="Animazione",Pinocchio di Guillermo del Toro (2022) [Animazione, Fantasy, Avventura] ⭐8.1
@@ -2206,7 +2206,7 @@ https://vixsrc.to/movie/1005342?lang=it
 #EXTINF:-1 tvg-id="852448" tvg-name="I Came By (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/pFB9jZDl52jBNbMPVSlISXD1ggS.jpg" type="movie" group-title="Crime",I Came By (2022) [Crime, Thriller] ⭐6.3
 https://vixsrc.to/movie/852448?lang=it
 
-#EXTINF:-1 tvg-id="829560" tvg-name="Altri 365 giorni (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/my5w73OU9quMkzLJ4oM8VZbmA8H.jpg" type="movie" group-title="Romance",Altri 365 giorni (2022) [Romance, Dramma] ⭐6.4
+#EXTINF:-1 tvg-id="829560" tvg-name="Altri 365 giorni (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/my5w73OU9quMkzLJ4oM8VZbmA8H.jpg" type="movie" group-title="Film Popolari",Altri 365 giorni (2022) [Romance, Dramma] ⭐6.4
 https://vixsrc.to/movie/829560?lang=it
 
 #EXTINF:-1 tvg-id="1003180" tvg-name="Nella mente di un gatto (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/3ZqokCmSQw8fl94CIgXv1xvxGO4.jpg" type="movie" group-title="Documentario",Nella mente di un gatto (2022) [Documentario] ⭐7.3
@@ -2230,7 +2230,7 @@ https://vixsrc.to/movie/1001835?lang=it
 #EXTINF:-1 tvg-id="862965" tvg-name="I crimini di Emily (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/eAjdr5EwsRXHMCnyRTqXYPI85r8.jpg" type="movie" group-title="Crime",I crimini di Emily (2022) [Crime, Dramma, Thriller] ⭐6.7
 https://vixsrc.to/movie/862965?lang=it
 
-#EXTINF:-1 tvg-id="985939" tvg-name="Fall (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/uZFX3ZU6AhS5bDRIysepwowmvjA.jpg" type="movie" group-title="Thriller",Fall (2022) [Thriller] ⭐7.1
+#EXTINF:-1 tvg-id="985939" tvg-name="Fall (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/uZFX3ZU6AhS5bDRIysepwowmvjA.jpg" type="movie" group-title="Film Popolari",Fall (2022) [Thriller] ⭐7.1
 https://vixsrc.to/movie/985939?lang=it
 
 #EXTINF:-1 tvg-id="760741" tvg-name="Beast (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/6YI269SVySa9TFsE5iBhvnE3Gyh.jpg" type="movie" group-title="Thriller",Beast (2022) [Thriller, Azione, Horror, Avventura] ⭐6.6
@@ -2452,7 +2452,7 @@ https://vixsrc.to/movie/477462?lang=it
 #EXTINF:-1 tvg-id="661231" tvg-name="L'arma dell'inganno - Operazione Mincemeat (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/soesVWPjilfIM6jijm1yR2SBcgE.jpg" type="movie" group-title="Guerra",L'arma dell'inganno - Operazione Mincemeat (2022) [Guerra, Storia, Dramma] ⭐6.5
 https://vixsrc.to/movie/661231?lang=it
 
-#EXTINF:-1 tvg-id="675353" tvg-name="Sonic 2 - Il film (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/fgZ49WvLRbHY5a2z7faGSBUfjrO.jpg" type="movie" group-title="Azione",Sonic 2 - Il film (2022) [Azione, Avventura, Famiglia, Commedia] ⭐7.5
+#EXTINF:-1 tvg-id="675353" tvg-name="Sonic 2 - Il film (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/fgZ49WvLRbHY5a2z7faGSBUfjrO.jpg" type="movie" group-title="Film Popolari",Sonic 2 - Il film (2022) [Azione, Avventura, Famiglia, Commedia] ⭐7.5
 https://vixsrc.to/movie/675353?lang=it
 
 #EXTINF:-1 tvg-id="526896" tvg-name="Morbius (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/ec6mrBpf7X5FFUVQ3bbJawXtFFz.jpg" type="movie" group-title="Azione",Morbius (2022) [Azione, Fantascienza, Fantasy] ⭐6.0
@@ -2572,7 +2572,7 @@ https://vixsrc.to/movie/615904?lang=it
 #EXTINF:-1 tvg-id="913862" tvg-name="Downfall: il caso Boeing (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/9LLfi2FZqRV8OZvkNbcXhqBB5Nn.jpg" type="movie" group-title="Documentario",Downfall: il caso Boeing (2022) [Documentario] ⭐7.1
 https://vixsrc.to/movie/913862?lang=it
 
-#EXTINF:-1 tvg-id="818647" tvg-name="Dalla mia finestra (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/gDZRoLOafyuW79pLnDheQtRoUG4.jpg" type="movie" group-title="Romance",Dalla mia finestra (2022) [Romance, Dramma, Commedia] ⭐7.4
+#EXTINF:-1 tvg-id="818647" tvg-name="Dalla mia finestra (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/gDZRoLOafyuW79pLnDheQtRoUG4.jpg" type="movie" group-title="Film Popolari",Dalla mia finestra (2022) [Romance, Dramma, Commedia] ⭐7.4
 https://vixsrc.to/movie/818647?lang=it
 
 #EXTINF:-1 tvg-id="406759" tvg-name="Moonfall (2022)" tvg-logo="https://image.tmdb.org/t/p/w500/2dBMMG0SzHHeKJCtBwXl4GD8ruj.jpg" type="movie" group-title="Fantascienza",Moonfall (2022) [Fantascienza, Avventura, Azione] ⭐6.3
@@ -2794,7 +2794,7 @@ https://vixsrc.to/movie/576925?lang=it
 #EXTINF:-1 tvg-id="793937" tvg-name="La scuola degli animali magici (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/zTgHq7Hmb0YtH42v2TDsUH6kIYT.jpg" type="movie" group-title="Famiglia",La scuola degli animali magici (2021) [Famiglia, Avventura, Fantasy] ⭐6.2
 https://vixsrc.to/movie/793937?lang=it
 
-#EXTINF:-1 tvg-id="568124" tvg-name="Encanto (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/e64r3VxrH9tijXhCZ7s7HQcYvD.jpg" type="movie" group-title="Animazione",Encanto (2021) [Animazione, Commedia, Famiglia, Fantasy] ⭐7.6
+#EXTINF:-1 tvg-id="568124" tvg-name="Encanto (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/e64r3VxrH9tijXhCZ7s7HQcYvD.jpg" type="movie" group-title="Film Popolari",Encanto (2021) [Animazione, Commedia, Famiglia, Fantasy] ⭐7.6
 https://vixsrc.to/movie/568124?lang=it
 
 #EXTINF:-1 tvg-id="617653" tvg-name="The Last Duel (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/eJKmKG1hlApaqrJ6MU0pGZzu9mm.jpg" type="movie" group-title="Storia",The Last Duel (2021) [Storia, Dramma, Azione] ⭐7.4
@@ -3073,7 +3073,7 @@ https://vixsrc.to/movie/649409?lang=it
 #EXTINF:-1 tvg-id="625169" tvg-name="12 fantastici orfani (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/cVqA1PlzyxuzqFah6xjxz3d4Udb.jpg" type="movie" group-title="Storia",12 fantastici orfani (2021) [Storia, Dramma, Azione] ⭐7.2
 https://vixsrc.to/movie/625169?lang=it
 
-#EXTINF:-1 tvg-id="508943" tvg-name="Luca (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/3r6pkASHMw47EVBbUshsqBB0jZj.jpg" type="movie" group-title="Animazione",Luca (2021) [Animazione, Commedia, Fantasy, Avventura, Famiglia] ⭐7.8
+#EXTINF:-1 tvg-id="508943" tvg-name="Luca (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/3r6pkASHMw47EVBbUshsqBB0jZj.jpg" type="movie" group-title="Film Popolari",Luca (2021) [Animazione, Commedia, Fantasy, Avventura, Famiglia] ⭐7.8
 https://vixsrc.to/movie/508943?lang=it
 
 #EXTINF:-1 tvg-id="522931" tvg-name="Come ti ammazzo il bodyguard 2 - La moglie del sicario (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/hcqB3k7A1ga6stHSFdIKoSha9zO.jpg" type="movie" group-title="Azione",Come ti ammazzo il bodyguard 2 - La moglie del sicario (2021) [Azione, Commedia, Crime, Thriller] ⭐6.7
@@ -3103,10 +3103,10 @@ https://vixsrc.to/movie/553087?lang=it
 #EXTINF:-1 tvg-id="756403" tvg-name="Riverdance - L’avventura animata (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/42zeKbiYSkM8SR5buuiRpK5tZjb.jpg" type="movie" group-title="Animazione",Riverdance - L’avventura animata (2021) [Animazione, Fantasy, Musica, Avventura, Commedia, Famiglia] ⭐6.0
 https://vixsrc.to/movie/756403?lang=it
 
-#EXTINF:-1 tvg-id="337404" tvg-name="Crudelia (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/y87a7TCp0SIHE2YXfyS0dN8Tghk.jpg" type="movie" group-title="Commedia",Crudelia (2021) [Commedia, Crime, Avventura] ⭐8.0
+#EXTINF:-1 tvg-id="337404" tvg-name="Crudelia (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/y87a7TCp0SIHE2YXfyS0dN8Tghk.jpg" type="movie" group-title="Film Popolari",Crudelia (2021) [Commedia, Crime, Avventura] ⭐8.0
 https://vixsrc.to/movie/337404?lang=it
 
-#EXTINF:-1 tvg-id="423108" tvg-name="The Conjuring - Per ordine del diavolo (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/qRiThUjSkN5b4kYAzLlUh2OAquv.jpg" type="movie" group-title="Horror",The Conjuring - Per ordine del diavolo (2021) [Horror, Mistero, Thriller] ⭐7.4
+#EXTINF:-1 tvg-id="423108" tvg-name="The Conjuring - Per ordine del diavolo (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/qRiThUjSkN5b4kYAzLlUh2OAquv.jpg" type="movie" group-title="Film Popolari",The Conjuring - Per ordine del diavolo (2021) [Horror, Mistero, Thriller] ⭐7.4
 https://vixsrc.to/movie/423108?lang=it
 
 #EXTINF:-1 tvg-id="520763" tvg-name="A Quiet Place II (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/AdsUccrssWN71DfbsDydB8hWZZB.jpg" type="movie" group-title="Fantascienza",A Quiet Place II (2021) [Fantascienza, Thriller, Horror] ⭐7.5
@@ -3181,7 +3181,7 @@ https://vixsrc.to/movie/522478?lang=it
 #EXTINF:-1 tvg-id="801058" tvg-name="Seaspiracy - esiste la pesca sostenibile? (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/iFNri0fwn1WfCoxf3H3v1z8dCm4.jpg" type="movie" group-title="Documentario",Seaspiracy - esiste la pesca sostenibile? (2021) [Documentario, Crime] ⭐7.8
 https://vixsrc.to/movie/801058?lang=it
 
-#EXTINF:-1 tvg-id="615457" tvg-name="Io sono nessuno (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/iECT5xNf72P7cx9LDMrEwhGYD5O.jpg" type="movie" group-title="Azione",Io sono nessuno (2021) [Azione, Thriller] ⭐7.9
+#EXTINF:-1 tvg-id="615457" tvg-name="Io sono nessuno (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/iECT5xNf72P7cx9LDMrEwhGYD5O.jpg" type="movie" group-title="Film Popolari",Io sono nessuno (2021) [Azione, Thriller] ⭐7.9
 https://vixsrc.to/movie/615457?lang=it
 
 #EXTINF:-1 tvg-id="791373" tvg-name="Zack Snyder's Justice League (2021)" tvg-logo="https://image.tmdb.org/t/p/w500/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg" type="movie" group-title="Azione",Zack Snyder's Justice League (2021) [Azione, Avventura, Fantasy] ⭐8.1
@@ -3751,7 +3751,7 @@ https://vixsrc.to/movie/658760?lang=it
 #EXTINF:-1 tvg-id="556678" tvg-name="Emma. (2020)" tvg-logo="https://image.tmdb.org/t/p/w500/3YwvGzL96cJLOSRB0S4fnFeuxeh.jpg" type="movie" group-title="Commedia",Emma. (2020) [Commedia, Romance] ⭐7.0
 https://vixsrc.to/movie/556678?lang=it
 
-#EXTINF:-1 tvg-id="454626" tvg-name="Sonic - Il film (2020)" tvg-logo="https://image.tmdb.org/t/p/w500/bGKLAN3Q5ckCJZRP4VZ6Hn2bTVw.jpg" type="movie" group-title="Azione",Sonic - Il film (2020) [Azione, Fantascienza, Commedia, Famiglia] ⭐7.3
+#EXTINF:-1 tvg-id="454626" tvg-name="Sonic - Il film (2020)" tvg-logo="https://image.tmdb.org/t/p/w500/bGKLAN3Q5ckCJZRP4VZ6Hn2bTVw.jpg" type="movie" group-title="Film Popolari",Sonic - Il film (2020) [Azione, Fantascienza, Commedia, Famiglia] ⭐7.3
 https://vixsrc.to/movie/454626?lang=it
 
 #EXTINF:-1 tvg-id="539537" tvg-name="Fantasy Island (2020)" tvg-logo="https://image.tmdb.org/t/p/w500/sBi59ePozU5E3mVioxULDNSY4XV.jpg" type="movie" group-title="Avventura",Fantasy Island (2020) [Avventura, Fantasy, Horror, Mistero] ⭐5.8
@@ -3847,7 +3847,7 @@ https://vixsrc.to/movie/449924?lang=it
 #EXTINF:-1 tvg-id="413518" tvg-name="Pinocchio (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/9YSQeIudZWH8BrWZtVIIqJlKFYi.jpg" type="movie" group-title="Dramma",Pinocchio (2019) [Dramma, Famiglia, Fantasy] ⭐6.6
 https://vixsrc.to/movie/413518?lang=it
 
-#EXTINF:-1 tvg-id="181812" tvg-name="Star Wars: L'ascesa di Skywalker (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/7IS7cGKMGgKaRLelnYJhwtm9lIS.jpg" type="movie" group-title="Avventura",Star Wars: L'ascesa di Skywalker (2019) [Avventura, Azione, Fantascienza] ⭐6.3
+#EXTINF:-1 tvg-id="181812" tvg-name="Star Wars: L'ascesa di Skywalker (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/7IS7cGKMGgKaRLelnYJhwtm9lIS.jpg" type="movie" group-title="Film Popolari",Star Wars: L'ascesa di Skywalker (2019) [Avventura, Azione, Fantascienza] ⭐6.3
 https://vixsrc.to/movie/181812?lang=it
 
 #EXTINF:-1 tvg-id="647063" tvg-name="The Great War (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/mB8sqwHkVZWBvhEn71ICewPCfNS.jpg" type="movie" group-title="Storia",The Great War (2019) [Storia, Guerra, Dramma, Azione] ⭐6.6
@@ -4003,7 +4003,7 @@ https://vixsrc.to/movie/509598?lang=it
 #EXTINF:-1 tvg-id="453405" tvg-name="Gemini Man (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/dpNW1gssSxH31rcLCrf8uc86GMq.jpg" type="movie" group-title="Fantascienza",Gemini Man (2019) [Fantascienza, Azione, Avventura, Thriller] ⭐6.3
 https://vixsrc.to/movie/453405?lang=it
 
-#EXTINF:-1 tvg-id="475557" tvg-name="Joker (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/y1AthYH1r2j4N4cYn2HdrEGgrnJ.jpg" type="movie" group-title="Crime",Joker (2019) [Crime, Thriller, Dramma] ⭐8.1
+#EXTINF:-1 tvg-id="475557" tvg-name="Joker (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/y1AthYH1r2j4N4cYn2HdrEGgrnJ.jpg" type="movie" group-title="Film Popolari",Joker (2019) [Crime, Thriller, Dramma] ⭐8.1
 https://vixsrc.to/movie/475557?lang=it
 
 #EXTINF:-1 tvg-id="399121" tvg-name="L'ufficiale e la spia (2019)" tvg-logo="https://image.tmdb.org/t/p/w500/uwl1vbEQtv21tNs6YN16j2e5hWX.jpg" type="movie" group-title="Storia",L'ufficiale e la spia (2019) [Storia, Dramma, Thriller] ⭐7.1
@@ -4462,7 +4462,7 @@ https://vixsrc.to/movie/297802?lang=it
 #EXTINF:-1 tvg-id="457136" tvg-name="Maria regina di Scozia (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/fpd3M02i0RgR1zdVIiiDt3ogzJF.jpg" type="movie" group-title="Dramma",Maria regina di Scozia (2018) [Dramma, Storia] ⭐6.6
 https://vixsrc.to/movie/457136?lang=it
 
-#EXTINF:-1 tvg-id="324857" tvg-name="Spider-Man - Un nuovo universo (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/hGLeRHPE0hxMiS5H7l3uaAQ4IlW.jpg" type="movie" group-title="Animazione",Spider-Man - Un nuovo universo (2018) [Animazione, Azione, Avventura, Fantascienza] ⭐8.4
+#EXTINF:-1 tvg-id="324857" tvg-name="Spider-Man - Un nuovo universo (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/hGLeRHPE0hxMiS5H7l3uaAQ4IlW.jpg" type="movie" group-title="Film Popolari",Spider-Man - Un nuovo universo (2018) [Animazione, Azione, Avventura, Fantascienza] ⭐8.4
 https://vixsrc.to/movie/324857?lang=it
 
 #EXTINF:-1 tvg-id="489763" tvg-name="The Keeper - La leggenda di un portiere (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/jP686VH27VGKwaJ30XnkAQcKtMQ.jpg" type="movie" group-title="Dramma",The Keeper - La leggenda di un portiere (2018) [Dramma, Guerra, Storia] ⭐7.4
@@ -4591,7 +4591,7 @@ https://vixsrc.to/movie/521935?lang=it
 #EXTINF:-1 tvg-id="463319" tvg-name="Shadow (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/jOSdl4US14PADyaPilVp8sQS9M4.jpg" type="movie" group-title="Azione",Shadow (2018) [Azione, Guerra] ⭐6.7
 https://vixsrc.to/movie/463319?lang=it
 
-#EXTINF:-1 tvg-id="335983" tvg-name="Venom (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/96dD92MCJoKYvsGh2JTs5pnT2sN.jpg" type="movie" group-title="Fantascienza",Venom (2018) [Fantascienza, Azione] ⭐6.8
+#EXTINF:-1 tvg-id="335983" tvg-name="Venom (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/96dD92MCJoKYvsGh2JTs5pnT2sN.jpg" type="movie" group-title="Film Popolari",Venom (2018) [Fantascienza, Azione] ⭐6.8
 https://vixsrc.to/movie/335983?lang=it
 
 #EXTINF:-1 tvg-id="515042" tvg-name="Free Solo - Sfida estrema (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/rY37zYTYwQYoKLQbgS6AaQrG3j6.jpg" type="movie" group-title="Documentario",Free Solo - Sfida estrema (2018) [Documentario, Avventura] ⭐7.9
@@ -4645,7 +4645,7 @@ https://vixsrc.to/movie/506863?lang=it
 #EXTINF:-1 tvg-id="454227" tvg-name="Outlaw King - Il re fuorilegge (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/wha0zsZLXJyLbpiHTJzJ19iJWwr.jpg" type="movie" group-title="Azione",Outlaw King - Il re fuorilegge (2018) [Azione, Storia, Guerra] ⭐6.8
 https://vixsrc.to/movie/454227?lang=it
 
-#EXTINF:-1 tvg-id="439079" tvg-name="The Nun - La vocazione del male (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/skVJKaiKDd1EWMPFMrKsWOW3oM1.jpg" type="movie" group-title="Horror",The Nun - La vocazione del male (2018) [Horror] ⭐5.9
+#EXTINF:-1 tvg-id="439079" tvg-name="The Nun - La vocazione del male (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/skVJKaiKDd1EWMPFMrKsWOW3oM1.jpg" type="movie" group-title="Film Popolari",The Nun - La vocazione del male (2018) [Horror] ⭐5.9
 https://vixsrc.to/movie/439079?lang=it
 
 #EXTINF:-1 tvg-id="346910" tvg-name="The Predator (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/bS88Q4QL5B8RAcWr8BvmFGKTK8J.jpg" type="movie" group-title="Fantascienza",The Predator (2018) [Fantascienza, Azione, Thriller] ⭐5.6
@@ -4834,7 +4834,7 @@ https://vixsrc.to/movie/464502?lang=it
 #EXTINF:-1 tvg-id="476926" tvg-name="The Titan (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/qRmQazyIBZR4pQIk9VruiZul0Au.jpg" type="movie" group-title="Fantascienza",The Titan (2018) [Fantascienza, Thriller] ⭐5.3
 https://vixsrc.to/movie/476926?lang=it
 
-#EXTINF:-1 tvg-id="333339" tvg-name="Ready Player One (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/q8A6bigh2WqOiQVmwmkbRSadEeR.jpg" type="movie" group-title="Avventura",Ready Player One (2018) [Avventura, Azione, Fantascienza] ⭐7.6
+#EXTINF:-1 tvg-id="333339" tvg-name="Ready Player One (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/q8A6bigh2WqOiQVmwmkbRSadEeR.jpg" type="movie" group-title="Film Popolari",Ready Player One (2018) [Avventura, Azione, Fantascienza] ⭐7.6
 https://vixsrc.to/movie/333339?lang=it
 
 #EXTINF:-1 tvg-id="354279" tvg-name="C'era una volta il Principe Azzurro (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/ja6ZjcMIpjgoiicIdFL26qVAqR5.jpg" type="movie" group-title="Animazione",C'era una volta il Principe Azzurro (2018) [Animazione, Avventura, Commedia, Famiglia, Fantasy, Musica] ⭐6.4
@@ -4882,7 +4882,7 @@ https://vixsrc.to/movie/437375?lang=it
 #EXTINF:-1 tvg-id="445571" tvg-name="Game Night - Indovina chi muore stasera? (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/mcqV83O3KlM6Qu4UHx5ZnY4k29A.jpg" type="movie" group-title="Mistero",Game Night - Indovina chi muore stasera? (2018) [Mistero, Commedia, Crime] ⭐6.8
 https://vixsrc.to/movie/445571?lang=it
 
-#EXTINF:-1 tvg-id="284054" tvg-name="Black Panther (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/nq4us1kF7HiOKoqW2f94aAeVuBz.jpg" type="movie" group-title="Azione",Black Panther (2018) [Azione, Avventura, Fantascienza] ⭐7.4
+#EXTINF:-1 tvg-id="284054" tvg-name="Black Panther (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/nq4us1kF7HiOKoqW2f94aAeVuBz.jpg" type="movie" group-title="Film Popolari",Black Panther (2018) [Azione, Avventura, Fantascienza] ⭐7.4
 https://vixsrc.to/movie/284054?lang=it
 
 #EXTINF:-1 tvg-id="416494" tvg-name="Status Update (2018)" tvg-logo="https://image.tmdb.org/t/p/w500/E4twRNScyq3g6tRpvK6X8LdD1z.jpg" type="movie" group-title="Commedia",Status Update (2018) [Commedia, Fantasy, Fantascienza] ⭐7.3
@@ -5104,7 +5104,7 @@ https://vixsrc.to/movie/423899?lang=it
 #EXTINF:-1 tvg-id="397538" tvg-name="Borg McEnroe (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/gde8ygq2DtFHBu4gqqEIJ9Tl6iq.jpg" type="movie" group-title="Dramma",Borg McEnroe (2017) [Dramma, Storia] ⭐6.9
 https://vixsrc.to/movie/397538?lang=it
 
-#EXTINF:-1 tvg-id="346364" tvg-name="It (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ru0gDnxKzBjzrPxfRyZIuse9hfu.jpg" type="movie" group-title="Horror",It (2017) [Horror, Thriller] ⭐7.2
+#EXTINF:-1 tvg-id="346364" tvg-name="It (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ru0gDnxKzBjzrPxfRyZIuse9hfu.jpg" type="movie" group-title="Film Popolari",It (2017) [Horror, Thriller] ⭐7.2
 https://vixsrc.to/movie/346364?lang=it
 
 #EXTINF:-1 tvg-id="419835" tvg-name="Mistero a Crooked House (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/jfhykHk3PAXzhsJILYlM5seFdg8.jpg" type="movie" group-title="Mistero",Mistero a Crooked House (2017) [Mistero, Crime, Thriller] ⭐6.4
@@ -5179,7 +5179,7 @@ https://vixsrc.to/movie/347984?lang=it
 #EXTINF:-1 tvg-id="339692" tvg-name="La fratellanza (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ddcHqGdowkRnktIhI1ss7NeUly7.jpg" type="movie" group-title="Crime",La fratellanza (2017) [Crime, Dramma, Thriller] ⭐7.0
 https://vixsrc.to/movie/339692?lang=it
 
-#EXTINF:-1 tvg-id="315635" tvg-name="Spider-Man: Homecoming (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ttJkhQxKoWkfenJb5GyKSV1lGxY.jpg" type="movie" group-title="Azione",Spider-Man: Homecoming (2017) [Azione, Avventura, Fantascienza, Dramma] ⭐7.3
+#EXTINF:-1 tvg-id="315635" tvg-name="Spider-Man: Homecoming (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ttJkhQxKoWkfenJb5GyKSV1lGxY.jpg" type="movie" group-title="Film Popolari",Spider-Man: Homecoming (2017) [Azione, Avventura, Fantascienza, Dramma] ⭐7.3
 https://vixsrc.to/movie/315635?lang=it
 
 #EXTINF:-1 tvg-id="269795" tvg-name="2:22 - Il destino è già scritto (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/wDODE9dTAEMnGouAeMbUosMyeBB.jpg" type="movie" group-title="Fantascienza",2:22 - Il destino è già scritto (2017) [Fantascienza, Mistero, Thriller, Romance] ⭐6.0
@@ -5290,7 +5290,7 @@ https://vixsrc.to/movie/295693?lang=it
 #EXTINF:-1 tvg-id="417644" tvg-name="CHiPS (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/j08CAgUn8gFnDP8idPHesZoVrSS.jpg" type="movie" group-title="Azione",CHiPS (2017) [Azione, Commedia, Crime] ⭐6.1
 https://vixsrc.to/movie/417644?lang=it
 
-#EXTINF:-1 tvg-id="321612" tvg-name="La bella e la bestia (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ysEgMEWgdJYRRgYFBJOWZM2Rbug.jpg" type="movie" group-title="Famiglia",La bella e la bestia (2017) [Famiglia, Fantasy, Romance] ⭐7.0
+#EXTINF:-1 tvg-id="321612" tvg-name="La bella e la bestia (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/ysEgMEWgdJYRRgYFBJOWZM2Rbug.jpg" type="movie" group-title="Film Popolari",La bella e la bestia (2017) [Famiglia, Fantasy, Romance] ⭐7.0
 https://vixsrc.to/movie/321612?lang=it
 
 #EXTINF:-1 tvg-id="314095" tvg-name="Civiltà perduta (2017)" tvg-logo="https://image.tmdb.org/t/p/w500/7N2lOb7x2ym0p4xrDKkN72DOZkQ.jpg" type="movie" group-title="Avventura",Civiltà perduta (2017) [Avventura, Dramma, Storia] ⭐6.4
@@ -5431,7 +5431,7 @@ https://vixsrc.to/movie/334541?lang=it
 #EXTINF:-1 tvg-id="259316" tvg-name="Animali fantastici e dove trovarli (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/8JbmIu4Uvegaf7rOnyiO7PbuX2A.jpg" type="movie" group-title="Fantasy",Animali fantastici e dove trovarli (2016) [Fantasy, Avventura] ⭐7.3
 https://vixsrc.to/movie/259316?lang=it
 
-#EXTINF:-1 tvg-id="329865" tvg-name="Arrival (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/ssAmTJia73UR2tHeTJDXgCH6FG1.jpg" type="movie" group-title="Dramma",Arrival (2016) [Dramma, Fantascienza, Mistero] ⭐7.6
+#EXTINF:-1 tvg-id="329865" tvg-name="Arrival (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/ssAmTJia73UR2tHeTJDXgCH6FG1.jpg" type="movie" group-title="Film Popolari",Arrival (2016) [Dramma, Fantascienza, Mistero] ⭐7.6
 https://vixsrc.to/movie/329865?lang=it
 
 #EXTINF:-1 tvg-id="404378" tvg-name="A spasso con Bob (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/wMpStSAwt9iZOzsl8LVUDFwKcdJ.jpg" type="movie" group-title="Famiglia",A spasso con Bob (2016) [Famiglia, Dramma] ⭐7.9
@@ -5464,7 +5464,7 @@ https://vixsrc.to/movie/207932?lang=it
 #EXTINF:-1 tvg-id="277834" tvg-name="Oceania (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/43vjVkkeYKavbiUTJPoIXejkNAk.jpg" type="movie" group-title="Avventura",Oceania (2016) [Avventura, Commedia, Famiglia, Animazione] ⭐7.6
 https://vixsrc.to/movie/277834?lang=it
 
-#EXTINF:-1 tvg-id="324786" tvg-name="La battaglia di Hacksaw Ridge (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/hmaWy0tZlYoZoMpGId6MVIImIGG.jpg" type="movie" group-title="Dramma",La battaglia di Hacksaw Ridge (2016) [Dramma, Storia, Guerra] ⭐8.2
+#EXTINF:-1 tvg-id="324786" tvg-name="La battaglia di Hacksaw Ridge (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/hmaWy0tZlYoZoMpGId6MVIImIGG.jpg" type="movie" group-title="Film Popolari",La battaglia di Hacksaw Ridge (2016) [Dramma, Storia, Guerra] ⭐8.2
 https://vixsrc.to/movie/324786?lang=it
 
 #EXTINF:-1 tvg-id="258230" tvg-name="Sette minuti dopo la mezzanotte (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/o26qsA9FTvupfFE593dcrMbdxbf.jpg" type="movie" group-title="Fantasy",Sette minuti dopo la mezzanotte (2016) [Fantasy, Avventura, Famiglia] ⭐7.3
@@ -5551,7 +5551,7 @@ https://vixsrc.to/movie/371738?lang=it
 #EXTINF:-1 tvg-id="345911" tvg-name="Lights Out - Terrore nel buio (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/sudhrgCp0Pb4FnA66Qvq8WGIj7M.jpg" type="movie" group-title="Horror",Lights Out - Terrore nel buio (2016) [Horror] ⭐6.4
 https://vixsrc.to/movie/345911?lang=it
 
-#EXTINF:-1 tvg-id="396535" tvg-name="Train to Busan (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/oekUlBFR85PejJK3z5jWyy3KyCG.jpg" type="movie" group-title="Horror",Train to Busan (2016) [Horror, Thriller, Azione, Avventura] ⭐7.7
+#EXTINF:-1 tvg-id="396535" tvg-name="Train to Busan (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/oekUlBFR85PejJK3z5jWyy3KyCG.jpg" type="movie" group-title="Film Popolari",Train to Busan (2016) [Horror, Thriller, Azione, Avventura] ⭐7.7
 https://vixsrc.to/movie/396535?lang=it
 
 #EXTINF:-1 tvg-id="43074" tvg-name="Ghostbusters (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/tSiwm1zv3fT1MC1qQ6sqk9ocTuy.jpg" type="movie" group-title="Azione",Ghostbusters (2016) [Azione, Fantasy, Commedia] ⭐5.3
@@ -5605,7 +5605,7 @@ https://vixsrc.to/movie/328111?lang=it
 #EXTINF:-1 tvg-id="267192" tvg-name="Genius (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/ecWzXabS2l1iEJHgSZwJbORKdXc.jpg" type="movie" group-title="Storia",Genius (2016) [Storia, Dramma] ⭐6.5
 https://vixsrc.to/movie/267192?lang=it
 
-#EXTINF:-1 tvg-id="259693" tvg-name="The Conjuring - Il caso Enfield (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/6hSoHPK0KbfGZ7Aw1OQZ4nLgFm7.jpg" type="movie" group-title="Horror",The Conjuring - Il caso Enfield (2016) [Horror] ⭐7.3
+#EXTINF:-1 tvg-id="259693" tvg-name="The Conjuring - Il caso Enfield (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/6hSoHPK0KbfGZ7Aw1OQZ4nLgFm7.jpg" type="movie" group-title="Film Popolari",The Conjuring - Il caso Enfield (2016) [Horror] ⭐7.3
 https://vixsrc.to/movie/259693?lang=it
 
 #EXTINF:-1 tvg-id="300669" tvg-name="Man in the Dark (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/5EG1C1mrak2WsP3xcluRQ74ZbDl.jpg" type="movie" group-title="Horror",Man in the Dark (2016) [Horror, Thriller] ⭐7.0
@@ -5656,7 +5656,7 @@ https://vixsrc.to/movie/153518?lang=it
 #EXTINF:-1 tvg-id="325133" tvg-name="Cattivi vicini 2 (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/tfc8gz8pQBhX8WSYX6ioi6X40mk.jpg" type="movie" group-title="Commedia",Cattivi vicini 2 (2016) [Commedia] ⭐5.8
 https://vixsrc.to/movie/325133?lang=it
 
-#EXTINF:-1 tvg-id="271110" tvg-name="Captain America: Civil War (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/zV6uLEHFFjrGBAogwU9CoHSmPPY.jpg" type="movie" group-title="Avventura",Captain America: Civil War (2016) [Avventura, Azione, Fantascienza] ⭐7.4
+#EXTINF:-1 tvg-id="271110" tvg-name="Captain America: Civil War (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/zV6uLEHFFjrGBAogwU9CoHSmPPY.jpg" type="movie" group-title="Film Popolari",Captain America: Civil War (2016) [Avventura, Azione, Fantascienza] ⭐7.4
 https://vixsrc.to/movie/271110?lang=it
 
 #EXTINF:-1 tvg-id="353326" tvg-name="L'uomo che vide l'infinito (2016)" tvg-logo="https://image.tmdb.org/t/p/w500/26DSOqwbYcGDynK8NQIK4CA9aJ9.jpg" type="movie" group-title="Dramma",L'uomo che vide l'infinito (2016) [Dramma, Storia] ⭐7.1
@@ -5938,7 +5938,7 @@ https://vixsrc.to/movie/328425?lang=it
 #EXTINF:-1 tvg-id="309809" tvg-name="Il piccolo principe (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/6mNmKgY0rRvlijoowVLVE5jH9Sy.jpg" type="movie" group-title="Avventura",Il piccolo principe (2015) [Avventura, Animazione, Fantasy, Famiglia] ⭐7.6
 https://vixsrc.to/movie/309809?lang=it
 
-#EXTINF:-1 tvg-id="177677" tvg-name="Mission: Impossible - Rogue Nation (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/g29YF1YZd4Mx3cS0EXRHzNbEbvF.jpg" type="movie" group-title="Azione",Mission: Impossible - Rogue Nation (2015) [Azione, Avventura] ⭐7.2
+#EXTINF:-1 tvg-id="177677" tvg-name="Mission: Impossible - Rogue Nation (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/g29YF1YZd4Mx3cS0EXRHzNbEbvF.jpg" type="movie" group-title="Film Popolari",Mission: Impossible - Rogue Nation (2015) [Azione, Avventura] ⭐7.2
 https://vixsrc.to/movie/177677?lang=it
 
 #EXTINF:-1 tvg-id="296099" tvg-name="Come ti rovino le vacanze (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/oKQIpy9CJqej197x3pDdv9HxFOS.jpg" type="movie" group-title="Commedia",Come ti rovino le vacanze (2015) [Commedia] ⭐6.3
@@ -6028,7 +6028,7 @@ https://vixsrc.to/movie/238713?lang=it
 #EXTINF:-1 tvg-id="336845" tvg-name="Il mostro di Cleveland (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/ggZoGw2s7zbEGjJ4lTaGLSjsnRM.jpg" type="movie" group-title="Dramma",Il mostro di Cleveland (2015) [Dramma, Crime, televisione film] ⭐7.2
 https://vixsrc.to/movie/336845?lang=it
 
-#EXTINF:-1 tvg-id="99861" tvg-name="Avengers: Age of Ultron (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/jm6lX35DkZRtyf0rNGQUIBLFoBa.jpg" type="movie" group-title="Azione",Avengers: Age of Ultron (2015) [Azione, Avventura, Fantascienza] ⭐7.3
+#EXTINF:-1 tvg-id="99861" tvg-name="Avengers: Age of Ultron (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/jm6lX35DkZRtyf0rNGQUIBLFoBa.jpg" type="movie" group-title="Film Popolari",Avengers: Age of Ultron (2015) [Azione, Avventura, Fantascienza] ⭐7.3
 https://vixsrc.to/movie/99861?lang=it
 
 #EXTINF:-1 tvg-id="245706" tvg-name="True Story (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/ncP8XQ0bXP0xSpJmMsRt8mUcEXd.jpg" type="movie" group-title="Crime",True Story (2015) [Crime, Dramma, Storia] ⭐6.3
@@ -6073,7 +6073,7 @@ https://vixsrc.to/movie/271674?lang=it
 #EXTINF:-1 tvg-id="241554" tvg-name="Run All Night - Una notte per sopravvivere (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/vR1nM6G4iGKsyXAR8mZQZaxhA2x.jpg" type="movie" group-title="Azione",Run All Night - Una notte per sopravvivere (2015) [Azione, Crime, Thriller] ⭐6.4
 https://vixsrc.to/movie/241554?lang=it
 
-#EXTINF:-1 tvg-id="150689" tvg-name="Cenerentola (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/e5ptdIKFxaWVanL2b05CIrU8zMx.jpg" type="movie" group-title="Romance",Cenerentola (2015) [Romance, Fantasy, Famiglia, Dramma] ⭐6.8
+#EXTINF:-1 tvg-id="150689" tvg-name="Cenerentola (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/e5ptdIKFxaWVanL2b05CIrU8zMx.jpg" type="movie" group-title="Film Popolari",Cenerentola (2015) [Romance, Fantasy, Famiglia, Dramma] ⭐6.8
 https://vixsrc.to/movie/150689?lang=it
 
 #EXTINF:-1 tvg-id="325358" tvg-name="Superfast & Superfurious: Solo party originali (2015)" tvg-logo="https://image.tmdb.org/t/p/w500/i90eAMwhGwqYw8V2HJIewbAOAtp.jpg" type="movie" group-title="Commedia",Superfast & Superfurious: Solo party originali (2015) [Commedia, Azione] ⭐5.1
@@ -6166,7 +6166,7 @@ https://vixsrc.to/movie/297270?lang=it
 #EXTINF:-1 tvg-id="171274" tvg-name="Vizio di forma (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/jpFiC2sRaGHDUv2jiK8igveQywi.jpg" type="movie" group-title="Dramma",Vizio di forma (2014) [Dramma, Mistero, Commedia] ⭐6.6
 https://vixsrc.to/movie/171274?lang=it
 
-#EXTINF:-1 tvg-id="122917" tvg-name="Lo Hobbit: La battaglia delle cinque armate (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/zkTKbIdpzunSchWDS43J7w61JVj.jpg" type="movie" group-title="Azione",Lo Hobbit: La battaglia delle cinque armate (2014) [Azione, Avventura, Fantasy] ⭐7.3
+#EXTINF:-1 tvg-id="122917" tvg-name="Lo Hobbit: La battaglia delle cinque armate (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/zkTKbIdpzunSchWDS43J7w61JVj.jpg" type="movie" group-title="Film Popolari",Lo Hobbit: La battaglia delle cinque armate (2014) [Azione, Avventura, Fantasy] ⭐7.3
 https://vixsrc.to/movie/122917?lang=it
 
 #EXTINF:-1 tvg-id="256835" tvg-name="Toy Story: Tutto un altro mondo (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/nw30YdmRU55wA2CtsiQrBN2qmcu.jpg" type="movie" group-title="Animazione",Toy Story: Tutto un altro mondo (2014) [Animazione, Famiglia, Avventura, Commedia] ⭐7.0
@@ -6181,7 +6181,7 @@ https://vixsrc.to/movie/116149?lang=it
 #EXTINF:-1 tvg-id="270946" tvg-name="I pinguini di Madagascar (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/iH4RnQe11fv9aGhZyYoDCrQahJk.jpg" type="movie" group-title="Famiglia",I pinguini di Madagascar (2014) [Famiglia, Animazione, Avventura, Commedia] ⭐6.5
 https://vixsrc.to/movie/270946?lang=it
 
-#EXTINF:-1 tvg-id="131631" tvg-name="Hunger Games: Il canto della rivolta - Parte 1 (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/bBfoHnHEEP3pkBKvsYpYetnAq3.jpg" type="movie" group-title="Fantascienza",Hunger Games: Il canto della rivolta - Parte 1 (2014) [Fantascienza, Avventura, Thriller] ⭐6.8
+#EXTINF:-1 tvg-id="131631" tvg-name="Hunger Games: Il canto della rivolta - Parte 1 (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/bBfoHnHEEP3pkBKvsYpYetnAq3.jpg" type="movie" group-title="Film Popolari",Hunger Games: Il canto della rivolta - Parte 1 (2014) [Fantascienza, Avventura, Thriller] ⭐6.8
 https://vixsrc.to/movie/131631?lang=it
 
 #EXTINF:-1 tvg-id="241863" tvg-name="As the Gods Will (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/lXo4Afo6u7z2QA2IHeJKHTqj8dk.jpg" type="movie" group-title="Thriller",As the Gods Will (2014) [Thriller, Horror, Commedia] ⭐7.1
@@ -6220,7 +6220,7 @@ https://vixsrc.to/movie/242582?lang=it
 #EXTINF:-1 tvg-id="207933" tvg-name="Stonehearst Asylum (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/iq2hGgljpdGvlUO1gw3uhXfv97m.jpg" type="movie" group-title="Thriller",Stonehearst Asylum (2014) [Thriller, Mistero, Horror] ⭐6.9
 https://vixsrc.to/movie/207933?lang=it
 
-#EXTINF:-1 tvg-id="245891" tvg-name="John Wick (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/53eyENPWMU70zh11AtbZlXkZOOq.jpg" type="movie" group-title="Azione",John Wick (2014) [Azione, Thriller] ⭐7.4
+#EXTINF:-1 tvg-id="245891" tvg-name="John Wick (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/53eyENPWMU70zh11AtbZlXkZOOq.jpg" type="movie" group-title="Film Popolari",John Wick (2014) [Azione, Thriller] ⭐7.4
 https://vixsrc.to/movie/245891?lang=it
 
 #EXTINF:-1 tvg-id="277685" tvg-name="Unfriended (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/A76ghHSu54bn0wM8GQJBRq0N3gR.jpg" type="movie" group-title="Horror",Unfriended (2014) [Horror, Mistero, Thriller] ⭐5.5
@@ -6238,7 +6238,7 @@ https://vixsrc.to/movie/228150?lang=it
 #EXTINF:-1 tvg-id="239571" tvg-name="Il meglio di me (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/zTilOUx9PqPtia4O7QHfQtsDv4.jpg" type="movie" group-title="Dramma",Il meglio di me (2014) [Dramma, Romance] ⭐7.5
 https://vixsrc.to/movie/239571?lang=it
 
-#EXTINF:-1 tvg-id="244786" tvg-name="Whiplash (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/jQwkXN38AGrK2s3LJqxZow1Ic7z.jpg" type="movie" group-title="Dramma",Whiplash (2014) [Dramma, Musica] ⭐8.4
+#EXTINF:-1 tvg-id="244786" tvg-name="Whiplash (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/jQwkXN38AGrK2s3LJqxZow1Ic7z.jpg" type="movie" group-title="Film Popolari",Whiplash (2014) [Dramma, Musica] ⭐8.4
 https://vixsrc.to/movie/244786?lang=it
 
 #EXTINF:-1 tvg-id="262543" tvg-name="Automata (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/tcaVcwCZgXLzNblC0LResj6N8pe.jpg" type="movie" group-title="Thriller",Automata (2014) [Thriller, Fantascienza] ⭐5.9
@@ -6250,10 +6250,10 @@ https://vixsrc.to/movie/205587?lang=it
 #EXTINF:-1 tvg-id="218043" tvg-name="Left Behind - La profezia (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/mJ5CGnAkxNLZtT9qdGRHZ0g4cvq.jpg" type="movie" group-title="Thriller",Left Behind - La profezia (2014) [Thriller, Azione, Fantascienza] ⭐4.3
 https://vixsrc.to/movie/218043?lang=it
 
-#EXTINF:-1 tvg-id="250546" tvg-name="Annabelle (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/wd0AcMyc8MbkG4ViDFOU2hQjGoz.jpg" type="movie" group-title="Film Al Cinema",Annabelle (2014) [Horror] ⭐5.8
+#EXTINF:-1 tvg-id="250546" tvg-name="Annabelle (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/wd0AcMyc8MbkG4ViDFOU2hQjGoz.jpg" type="movie" group-title="Film Popolari",Annabelle (2014) [Horror] ⭐5.8
 https://vixsrc.to/movie/250546?lang=it
 
-#EXTINF:-1 tvg-id="210577" tvg-name="L'amore bugiardo - Gone Girl (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/6VHGi1nlslwztqGOCrlQlNvell2.jpg" type="movie" group-title="Mistero",L'amore bugiardo - Gone Girl (2014) [Mistero, Thriller, Dramma] ⭐7.9
+#EXTINF:-1 tvg-id="210577" tvg-name="L'amore bugiardo - Gone Girl (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/6VHGi1nlslwztqGOCrlQlNvell2.jpg" type="movie" group-title="Film Popolari",L'amore bugiardo - Gone Girl (2014) [Mistero, Thriller, Dramma] ⭐7.9
 https://vixsrc.to/movie/210577?lang=it
 
 #EXTINF:-1 tvg-id="228326" tvg-name="Il libro della vita (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/ooijwwXi9G2ieWx9fiwPB3M7Suy.jpg" type="movie" group-title="Animazione",Il libro della vita (2014) [Animazione, Avventura, Commedia, Famiglia, Fantasy] ⭐7.5
@@ -6367,7 +6367,7 @@ https://vixsrc.to/movie/82702?lang=it
 #EXTINF:-1 tvg-id="187017" tvg-name="22 Jump Street (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/jdMyO2yTnSBYyM0xhEBTYwdVCRa.jpg" type="movie" group-title="Crime",22 Jump Street (2014) [Crime, Commedia, Azione] ⭐6.8
 https://vixsrc.to/movie/187017?lang=it
 
-#EXTINF:-1 tvg-id="102651" tvg-name="Maleficent (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/c2g83Ux98pi1fGAs42xUYfJHf4Q.jpg" type="movie" group-title="Fantasy",Maleficent (2014) [Fantasy, Avventura, Azione, Famiglia, Romance] ⭐7.1
+#EXTINF:-1 tvg-id="102651" tvg-name="Maleficent (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/c2g83Ux98pi1fGAs42xUYfJHf4Q.jpg" type="movie" group-title="Film Popolari",Maleficent (2014) [Fantasy, Avventura, Azione, Famiglia, Romance] ⭐7.1
 https://vixsrc.to/movie/102651?lang=it
 
 #EXTINF:-1 tvg-id="137113" tvg-name="Edge of Tomorrow - Senza domani (2014)" tvg-logo="https://image.tmdb.org/t/p/w500/AbzpU4ookiyWFmiq1bTZwjNl7Y1.jpg" type="movie" group-title="Azione",Edge of Tomorrow - Senza domani (2014) [Azione, Fantascienza] ⭐7.6
@@ -6520,7 +6520,7 @@ https://vixsrc.to/movie/249397?lang=it
 #EXTINF:-1 tvg-id="193756" tvg-name="Lone Survivor (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/tT36KsMDqVcuuCutGKshWl2cnY6.jpg" type="movie" group-title="Guerra",Lone Survivor (2013) [Guerra, Azione, Dramma] ⭐7.4
 https://vixsrc.to/movie/193756?lang=it
 
-#EXTINF:-1 tvg-id="152601" tvg-name="Lei (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/bLAnGjgo4T5COktQz6SgYuxPuWu.jpg" type="movie" group-title="Romance",Lei (2013) [Romance, Fantascienza, Dramma] ⭐7.8
+#EXTINF:-1 tvg-id="152601" tvg-name="Lei (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/bLAnGjgo4T5COktQz6SgYuxPuWu.jpg" type="movie" group-title="Film Popolari",Lei (2013) [Romance, Fantascienza, Dramma] ⭐7.8
 https://vixsrc.to/movie/152601?lang=it
 
 #EXTINF:-1 tvg-id="116745" tvg-name="I sogni segreti di Walter Mitty (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/aBaLgOfwIbQCVq2honGloFOuj3r.jpg" type="movie" group-title="Avventura",I sogni segreti di Walter Mitty (2013) [Avventura, Commedia, Dramma, Fantasy] ⭐7.2
@@ -6694,7 +6694,7 @@ https://vixsrc.to/movie/117251?lang=it
 #EXTINF:-1 tvg-id="93456" tvg-name="Cattivissimo me 2 (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/6VOIMY3DrNPqKwl56N6nQaoRIYR.jpg" type="movie" group-title="Animazione",Cattivissimo me 2 (2013) [Animazione, Commedia, Famiglia] ⭐6.9
 https://vixsrc.to/movie/93456?lang=it
 
-#EXTINF:-1 tvg-id="72190" tvg-name="World War Z (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/3g0PjxeIcWt7PVf9CWtiuOUlGzH.jpg" type="movie" group-title="Azione",World War Z (2013) [Azione, Horror, Fantascienza, Thriller] ⭐6.8
+#EXTINF:-1 tvg-id="72190" tvg-name="World War Z (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/3g0PjxeIcWt7PVf9CWtiuOUlGzH.jpg" type="movie" group-title="Film Popolari",World War Z (2013) [Azione, Horror, Fantascienza, Thriller] ⭐6.8
 https://vixsrc.to/movie/72190?lang=it
 
 #EXTINF:-1 tvg-id="62211" tvg-name="Monsters University (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/e8grqkdNzjIUg3wa0Siqizg2QCA.jpg" type="movie" group-title="Animazione",Monsters University (2013) [Animazione, Famiglia] ⭐7.0
@@ -6829,7 +6829,7 @@ https://vixsrc.to/movie/156717?lang=it
 #EXTINF:-1 tvg-id="76617" tvg-name="Non aprite quella porta 3D (2013)" tvg-logo="https://image.tmdb.org/t/p/w500/e4CQFTACzCOlJkRZjPN9lO8E2qn.jpg" type="movie" group-title="Horror",Non aprite quella porta 3D (2013) [Horror, Thriller] ⭐5.5
 https://vixsrc.to/movie/76617?lang=it
 
-#EXTINF:-1 tvg-id="68718" tvg-name="Django Unchained (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/3Q41QdROiYoEMY0qXhfRMT5DbPd.jpg" type="movie" group-title="Dramma",Django Unchained (2012) [Dramma, Western] ⭐8.2
+#EXTINF:-1 tvg-id="68718" tvg-name="Django Unchained (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/3Q41QdROiYoEMY0qXhfRMT5DbPd.jpg" type="movie" group-title="Film Popolari",Django Unchained (2012) [Dramma, Western] ⭐8.2
 https://vixsrc.to/movie/68718?lang=it
 
 #EXTINF:-1 tvg-id="75780" tvg-name="Jack Reacher - La prova decisiva (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/jlxIksd6ZcZYsKs0W2FgnWRUUCj.jpg" type="movie" group-title="Crime",Jack Reacher - La prova decisiva (2012) [Crime, Dramma, Thriller, Azione] ⭐6.6
@@ -6841,7 +6841,7 @@ https://vixsrc.to/movie/97630?lang=it
 #EXTINF:-1 tvg-id="82695" tvg-name="Les Misérables (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/PrI0MJU2LLNm091h5DZLT0vV63.jpg" type="movie" group-title="Storia",Les Misérables (2012) [Storia, Dramma] ⭐7.3
 https://vixsrc.to/movie/82695?lang=it
 
-#EXTINF:-1 tvg-id="49051" tvg-name="Lo Hobbit: Un viaggio inaspettato (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/gFW9Pq7rXIFSsfYdpwD35Ws8M7.jpg" type="movie" group-title="Avventura",Lo Hobbit: Un viaggio inaspettato (2012) [Avventura, Fantasy, Azione] ⭐7.4
+#EXTINF:-1 tvg-id="49051" tvg-name="Lo Hobbit: Un viaggio inaspettato (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/gFW9Pq7rXIFSsfYdpwD35Ws8M7.jpg" type="movie" group-title="Film Popolari",Lo Hobbit: Un viaggio inaspettato (2012) [Avventura, Fantasy, Azione] ⭐7.4
 https://vixsrc.to/movie/49051?lang=it
 
 #EXTINF:-1 tvg-id="134375" tvg-name="Holiday Heist - Mamma, ho visto un fantasma (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/nsRl6M33UjKNpHDIRoGW81WX89H.jpg" type="movie" group-title="Commedia",Holiday Heist - Mamma, ho visto un fantasma (2012) [Commedia, Famiglia, televisione film] ⭐5.2
@@ -6856,7 +6856,7 @@ https://vixsrc.to/movie/87827?lang=it
 #EXTINF:-1 tvg-id="82693" tvg-name="Il lato positivo - Silver Linings Playbook (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/4zgvDghWqx3h3knz2VG3OvCAaxG.jpg" type="movie" group-title="Dramma",Il lato positivo - Silver Linings Playbook (2012) [Dramma, Commedia, Romance] ⭐7.1
 https://vixsrc.to/movie/82693?lang=it
 
-#EXTINF:-1 tvg-id="50620" tvg-name="The Twilight Saga: Breaking Dawn - Parte 2 (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/jggdHu4vvm5v7mBYhb8VwV35ZtG.jpg" type="movie" group-title="Avventura",The Twilight Saga: Breaking Dawn - Parte 2 (2012) [Avventura, Fantasy, Dramma, Romance] ⭐6.5
+#EXTINF:-1 tvg-id="50620" tvg-name="The Twilight Saga: Breaking Dawn - Parte 2 (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/jggdHu4vvm5v7mBYhb8VwV35ZtG.jpg" type="movie" group-title="Film Popolari",The Twilight Saga: Breaking Dawn - Parte 2 (2012) [Avventura, Fantasy, Dramma, Romance] ⭐6.5
 https://vixsrc.to/movie/50620?lang=it
 
 #EXTINF:-1 tvg-id="87502" tvg-name="Flight (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/1AjXgBM2lkpG3FLQO0f6AK3Bi1e.jpg" type="movie" group-title="Dramma",Flight (2012) [Dramma] ⭐6.8
@@ -6955,13 +6955,13 @@ https://vixsrc.to/movie/80035?lang=it
 #EXTINF:-1 tvg-id="85446" tvg-name="Step Up 4 - Revolution (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/3fqIrd0PzRlJKFYs8lfjvRqWCwg.jpg" type="movie" group-title="Musica",Step Up 4 - Revolution (2012) [Musica, Dramma, Romance] ⭐6.9
 https://vixsrc.to/movie/85446?lang=it
 
-#EXTINF:-1 tvg-id="49026" tvg-name="Il cavaliere oscuro - Il ritorno (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/p2JzxFRAlbxS4EvWMo4yiYZXu1W.jpg" type="movie" group-title="Azione",Il cavaliere oscuro - Il ritorno (2012) [Azione, Crime, Dramma, Thriller] ⭐7.8
+#EXTINF:-1 tvg-id="49026" tvg-name="Il cavaliere oscuro - Il ritorno (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/p2JzxFRAlbxS4EvWMo4yiYZXu1W.jpg" type="movie" group-title="Film Popolari",Il cavaliere oscuro - Il ritorno (2012) [Azione, Crime, Dramma, Thriller] ⭐7.8
 https://vixsrc.to/movie/49026?lang=it
 
 #EXTINF:-1 tvg-id="57800" tvg-name="L'era glaciale 4 - Continenti alla deriva (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/2BaUPgaPad90557uieNwDllm4DU.jpg" type="movie" group-title="Animazione",L'era glaciale 4 - Continenti alla deriva (2012) [Animazione, Commedia, Avventura, Famiglia] ⭐6.4
 https://vixsrc.to/movie/57800?lang=it
 
-#EXTINF:-1 tvg-id="1930" tvg-name="The Amazing Spider-Man (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/tHDyTZ2GX0hBWSdzFfwo3G1v0VI.jpg" type="movie" group-title="Azione",The Amazing Spider-Man (2012) [Azione, Avventura, Fantascienza] ⭐6.7
+#EXTINF:-1 tvg-id="1930" tvg-name="The Amazing Spider-Man (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/tHDyTZ2GX0hBWSdzFfwo3G1v0VI.jpg" type="movie" group-title="Film Popolari",The Amazing Spider-Man (2012) [Azione, Avventura, Fantascienza] ⭐6.7
 https://vixsrc.to/movie/1930?lang=it
 
 #EXTINF:-1 tvg-id="62177" tvg-name="Ribelle - The Brave (2012)" tvg-logo="https://image.tmdb.org/t/p/w500/3murytVQlHUdfLPCqU9EDMlQHcF.jpg" type="movie" group-title="Animazione",Ribelle - The Brave (2012) [Animazione, Avventura, Commedia, Famiglia, Azione, Fantasy] ⭐7.0
@@ -7123,7 +7123,7 @@ https://vixsrc.to/movie/44826?lang=it
 #EXTINF:-1 tvg-id="65759" tvg-name="Happy Feet 2 (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/ihovmn9mimn0NcaIT93N9SqM3CT.jpg" type="movie" group-title="Animazione",Happy Feet 2 (2011) [Animazione, Commedia, Famiglia] ⭐6.2
 https://vixsrc.to/movie/65759?lang=it
 
-#EXTINF:-1 tvg-id="50619" tvg-name="The Twilight Saga: Breaking Dawn - Parte 1 (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/86WkUiB476x7gtTTCVwIU6rEPIK.jpg" type="movie" group-title="Avventura",The Twilight Saga: Breaking Dawn - Parte 1 (2011) [Avventura, Fantasy, Romance] ⭐6.2
+#EXTINF:-1 tvg-id="50619" tvg-name="The Twilight Saga: Breaking Dawn - Parte 1 (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/86WkUiB476x7gtTTCVwIU6rEPIK.jpg" type="movie" group-title="Film Popolari",The Twilight Saga: Breaking Dawn - Parte 1 (2011) [Avventura, Fantasy, Romance] ⭐6.2
 https://vixsrc.to/movie/50619?lang=it
 
 #EXTINF:-1 tvg-id="71880" tvg-name="Jack e Jill (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/aO7clPfVcmqIdovS8RvgnCilnX3.jpg" type="movie" group-title="Commedia",Jack e Jill (2011) [Commedia, Famiglia] ⭐4.4
@@ -7258,7 +7258,7 @@ https://vixsrc.to/movie/77887?lang=it
 #EXTINF:-1 tvg-id="44912" tvg-name="Lanterna verde (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/dWdzyQ3NcAW6OmAuzoNCxqwtpmq.jpg" type="movie" group-title="Avventura",Lanterna verde (2011) [Avventura, Azione, Thriller, Fantascienza] ⭐5.2
 https://vixsrc.to/movie/44912?lang=it
 
-#EXTINF:-1 tvg-id="49013" tvg-name="Cars 2 (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/tkDt9LMNhdz4PB9fu8a0Psp8Pky.jpg" type="movie" group-title="Animazione",Cars 2 (2011) [Animazione, Famiglia, Avventura, Commedia] ⭐6.2
+#EXTINF:-1 tvg-id="49013" tvg-name="Cars 2 (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/tkDt9LMNhdz4PB9fu8a0Psp8Pky.jpg" type="movie" group-title="Film Popolari",Cars 2 (2011) [Animazione, Famiglia, Avventura, Commedia] ⭐6.2
 https://vixsrc.to/movie/49013?lang=it
 
 #EXTINF:-1 tvg-id="37686" tvg-name="Super 8 (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/p1FnQ1nG7cbnN1RzR4wv1dAQ28G.jpg" type="movie" group-title="Thriller",Super 8 (2011) [Thriller, Fantascienza, Mistero] ⭐6.8
@@ -7279,7 +7279,7 @@ https://vixsrc.to/movie/8967?lang=it
 #EXTINF:-1 tvg-id="52449" tvg-name="Bad Teacher - Una cattiva maestra (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/rL5pPelTX6IDVFzHznYxvcK2bY9.jpg" type="movie" group-title="Commedia",Bad Teacher - Una cattiva maestra (2011) [Commedia] ⭐5.6
 https://vixsrc.to/movie/52449?lang=it
 
-#EXTINF:-1 tvg-id="1865" tvg-name="Pirati dei Caraibi - Oltre i confini del mare (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/p0aMDd3EtOCfImHIeL9hgPnLRIo.jpg" type="movie" group-title="Avventura",Pirati dei Caraibi - Oltre i confini del mare (2011) [Avventura, Azione, Fantasy] ⭐6.6
+#EXTINF:-1 tvg-id="1865" tvg-name="Pirati dei Caraibi - Oltre i confini del mare (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/p0aMDd3EtOCfImHIeL9hgPnLRIo.jpg" type="movie" group-title="Film Popolari",Pirati dei Caraibi - Oltre i confini del mare (2011) [Avventura, Azione, Fantasy] ⭐6.6
 https://vixsrc.to/movie/1865?lang=it
 
 #EXTINF:-1 tvg-id="59436" tvg-name="Midnight in Paris (2011)" tvg-logo="https://image.tmdb.org/t/p/w500/hfdsTXO6wIJ9uywIgnqzNYDWYQK.jpg" type="movie" group-title="Fantasy",Midnight in Paris (2011) [Fantasy, Commedia, Romance] ⭐7.5
@@ -7408,7 +7408,7 @@ https://vixsrc.to/movie/10140?lang=it
 #EXTINF:-1 tvg-id="45269" tvg-name="Il discorso del re (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/coYmUhyPEDMVw6ThmEb9gBv3AQl.jpg" type="movie" group-title="Dramma",Il discorso del re (2010) [Dramma, Storia] ⭐7.7
 https://vixsrc.to/movie/45269?lang=it
 
-#EXTINF:-1 tvg-id="38757" tvg-name="Rapunzel - L'intreccio della torre (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/3Vd4vU3v9iuwpQ7CRR0HIcBihj4.jpg" type="movie" group-title="Animazione",Rapunzel - L'intreccio della torre (2010) [Animazione, Famiglia, Avventura] ⭐7.6
+#EXTINF:-1 tvg-id="38757" tvg-name="Rapunzel - L'intreccio della torre (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/3Vd4vU3v9iuwpQ7CRR0HIcBihj4.jpg" type="movie" group-title="Film Popolari",Rapunzel - L'intreccio della torre (2010) [Animazione, Famiglia, Avventura] ⭐7.6
 https://vixsrc.to/movie/38757?lang=it
 
 #EXTINF:-1 tvg-id="42297" tvg-name="Burlesque (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/vq1RopG9OGO211TeI9pqgSIvazz.jpg" type="movie" group-title="Dramma",Burlesque (2010) [Dramma, Romance] ⭐7.2
@@ -7540,16 +7540,16 @@ https://vixsrc.to/movie/10196?lang=it
 #EXTINF:-1 tvg-id="36950" tvg-name="You Don't Know Jack - Il dottor morte (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/lrKP3Z7ag2YFHbXwjTq9KDM3LRQ.jpg" type="movie" group-title="Dramma",You Don't Know Jack - Il dottor morte (2010) [Dramma, televisione film, Storia] ⭐7.0
 https://vixsrc.to/movie/36950?lang=it
 
-#EXTINF:-1 tvg-id="38365" tvg-name="Un weekend da bamboccioni (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/a5C0DaMUIW0etN0WV9yKGLTEy1b.jpg" type="movie" group-title="Commedia",Un weekend da bamboccioni (2010) [Commedia] ⭐6.4
+#EXTINF:-1 tvg-id="38365" tvg-name="Un weekend da bamboccioni (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/a5C0DaMUIW0etN0WV9yKGLTEy1b.jpg" type="movie" group-title="Film Popolari",Un weekend da bamboccioni (2010) [Commedia] ⭐6.4
 https://vixsrc.to/movie/38365?lang=it
 
-#EXTINF:-1 tvg-id="24021" tvg-name="The Twilight Saga - Eclipse (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/smOfIKy6RASxhjjMDK5Tje55xT5.jpg" type="movie" group-title="Avventura",The Twilight Saga - Eclipse (2010) [Avventura, Fantasy, Dramma, Romance] ⭐6.2
+#EXTINF:-1 tvg-id="24021" tvg-name="The Twilight Saga - Eclipse (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/smOfIKy6RASxhjjMDK5Tje55xT5.jpg" type="movie" group-title="Film Popolari",The Twilight Saga - Eclipse (2010) [Avventura, Fantasy, Dramma, Romance] ⭐6.2
 https://vixsrc.to/movie/24021?lang=it
 
 #EXTINF:-1 tvg-id="37834" tvg-name="Innocenti bugie (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/aRgCxDeL94AmAKXgPvBEUD7Yk8Z.jpg" type="movie" group-title="Azione",Innocenti bugie (2010) [Azione, Commedia] ⭐6.2
 https://vixsrc.to/movie/37834?lang=it
 
-#EXTINF:-1 tvg-id="38575" tvg-name="The Karate Kid - La leggenda continua (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/usxoDGYR2pco8ZESlApAHNaGj6G.jpg" type="movie" group-title="Azione",The Karate Kid - La leggenda continua (2010) [Azione, Avventura, Dramma, Famiglia] ⭐6.6
+#EXTINF:-1 tvg-id="38575" tvg-name="The Karate Kid - La leggenda continua (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/usxoDGYR2pco8ZESlApAHNaGj6G.jpg" type="movie" group-title="Film Popolari",The Karate Kid - La leggenda continua (2010) [Azione, Avventura, Dramma, Famiglia] ⭐6.6
 https://vixsrc.to/movie/38575?lang=it
 
 #EXTINF:-1 tvg-id="34544" tvg-name="A-Team (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/dC4sNYkGpz1YdGJPsV8pADe7mXd.jpg" type="movie" group-title="Azione",A-Team (2010) [Azione, Commedia, Crime] ⭐6.4
@@ -7591,7 +7591,7 @@ https://vixsrc.to/movie/41210?lang=it
 #EXTINF:-1 tvg-id="23437" tvg-name="Nightmare (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/a4H26CxjMMVZjuhGUD4WFUU55vp.jpg" type="movie" group-title="Horror",Nightmare (2010) [Horror, Mistero, Thriller] ⭐5.5
 https://vixsrc.to/movie/23437?lang=it
 
-#EXTINF:-1 tvg-id="10138" tvg-name="Iron Man 2 (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/2LWFruYSQOlxGcIL85EF0cKIOdV.jpg" type="movie" group-title="Avventura",Iron Man 2 (2010) [Avventura, Azione, Fantascienza] ⭐6.8
+#EXTINF:-1 tvg-id="10138" tvg-name="Iron Man 2 (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/2LWFruYSQOlxGcIL85EF0cKIOdV.jpg" type="movie" group-title="Film Popolari",Iron Man 2 (2010) [Avventura, Azione, Fantascienza] ⭐6.8
 https://vixsrc.to/movie/10138?lang=it
 
 #EXTINF:-1 tvg-id="34806" tvg-name="Piacere, sono un po' incinta (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/nHGARrws1kFlobIERBQdwJWh0DP.jpg" type="movie" group-title="Commedia",Piacere, sono un po' incinta (2010) [Commedia, Romance] ⭐6.1
@@ -7654,7 +7654,7 @@ https://vixsrc.to/movie/28211?lang=it
 #EXTINF:-1 tvg-id="32206" tvg-name="Quantum Apocalypse (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/7hMBhDknvIDFtkohTcggXvIwYxg.jpg" type="movie" group-title="Fantascienza",Quantum Apocalypse (2010) [Fantascienza, televisione film, Mistero, Dramma] ⭐3.8
 https://vixsrc.to/movie/32206?lang=it
 
-#EXTINF:-1 tvg-id="11324" tvg-name="Shutter Island (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/rYiiHUOndO4lMLiQZbmARIVmdVX.jpg" type="movie" group-title="Dramma",Shutter Island (2010) [Dramma, Thriller, Mistero] ⭐8.2
+#EXTINF:-1 tvg-id="11324" tvg-name="Shutter Island (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/rYiiHUOndO4lMLiQZbmARIVmdVX.jpg" type="movie" group-title="Film Popolari",Shutter Island (2010) [Dramma, Thriller, Mistero] ⭐8.2
 https://vixsrc.to/movie/11324?lang=it
 
 #EXTINF:-1 tvg-id="34182" tvg-name="Confucio (2010)" tvg-logo="https://image.tmdb.org/t/p/w500/g4eFeILq1hx95V0oW74T3N0ZVOd.jpg" type="movie" group-title="Dramma",Confucio (2010) [Dramma, Storia] ⭐6.0
@@ -7702,7 +7702,7 @@ https://vixsrc.to/movie/19995?lang=it
 #EXTINF:-1 tvg-id="22954" tvg-name="Invictus - L'invincibile (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/kdX7c7Dsakmb54u1WfT5m584jNQ.jpg" type="movie" group-title="Dramma",Invictus - L'invincibile (2009) [Dramma, Storia] ⭐7.2
 https://vixsrc.to/movie/22954?lang=it
 
-#EXTINF:-1 tvg-id="10198" tvg-name="La principessa e il ranocchio (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/yz0MyuQQZsihsZJkpZ5xCoLeGwZ.jpg" type="movie" group-title="Animazione",La principessa e il ranocchio (2009) [Animazione, Romance, Fantasy, Famiglia] ⭐7.2
+#EXTINF:-1 tvg-id="10198" tvg-name="La principessa e il ranocchio (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/yz0MyuQQZsihsZJkpZ5xCoLeGwZ.jpg" type="movie" group-title="Film Popolari",La principessa e il ranocchio (2009) [Animazione, Romance, Fantasy, Famiglia] ⭐7.2
 https://vixsrc.to/movie/10198?lang=it
 
 #EXTINF:-1 tvg-id="22947" tvg-name="Tra le nuvole (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/jwM6AsjfHo3A9GZZWOcxlfXzayj.jpg" type="movie" group-title="Dramma",Tra le nuvole (2009) [Dramma, Romance] ⭐6.9
@@ -7759,7 +7759,7 @@ https://vixsrc.to/movie/16577?lang=it
 #EXTINF:-1 tvg-id="10315" tvg-name="Fantastic Mr. Fox (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/zHKjpcKEnKa0wOknrt8B1hkur7y.jpg" type="movie" group-title="Avventura",Fantastic Mr. Fox (2009) [Avventura, Animazione, Commedia, Famiglia] ⭐7.8
 https://vixsrc.to/movie/10315?lang=it
 
-#EXTINF:-1 tvg-id="14161" tvg-name="2012 (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/rO5L1VxVLSkI9Y9LKzkllTFfsKu.jpg" type="movie" group-title="Azione",2012 (2009) [Azione, Avventura, Fantascienza] ⭐5.9
+#EXTINF:-1 tvg-id="14161" tvg-name="2012 (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/rO5L1VxVLSkI9Y9LKzkllTFfsKu.jpg" type="movie" group-title="Film Popolari",2012 (2009) [Azione, Avventura, Fantascienza] ⭐5.9
 https://vixsrc.to/movie/14161?lang=it
 
 #EXTINF:-1 tvg-id="30289" tvg-name="MegaFault - La terra trema (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/wa3v5osMnFaEUImfMiWOTIjv2lQ.jpg" type="movie" group-title="televisione film",MegaFault - La terra trema (2009) [televisione film, Azione, Avventura, Fantascienza] ⭐5.3
@@ -7834,7 +7834,7 @@ https://vixsrc.to/movie/17654?lang=it
 #EXTINF:-1 tvg-id="14869" tvg-name="G.I. Joe - La nascita dei Cobra (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/ibQuFwe8Ezb7ADlII2W9q2GWE9u.jpg" type="movie" group-title="Avventura",G.I. Joe - La nascita dei Cobra (2009) [Avventura, Azione, Thriller, Fantascienza] ⭐5.8
 https://vixsrc.to/movie/14869?lang=it
 
-#EXTINF:-1 tvg-id="16869" tvg-name="Bastardi senza gloria (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/aa1jLbxTTuA6o5ucHoZh2khwNSo.jpg" type="movie" group-title="Dramma",Bastardi senza gloria (2009) [Dramma, Thriller, Guerra] ⭐8.2
+#EXTINF:-1 tvg-id="16869" tvg-name="Bastardi senza gloria (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/aa1jLbxTTuA6o5ucHoZh2khwNSo.jpg" type="movie" group-title="Film Popolari",Bastardi senza gloria (2009) [Dramma, Thriller, Guerra] ⭐8.2
 https://vixsrc.to/movie/16869?lang=it
 
 #EXTINF:-1 tvg-id="20856" tvg-name="Alieni in soffitta (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/zPgpMrJdo8kqLa5IGbCH5hYV0RV.jpg" type="movie" group-title="Avventura",Alieni in soffitta (2009) [Avventura, Commedia, Famiglia, Fantasy, Fantascienza] ⭐5.7
@@ -7876,7 +7876,7 @@ https://vixsrc.to/movie/18785?lang=it
 #EXTINF:-1 tvg-id="18240" tvg-name="Ricatto d'amore (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/78RJUsDqs87ecBkNkO2ZQHZM0JC.jpg" type="movie" group-title="Commedia",Ricatto d'amore (2009) [Commedia, Romance, Dramma] ⭐7.2
 https://vixsrc.to/movie/18240?lang=it
 
-#EXTINF:-1 tvg-id="14160" tvg-name="Up (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/j3Ga41uc0y3W8KbKjSfPHQiZYVn.jpg" type="movie" group-title="Animazione",Up (2009) [Animazione, Commedia, Famiglia, Avventura] ⭐8.0
+#EXTINF:-1 tvg-id="14160" tvg-name="Up (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/j3Ga41uc0y3W8KbKjSfPHQiZYVn.jpg" type="movie" group-title="Film Popolari",Up (2009) [Animazione, Commedia, Famiglia, Avventura] ⭐8.0
 https://vixsrc.to/movie/14160?lang=it
 
 #EXTINF:-1 tvg-id="16871" tvg-name="Drag Me to Hell (2009)" tvg-logo="https://image.tmdb.org/t/p/w500/a9cbfIxGf4jKplckuVRRa0pTDdF.jpg" type="movie" group-title="Horror",Drag Me to Hell (2009) [Horror, Thriller] ⭐6.4
@@ -8137,7 +8137,7 @@ https://vixsrc.to/movie/8960?lang=it
 #EXTINF:-1 tvg-id="1735" tvg-name="La mummia - La tomba dell'Imperatore Dragone (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/o97EsIf67XTdU09EyHFHE51POOm.jpg" type="movie" group-title="Avventura",La mummia - La tomba dell'Imperatore Dragone (2008) [Avventura, Azione, Fantasy] ⭐5.5
 https://vixsrc.to/movie/1735?lang=it
 
-#EXTINF:-1 tvg-id="10681" tvg-name="WALL•E (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/1ZkFCJwN6hNUdNZUIUCeugja06j.jpg" type="movie" group-title="Animazione",WALL•E (2008) [Animazione, Famiglia, Fantascienza] ⭐8.1
+#EXTINF:-1 tvg-id="10681" tvg-name="WALL•E (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/1ZkFCJwN6hNUdNZUIUCeugja06j.jpg" type="movie" group-title="Film Popolari",WALL•E (2008) [Animazione, Famiglia, Fantascienza] ⭐8.1
 https://vixsrc.to/movie/10681?lang=it
 
 #EXTINF:-1 tvg-id="12177" tvg-name="The Love Guru (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/sp8AV64ftAZCT9uWfgbCb3olGDW.jpg" type="movie" group-title="Commedia",The Love Guru (2008) [Commedia, Romance] ⭐4.1
@@ -8161,7 +8161,7 @@ https://vixsrc.to/movie/8645?lang=it
 #EXTINF:-1 tvg-id="10661" tvg-name="Zohan - Tutte le donne vengono al pettine (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/1RUVWWcrJ0fiqJwFifa2G06a6wu.jpg" type="movie" group-title="Commedia",Zohan - Tutte le donne vengono al pettine (2008) [Commedia, Azione] ⭐5.7
 https://vixsrc.to/movie/10661?lang=it
 
-#EXTINF:-1 tvg-id="9502" tvg-name="Kung Fu Panda (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/fWbCM5Ka8nre7hALmXFANXvzBHf.jpg" type="movie" group-title="Azione",Kung Fu Panda (2008) [Azione, Avventura, Animazione, Famiglia, Commedia] ⭐7.3
+#EXTINF:-1 tvg-id="9502" tvg-name="Kung Fu Panda (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/fWbCM5Ka8nre7hALmXFANXvzBHf.jpg" type="movie" group-title="Film Popolari",Kung Fu Panda (2008) [Azione, Avventura, Animazione, Famiglia, Commedia] ⭐7.3
 https://vixsrc.to/movie/9502?lang=it
 
 #EXTINF:-1 tvg-id="10665" tvg-name="The Strangers (2008)" tvg-logo="https://image.tmdb.org/t/p/w500/gwsg4qFmLOvlhwXj4OZuxfFUdP0.jpg" type="movie" group-title="Horror",The Strangers (2008) [Horror, Mistero, Thriller] ⭐6.1
@@ -8449,16 +8449,16 @@ https://vixsrc.to/movie/298?lang=it
 #EXTINF:-1 tvg-id="4964" tvg-name="Molto incinta (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/cAZdj1g6irBantrWgGcyOE6faom.jpg" type="movie" group-title="Commedia",Molto incinta (2007) [Commedia, Romance, Dramma] ⭐6.3
 https://vixsrc.to/movie/4964?lang=it
 
-#EXTINF:-1 tvg-id="285" tvg-name="Pirati dei Caraibi - Ai confini del mondo (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/ruiN32y17YV4BqliTsw3Vyz6Xys.jpg" type="movie" group-title="Avventura",Pirati dei Caraibi - Ai confini del mondo (2007) [Avventura, Fantasy, Azione] ⭐7.3
+#EXTINF:-1 tvg-id="285" tvg-name="Pirati dei Caraibi - Ai confini del mondo (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/ruiN32y17YV4BqliTsw3Vyz6Xys.jpg" type="movie" group-title="Film Popolari",Pirati dei Caraibi - Ai confini del mondo (2007) [Avventura, Fantasy, Azione] ⭐7.3
 https://vixsrc.to/movie/285?lang=it
 
-#EXTINF:-1 tvg-id="810" tvg-name="Shrek terzo (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/ryRQPB5BM5QAYaMz3OqaNwl9vzF.jpg" type="movie" group-title="Fantasy",Shrek terzo (2007) [Fantasy, Avventura, Animazione, Commedia, Famiglia] ⭐6.3
+#EXTINF:-1 tvg-id="810" tvg-name="Shrek terzo (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/ryRQPB5BM5QAYaMz3OqaNwl9vzF.jpg" type="movie" group-title="Film Popolari",Shrek terzo (2007) [Fantasy, Avventura, Animazione, Commedia, Famiglia] ⭐6.3
 https://vixsrc.to/movie/810?lang=it
 
 #EXTINF:-1 tvg-id="1931" tvg-name="Stepping - Dalla strada al palcoscenico (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/7W7L5oP1UG8Rshz49bqNuFCls4M.jpg" type="movie" group-title="Dramma",Stepping - Dalla strada al palcoscenico (2007) [Dramma, Musica] ⭐7.1
 https://vixsrc.to/movie/1931?lang=it
 
-#EXTINF:-1 tvg-id="559" tvg-name="Spider-Man 3 (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/wzsktqGr3UVYGn2lPKJYlFZV60.jpg" type="movie" group-title="Azione",Spider-Man 3 (2007) [Azione, Avventura, Fantascienza] ⭐6.4
+#EXTINF:-1 tvg-id="559" tvg-name="Spider-Man 3 (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/wzsktqGr3UVYGn2lPKJYlFZV60.jpg" type="movie" group-title="Film Popolari",Spider-Man 3 (2007) [Azione, Avventura, Fantascienza] ⭐6.4
 https://vixsrc.to/movie/559?lang=it
 
 #EXTINF:-1 tvg-id="1562" tvg-name="28 settimane dopo (2007)" tvg-logo="https://image.tmdb.org/t/p/w500/5ANtw99se6v8xMfMU74cfYsrKcj.jpg" type="movie" group-title="Horror",28 settimane dopo (2007) [Horror, Thriller, Fantascienza] ⭐6.6
@@ -8677,13 +8677,13 @@ https://vixsrc.to/movie/773?lang=it
 #EXTINF:-1 tvg-id="4474" tvg-name="La mia super ex-ragazza (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/dACc8EU9DLP6RNEG7GNJpFoXpzE.jpg" type="movie" group-title="Commedia",La mia super ex-ragazza (2006) [Commedia, Fantascienza, Romance] ⭐5.1
 https://vixsrc.to/movie/4474?lang=it
 
-#EXTINF:-1 tvg-id="58" tvg-name="Pirati dei Caraibi - La maledizione del forziere fantasma (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/yH5iDtRaq53q0sSU6EgUatKhrEn.jpg" type="movie" group-title="Avventura",Pirati dei Caraibi - La maledizione del forziere fantasma (2006) [Avventura, Fantasy, Azione] ⭐7.4
+#EXTINF:-1 tvg-id="58" tvg-name="Pirati dei Caraibi - La maledizione del forziere fantasma (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/yH5iDtRaq53q0sSU6EgUatKhrEn.jpg" type="movie" group-title="Film Popolari",Pirati dei Caraibi - La maledizione del forziere fantasma (2006) [Avventura, Fantasy, Azione] ⭐7.4
 https://vixsrc.to/movie/58?lang=it
 
 #EXTINF:-1 tvg-id="9297" tvg-name="Monster House (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/zCRPr4bkO3ae0U1134vJ39xZnAG.jpg" type="movie" group-title="Animazione",Monster House (2006) [Animazione, Commedia, Famiglia, Fantasy] ⭐6.7
 https://vixsrc.to/movie/9297?lang=it
 
-#EXTINF:-1 tvg-id="350" tvg-name="Il diavolo veste Prada (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/c7IwKvNSZW9wA4aKrBnV6v0GAS.jpg" type="movie" group-title="Dramma",Il diavolo veste Prada (2006) [Dramma, Commedia] ⭐7.4
+#EXTINF:-1 tvg-id="350" tvg-name="Il diavolo veste Prada (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/c7IwKvNSZW9wA4aKrBnV6v0GAS.jpg" type="movie" group-title="Film Popolari",Il diavolo veste Prada (2006) [Dramma, Commedia] ⭐7.4
 https://vixsrc.to/movie/350?lang=it
 
 #EXTINF:-1 tvg-id="1452" tvg-name="Superman Returns (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/385XwTQZDpRX2d3kxtnpiLrjBXw.jpg" type="movie" group-title="Fantascienza",Superman Returns (2006) [Fantascienza, Azione, Avventura] ⭐5.8
@@ -8707,7 +8707,7 @@ https://vixsrc.to/movie/2044?lang=it
 #EXTINF:-1 tvg-id="9513" tvg-name="Garfield 2 (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/yxyZXmeL9XUBW2hsqKRKI48L0Ki.jpg" type="movie" group-title="Commedia",Garfield 2 (2006) [Commedia, Famiglia, Avventura] ⭐5.6
 https://vixsrc.to/movie/9513?lang=it
 
-#EXTINF:-1 tvg-id="920" tvg-name="Cars - Motori ruggenti (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/moXcMQ1GdVPnQfX5qnJ0pZkJifJ.jpg" type="movie" group-title="Animazione",Cars - Motori ruggenti (2006) [Animazione, Avventura, Commedia, Famiglia] ⭐7.0
+#EXTINF:-1 tvg-id="920" tvg-name="Cars - Motori ruggenti (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/moXcMQ1GdVPnQfX5qnJ0pZkJifJ.jpg" type="movie" group-title="Film Popolari",Cars - Motori ruggenti (2006) [Animazione, Avventura, Commedia, Famiglia] ⭐7.0
 https://vixsrc.to/movie/920?lang=it
 
 #EXTINF:-1 tvg-id="806" tvg-name="Omen - Il Presagio (2006)" tvg-logo="https://image.tmdb.org/t/p/w500/zeZS8Ae70JoetvZ0oTnJnYdOQdj.jpg" type="movie" group-title="Horror",Omen - Il Presagio (2006) [Horror, Mistero, Thriller] ⭐5.6
@@ -8908,7 +8908,7 @@ https://vixsrc.to/movie/8066?lang=it
 #EXTINF:-1 tvg-id="9315" tvg-name="Flightplan - Mistero in volo (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/7fFKUm1jGA0YcrEi92qJDzLp7Ij.jpg" type="movie" group-title="Thriller",Flightplan - Mistero in volo (2005) [Thriller, Dramma, Mistero] ⭐6.5
 https://vixsrc.to/movie/9315?lang=it
 
-#EXTINF:-1 tvg-id="4348" tvg-name="Orgoglio e pregiudizio (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/bA4gEvNLIpwVV1JaU4S4yueLjP8.jpg" type="movie" group-title="Film Al Cinema",Orgoglio e pregiudizio (2005) [Dramma, Romance] ⭐8.1
+#EXTINF:-1 tvg-id="4348" tvg-name="Orgoglio e pregiudizio (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/bA4gEvNLIpwVV1JaU4S4yueLjP8.jpg" type="movie" group-title="Film Popolari",Orgoglio e pregiudizio (2005) [Dramma, Romance] ⭐8.1
 https://vixsrc.to/movie/4348?lang=it
 
 #EXTINF:-1 tvg-id="1830" tvg-name="Lord of War (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/xCyPMoceII9NM3IbJHNPXWLqWH3.jpg" type="movie" group-title="Crime",Lord of War (2005) [Crime, Dramma, Thriller] ⭐7.3
@@ -8923,7 +8923,7 @@ https://vixsrc.to/movie/5236?lang=it
 #EXTINF:-1 tvg-id="69" tvg-name="Quando l'amore brucia l'anima - Walk the Line (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/l8GaTEIxkUNEKQcijpZS4LSEFbC.jpg" type="movie" group-title="Dramma",Quando l'amore brucia l'anima - Walk the Line (2005) [Dramma, Musica, Romance] ⭐7.5
 https://vixsrc.to/movie/69?lang=it
 
-#EXTINF:-1 tvg-id="3933" tvg-name="La sposa cadavere (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/hs8i1Vpwrx6KBd00louOTP61Dp8.jpg" type="movie" group-title="Romance",La sposa cadavere (2005) [Romance, Fantasy, Animazione] ⭐7.6
+#EXTINF:-1 tvg-id="3933" tvg-name="La sposa cadavere (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/hs8i1Vpwrx6KBd00louOTP61Dp8.jpg" type="movie" group-title="Film Popolari",La sposa cadavere (2005) [Romance, Fantasy, Animazione] ⭐7.6
 https://vixsrc.to/movie/3933?lang=it
 
 #EXTINF:-1 tvg-id="8923" tvg-name="Hooligans (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/kF3gswhJcs3PmLU5yNg9KSV9DaK.jpg" type="movie" group-title="Crime",Hooligans (2005) [Crime, Dramma] ⭐7.3
@@ -9013,7 +9013,7 @@ https://vixsrc.to/movie/16411?lang=it
 #EXTINF:-1 tvg-id="10066" tvg-name="La maschera di cera (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/vwpXeoT4BcZoM930IOU6p0ulrY8.jpg" type="movie" group-title="Mistero",La maschera di cera (2005) [Mistero, Horror, Thriller] ⭐6.0
 https://vixsrc.to/movie/10066?lang=it
 
-#EXTINF:-1 tvg-id="1495" tvg-name="Le crociate - Kingdom of Heaven (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/chMeCOoGFPT3agnAHHisKLCX6Dd.jpg" type="movie" group-title="Dramma",Le crociate - Kingdom of Heaven (2005) [Dramma, Azione, Avventura, Storia, Guerra] ⭐7.0
+#EXTINF:-1 tvg-id="1495" tvg-name="Le crociate - Kingdom of Heaven (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/chMeCOoGFPT3agnAHHisKLCX6Dd.jpg" type="movie" group-title="Film Popolari",Le crociate - Kingdom of Heaven (2005) [Dramma, Azione, Avventura, Storia, Guerra] ⭐7.0
 https://vixsrc.to/movie/1495?lang=it
 
 #EXTINF:-1 tvg-id="7453" tvg-name="Guida galattica per autostoppisti (2005)" tvg-logo="https://image.tmdb.org/t/p/w500/4JpS1ClZ0JDbx4JolpzWssx9RuT.jpg" type="movie" group-title="Avventura",Guida galattica per autostoppisti (2005) [Avventura, Commedia, Fantascienza] ⭐6.7
@@ -9112,7 +9112,7 @@ https://vixsrc.to/movie/12242?lang=it
 #EXTINF:-1 tvg-id="1677" tvg-name="Ray (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/y3uZT1FRXbQ0bnjTOqFrdBUCYb2.jpg" type="movie" group-title="Dramma",Ray (2004) [Dramma, Musica] ⭐7.5
 https://vixsrc.to/movie/1677?lang=it
 
-#EXTINF:-1 tvg-id="9806" tvg-name="Gli Incredibili - Una "normale" famiglia di supereroi (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/YC2HuIkt6JOyOInuSRnRR9iVLE.jpg" type="movie" group-title="Azione",Gli Incredibili - Una "normale" famiglia di supereroi (2004) [Azione, Avventura, Animazione, Famiglia] ⭐7.7
+#EXTINF:-1 tvg-id="9806" tvg-name="Gli Incredibili - Una "normale" famiglia di supereroi (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/YC2HuIkt6JOyOInuSRnRR9iVLE.jpg" type="movie" group-title="Film Popolari",Gli Incredibili - Una "normale" famiglia di supereroi (2004) [Azione, Avventura, Animazione, Famiglia] ⭐7.7
 https://vixsrc.to/movie/9806?lang=it
 
 #EXTINF:-1 tvg-id="1970" tvg-name="The Grudge (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/5AGB8FVELnhMMw3nO372sw1xp58.jpg" type="movie" group-title="Horror",The Grudge (2004) [Horror, Mistero, Thriller] ⭐5.9
@@ -9238,13 +9238,13 @@ https://vixsrc.to/movie/11036?lang=it
 #EXTINF:-1 tvg-id="10304" tvg-name="Starship Troopers 2 - Eroi della Federazione (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/ynKsCf4o8fV6tmdwq1c9FrDFCCI.jpg" type="movie" group-title="Avventura",Starship Troopers 2 - Eroi della Federazione (2004) [Avventura, Horror, Azione, Fantascienza] ⭐4.5
 https://vixsrc.to/movie/10304?lang=it
 
-#EXTINF:-1 tvg-id="652" tvg-name="Troy (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/6n8BiphW9fvqC6biB0RMfblqi43.jpg" type="movie" group-title="Guerra",Troy (2004) [Guerra, Azione, Storia] ⭐7.2
+#EXTINF:-1 tvg-id="652" tvg-name="Troy (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/6n8BiphW9fvqC6biB0RMfblqi43.jpg" type="movie" group-title="Film Popolari",Troy (2004) [Guerra, Azione, Storia] ⭐7.2
 https://vixsrc.to/movie/652?lang=it
 
 #EXTINF:-1 tvg-id="7131" tvg-name="Van Helsing (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/34j4G1OdAYfFbYwF5n0bLVtbMtk.jpg" type="movie" group-title="Horror",Van Helsing (2004) [Horror, Avventura, Azione] ⭐6.4
 https://vixsrc.to/movie/7131?lang=it
 
-#EXTINF:-1 tvg-id="10625" tvg-name="Mean Girls (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/cg3kBYTyM2dFTe067TXguc7fFoS.jpg" type="movie" group-title="Dramma",Mean Girls (2004) [Dramma, Commedia] ⭐7.2
+#EXTINF:-1 tvg-id="10625" tvg-name="Mean Girls (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/cg3kBYTyM2dFTe067TXguc7fFoS.jpg" type="movie" group-title="Film Popolari",Mean Girls (2004) [Dramma, Commedia] ⭐7.2
 https://vixsrc.to/movie/10625?lang=it
 
 #EXTINF:-1 tvg-id="9509" tvg-name="Man on Fire - Il fuoco della vendetta (2004)" tvg-logo="https://image.tmdb.org/t/p/w500/5rdo14FzQTyIpw2E22PjlE4jfcs.jpg" type="movie" group-title="Azione",Man on Fire - Il fuoco della vendetta (2004) [Azione, Dramma, Thriller] ⭐7.5
@@ -9400,7 +9400,7 @@ https://vixsrc.to/movie/153?lang=it
 #EXTINF:-1 tvg-id="1428" tvg-name="C'era una volta in Messico (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/9RrHjBnng6GqbQr678S1wPmmL9j.jpg" type="movie" group-title="Azione",C'era una volta in Messico (2003) [Azione, Crime, Thriller] ⭐6.3
 https://vixsrc.to/movie/1428?lang=it
 
-#EXTINF:-1 tvg-id="15567" tvg-name="Provaci ancora Stitch! (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/zbKRPbqkac0fmjaUEbPxZscmAES.jpg" type="movie" group-title="Commedia",Provaci ancora Stitch! (2003) [Commedia, Avventura, Famiglia, Animazione, Fantascienza] ⭐6.4
+#EXTINF:-1 tvg-id="15567" tvg-name="Provaci ancora Stitch! (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/zbKRPbqkac0fmjaUEbPxZscmAES.jpg" type="movie" group-title="Film Popolari",Provaci ancora Stitch! (2003) [Commedia, Avventura, Famiglia, Animazione, Fantascienza] ⭐6.4
 https://vixsrc.to/movie/15567?lang=it
 
 #EXTINF:-1 tvg-id="470" tvg-name="21 grammi (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/jCgadLVHGilOu0zTsDD7Q1e3GpZ.jpg" type="movie" group-title="Dramma",21 grammi (2003) [Dramma, Crime, Thriller] ⭐7.3
@@ -9445,7 +9445,7 @@ https://vixsrc.to/movie/1927?lang=it
 #EXTINF:-1 tvg-id="4552" tvg-name="Two Sisters (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/5gWqetgQaY6MHEyNeLngT3w0jSj.jpg" type="movie" group-title="Dramma",Two Sisters (2003) [Dramma, Horror, Mistero] ⭐7.1
 https://vixsrc.to/movie/4552?lang=it
 
-#EXTINF:-1 tvg-id="12" tvg-name="Alla ricerca di Nemo (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/oXs67sAZuZOtTGjLG0TL1KdqqpR.jpg" type="movie" group-title="Animazione",Alla ricerca di Nemo (2003) [Animazione, Famiglia] ⭐7.8
+#EXTINF:-1 tvg-id="12" tvg-name="Alla ricerca di Nemo (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/oXs67sAZuZOtTGjLG0TL1KdqqpR.jpg" type="movie" group-title="Film Popolari",Alla ricerca di Nemo (2003) [Animazione, Famiglia] ⭐7.8
 https://vixsrc.to/movie/12?lang=it
 
 #EXTINF:-1 tvg-id="9902" tvg-name="Wrong Turn - Il bosco ha fame (2003)" tvg-logo="https://image.tmdb.org/t/p/w500/kdjO7rjFk0COqQ5X7wZAl7mBO07.jpg" type="movie" group-title="Horror",Wrong Turn - Il bosco ha fame (2003) [Horror, Thriller] ⭐6.4
@@ -9538,10 +9538,10 @@ https://vixsrc.to/movie/29339?lang=it
 #EXTINF:-1 tvg-id="2642" tvg-name="Two Weeks Notice - Due settimane per innamorarsi (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/ckgFLhYwQJ07xs7MLjVWWq349fp.jpg" type="movie" group-title="Romance",Two Weeks Notice - Due settimane per innamorarsi (2002) [Romance, Commedia] ⭐6.4
 https://vixsrc.to/movie/2642?lang=it
 
-#EXTINF:-1 tvg-id="121" tvg-name="Il Signore degli Anelli - Le due torri (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/fVKewiBPcY2dQujYEsnQmQ7lfRZ.jpg" type="movie" group-title="Avventura",Il Signore degli Anelli - Le due torri (2002) [Avventura, Fantasy, Azione] ⭐8.4
+#EXTINF:-1 tvg-id="121" tvg-name="Il Signore degli Anelli - Le due torri (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/fVKewiBPcY2dQujYEsnQmQ7lfRZ.jpg" type="movie" group-title="Film Popolari",Il Signore degli Anelli - Le due torri (2002) [Avventura, Fantasy, Azione] ⭐8.4
 https://vixsrc.to/movie/121?lang=it
 
-#EXTINF:-1 tvg-id="640" tvg-name="Prova a prendermi (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/yR5RSMbVqAxG8kDvzPnViTS65Rz.jpg" type="movie" group-title="Dramma",Prova a prendermi (2002) [Dramma, Crime] ⭐8.0
+#EXTINF:-1 tvg-id="640" tvg-name="Prova a prendermi (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/yR5RSMbVqAxG8kDvzPnViTS65Rz.jpg" type="movie" group-title="Film Popolari",Prova a prendermi (2002) [Dramma, Crime] ⭐8.0
 https://vixsrc.to/movie/640?lang=it
 
 #EXTINF:-1 tvg-id="3131" tvg-name="Gangs of New York (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/rCxKc45Nwv1FRXv2VQjvmBqUyc3.jpg" type="movie" group-title="Dramma",Gangs of New York (2002) [Dramma, Storia, Crime] ⭐7.3
@@ -9676,7 +9676,7 @@ https://vixsrc.to/movie/1894?lang=it
 #EXTINF:-1 tvg-id="2251" tvg-name="Unfaithful - L'amore infedele (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/1r1IlCjVxhYAujB3GEuLGbUtAwU.jpg" type="movie" group-title="Thriller",Unfaithful - L'amore infedele (2002) [Thriller, Dramma, Romance] ⭐6.7
 https://vixsrc.to/movie/2251?lang=it
 
-#EXTINF:-1 tvg-id="557" tvg-name="Spider-Man (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg" type="movie" group-title="Azione",Spider-Man (2002) [Azione, Fantascienza] ⭐7.3
+#EXTINF:-1 tvg-id="557" tvg-name="Spider-Man (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg" type="movie" group-title="Film Popolari",Spider-Man (2002) [Azione, Fantascienza] ⭐7.3
 https://vixsrc.to/movie/557?lang=it
 
 #EXTINF:-1 tvg-id="16643" tvg-name="Una vita quasi perfetta (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/dtd24WPMqKZmM2MxHsdJVOe6wK4.jpg" type="movie" group-title="Commedia",Una vita quasi perfetta (2002) [Commedia, Dramma, Romance] ⭐5.7
@@ -9706,7 +9706,7 @@ https://vixsrc.to/movie/36586?lang=it
 #EXTINF:-1 tvg-id="1576" tvg-name="Resident Evil (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/1UKNef590A0ZaMnxsscIcWuK1Em.jpg" type="movie" group-title="Horror",Resident Evil (2002) [Horror, Azione, Fantascienza] ⭐6.6
 https://vixsrc.to/movie/1576?lang=it
 
-#EXTINF:-1 tvg-id="425" tvg-name="L'era glaciale (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/dSWZ3oXT7ggTKvcD3noqYhKwTUa.jpg" type="movie" group-title="Animazione",L'era glaciale (2002) [Animazione, Commedia, Famiglia, Avventura] ⭐7.4
+#EXTINF:-1 tvg-id="425" tvg-name="L'era glaciale (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/dSWZ3oXT7ggTKvcD3noqYhKwTUa.jpg" type="movie" group-title="Film Popolari",L'era glaciale (2002) [Animazione, Commedia, Famiglia, Avventura] ⭐7.4
 https://vixsrc.to/movie/425?lang=it
 
 #EXTINF:-1 tvg-id="10590" tvg-name="We Were Soldiers - Fino all'ultimo uomo (2002)" tvg-logo="https://image.tmdb.org/t/p/w500/lerN4wOdVAiMpFrnLkOu5twNtuP.jpg" type="movie" group-title="Azione",We Were Soldiers - Fino all'ultimo uomo (2002) [Azione, Storia, Guerra] ⭐7.1
@@ -10000,7 +10000,7 @@ https://vixsrc.to/movie/955?lang=it
 #EXTINF:-1 tvg-id="9285" tvg-name="Road Trip (2000)" tvg-logo="https://image.tmdb.org/t/p/w500/maFwFCpW551cfmuOzvoW97OUk9X.jpg" type="movie" group-title="Commedia",Road Trip (2000) [Commedia, Avventura] ⭐6.2
 https://vixsrc.to/movie/9285?lang=it
 
-#EXTINF:-1 tvg-id="98" tvg-name="Il gladiatore (2000)" tvg-logo="https://image.tmdb.org/t/p/w500/42KK5H6oo30LxQ9PtYoUklPltrM.jpg" type="movie" group-title="Azione",Il gladiatore (2000) [Azione, Dramma, Avventura] ⭐8.2
+#EXTINF:-1 tvg-id="98" tvg-name="Il gladiatore (2000)" tvg-logo="https://image.tmdb.org/t/p/w500/42KK5H6oo30LxQ9PtYoUklPltrM.jpg" type="movie" group-title="Film Popolari",Il gladiatore (2000) [Azione, Dramma, Avventura] ⭐8.2
 https://vixsrc.to/movie/98?lang=it
 
 #EXTINF:-1 tvg-id="1443" tvg-name="Il giardino delle vergini suicide (2000)" tvg-logo="https://image.tmdb.org/t/p/w500/gp4sqRZfmx1NkFusXNcbQfWtT6Y.jpg" type="movie" group-title="Dramma",Il giardino delle vergini suicide (2000) [Dramma, Romance] ⭐7.1
@@ -10056,3 +10056,40 @@ https://vixsrc.to/movie/9456?lang=it
 
 #EXTINF:-1 tvg-id="49948" tvg-name="Fantasia 2000 (2000)" tvg-logo="https://image.tmdb.org/t/p/w500/zdNAUkVujq3fBToQPuJ3hvvZ5mS.jpg" type="movie" group-title="Animazione",Fantasia 2000 (2000) [Animazione, Famiglia, Musica] ⭐7.0
 https://vixsrc.to/movie/49948?lang=it
+
+#EXTINF:-1 tvg-id="1310086" tvg-name="Due fuori pista 2 (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/krqg1n92cs0NNvkjMtiyFwHeZrx.jpg" type="movie" group-title="Film Al Cinema",Due fuori pista 2 (2025) [Commedia, Dramma] ⭐5.7
+https://vixsrc.to/movie/1310086?lang=it
+
+#EXTINF:-1 tvg-id="1465026" tvg-name="Untold: The Fall of Favre (2025)" tvg-logo="https://image.tmdb.org/t/p/w500/t11mBtF6xd3KnaSGfoP3Q0TnnoE.jpg" type="movie" group-title="Film Al Cinema",Untold: The Fall of Favre (2025) [Documentario] ⭐5.6
+https://vixsrc.to/movie/1465026?lang=it
+
+#EXTINF:-1 tvg-id="1299046" tvg-name="Diamanti (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/l9Gwwr7nMQzCsOZ9B0b6FlOWTU6.jpg" type="movie" group-title="Film Al Cinema",Diamanti (2024) [Commedia, Dramma] ⭐7.3
+https://vixsrc.to/movie/1299046?lang=it
+
+#EXTINF:-1 tvg-id="948184" tvg-name="Stranger Eyes - Sguardi nascosti (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/onbL7JuObSH9goUCklN3wiaa7Ba.jpg" type="movie" group-title="Film Al Cinema",Stranger Eyes - Sguardi nascosti (2024) [Crime, Mistero, Thriller, Dramma] ⭐6.9
+https://vixsrc.to/movie/948184?lang=it
+
+#EXTINF:-1 tvg-id="931825" tvg-name="Madame Luna (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/gpVHTDVrqIJd3IyGF4nJL6Wtmxi.jpg" type="movie" group-title="Film Al Cinema",Madame Luna (2024) [Dramma] ⭐4.9
+https://vixsrc.to/movie/931825?lang=it
+
+#EXTINF:-1 tvg-id="974663" tvg-name="200% lupo (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/j80z4cJ9vVl6jXnXLlIOCFbPQAT.jpg" type="movie" group-title="Film Al Cinema",200% lupo (2024) [Animazione, Avventura, Fantasy, Famiglia, Azione, Commedia] ⭐5.4
+https://vixsrc.to/movie/974663?lang=it
+
+#EXTINF:-1 tvg-id="879412" tvg-name="You Can't Run Forever (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/mkQEa3W4UbkAaL8kwv7pj7AiM0u.jpg" type="movie" group-title="Film Al Cinema",You Can't Run Forever (2024) [Thriller] ⭐5.6
+https://vixsrc.to/movie/879412?lang=it
+
+#EXTINF:-1 tvg-id="1037051" tvg-name="Confidenza (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/af3XewJFtuXElyzCKCMaPNPZW7u.jpg" type="movie" group-title="Film Al Cinema",Confidenza (2024) [Dramma, Thriller] ⭐6.4
+https://vixsrc.to/movie/1037051?lang=it
+
+#EXTINF:-1 tvg-id="1087593" tvg-name="Another End (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/1aUUNWp1gzNHsv1vYH26b4KvvzF.jpg" type="movie" group-title="Film Al Cinema",Another End (2024) [Fantascienza, Dramma] ⭐6.7
+https://vixsrc.to/movie/1087593?lang=it
+
+#EXTINF:-1 tvg-id="1044741" tvg-name="Le occasioni dell'amore (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/HHypMdtrOX6m61h2D5M1EAg5aQ.jpg" type="movie" group-title="Film Al Cinema",Le occasioni dell'amore (2024) [Dramma] ⭐6.3
+https://vixsrc.to/movie/1044741?lang=it
+
+#EXTINF:-1 tvg-id="785429" tvg-name="Ozi - La voce della foresta (2024)" tvg-logo="https://image.tmdb.org/t/p/w500/t6vxwutfM8ilmUmhRDxcApSqo5o.jpg" type="movie" group-title="Film Al Cinema",Ozi - La voce della foresta (2024) [Animazione, Avventura, Famiglia] ⭐5.8
+https://vixsrc.to/movie/785429?lang=it
+
+#EXTINF:-1 tvg-id="1053592" tvg-name="Tutti i nomi di Dio (2023)" tvg-logo="https://image.tmdb.org/t/p/w500/vEzNvVWgom6UEh2JjreF4RAD6CT.jpg" type="movie" group-title="Film Al Cinema",Tutti i nomi di Dio (2023) [Dramma, Azione, Thriller] ⭐6.4
+https://vixsrc.to/movie/1053592?lang=it
+
