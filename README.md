@@ -34,6 +34,20 @@ Non sai come creare un proxy o vuoi una lista gia pronta usa questo link.
 
 ---
 
+## 🔗 Link Film TEST
+
+Questa listi deve essere utilizzata con mediaflow-proxy usando il link cosi.
+
+- **Lista M3U**  
+  [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:PASSWORD&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:PASSWORD&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u)
+
+Sostituisci:
+
+- `<server-ip>` con l'indirizzo IP del tuo server mediaflow-proxy  
+- `<password>` con la password del tuo mediaflow-proxy  
+
+---
+
 ## 📺 Come aggiungere la lista su Stremio
 
 Per utilizzare questa lista IPTV su Stremio, dovrai usare l'addon **OMG Premium TV**:
@@ -116,7 +130,7 @@ questo sara il link della tua lista da mettere nelle app iptv!
 
 Sostituisci:
 
-- `<server-ip>` con l'indirizzo IP del tuo server MFP
+- `<server-ip>` con l'indirizzo IP del tuo server TvProxy
 - `<url-lista>` con l'URL effettivo della tua lista M3U (es. quello GitHub)
 
 Questo ti permetterà di servire la lista M3U attraverso il tuo proxy personale in modo sicuro e performante.
