@@ -865,7 +865,7 @@ def eventi_m3u8_generator_world():
                             f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n')
                             # Aggiungi EXTHTTP headers per canali daddy (esclusi .php)
                             if ("newkso.ru" in stream or "premium" in stream) and not stream.endswith('.php'):
-                                daddy_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
+                                daddy_headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
                                 f.write(f'#EXTHTTP:{json.dumps(daddy_headers)}\n')
                             f.write(f'{stream}\n\n')
                             print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
@@ -1428,7 +1428,7 @@ def eventi_m3u8_generator():
                             f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n')
                             # Aggiungi EXTHTTP headers per canali daddy (esclusi .php)
                             if ("newkso.ru" in stream or "premium" in stream) and not stream.endswith('.php'):
-                                daddy_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
+                                daddy_headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
                                 f.write(f'#EXTHTTP:{json.dumps(daddy_headers)}\n')
                             f.write(f'{stream}\n\n')
                             print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
@@ -2756,7 +2756,7 @@ def italy_channels():
                             f.write(f"{final_url_to_write}\n\n")
                         # 4. Controlla se è un canale daddy (newkso.ru o premium) ma non .php
                         elif ("newkso.ru" in final_url_to_write or "premium" in final_url_to_write) and not final_url_to_write.endswith('.php'):
-                            daddy_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
+                            daddy_headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
                             f.write(f'#EXTHTTP:{json.dumps(daddy_headers)}\n')
                             f.write(f"{final_url_to_write}\n\n")
                         # 5. Altri canali (es. link diretti manuali senza http_headers specifici)
