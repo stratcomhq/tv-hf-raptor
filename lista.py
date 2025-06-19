@@ -9,6 +9,51 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+def search_m3u8_in_sites(channel_id, is_tennis=False):
+    """
+    Cerca i file .m3u8 nei siti specificati per i canali daddy e tennis
+    """
+    if is_tennis:
+        # Per i canali tennis, cerca in wikihz
+        # Esempio: se id è 1507 cerca wikiten7, se è 1517 cerca wikiten17
+        if len(str(channel_id)) == 4 and str(channel_id).startswith('15'):
+            tennis_suffix = str(channel_id)[2:]  # Prende le ultime due cifre
+            folder_name = f"wikiten{tennis_suffix}"
+            base_url = "https://new.newkso.ru/wikihz/"
+            test_url = f"{base_url}{folder_name}/mono.m3u8"
+            
+            try:
+                response = requests.head(test_url, timeout=5)
+                if response.status_code == 200:
+                    print(f"[✓] Stream tennis trovato: {test_url}")
+                    return test_url
+            except:
+                pass
+    else:
+        # Per i canali daddy, cerca nei siti specificati
+        daddy_sites = [
+            "https://new.newkso.ru/wind/",
+            "https://new.newkso.ru/ddy6/", 
+            "https://new.newkso.ru/zeko/",
+            "https://new.newkso.ru/nfs/",
+            "https://new.newkso.ru/dokko1/"
+        ]
+        
+        folder_name = f"premium{channel_id}"
+        
+        for site in daddy_sites:
+            test_url = f"{site}{folder_name}/mono.m3u8"
+            try:
+                response = requests.head(test_url, timeout=5)
+                if response.status_code == 200:
+                    print(f"[✓] Stream daddy trovato: {test_url}")
+                    return test_url
+            except:
+                continue
+    
+    print(f"[!] Nessun stream .m3u8 trovato per channel_id {channel_id}")
+    return None
+
 def merger_playlist():
     # Codice del primo script qui
     # Aggiungi il codice del tuo script "merger_playlist.py" in questa funzione.
@@ -665,11 +710,14 @@ def eventi_m3u8_generator_world():
         return None
      
     def get_stream_from_channel_id(channel_id): 
-        # Costruisce l'URL .php per Daddylive
-        # La seconda definizione di eventi_m3u8_generator_world usa /stream/stream-{id}.php
+        # Prima cerca nei nuovi siti .m3u8
+        m3u8_url = search_m3u8_in_sites(channel_id, is_tennis=False)
+        if m3u8_url:
+            return m3u8_url
+        
+        # Fallback al vecchio metodo .php se non trovato
         embed_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php" 
-
-        print(f"Generazione URL base per il canale Daddylive {channel_id}.")
+        print(f"Fallback URL .php per il canale Daddylive {channel_id}.")
         return embed_url
      
     # def clean_category_name(name): # Rimossa definizione duplicata
@@ -792,6 +840,7 @@ def eventi_m3u8_generator_world():
                     tvg_name = ch["tvg_name"] 
                     channel_id = ch["channel_id"] 
                     event_title = ch["event_title"]  # Otteniamo il titolo dell'evento
+                    channel_name = ch["channel_name"]
                     
                     # Cerca un logo per questo evento
                     # Rimuovi l'orario dal titolo dell'evento prima di cercare il logo
@@ -801,10 +850,24 @@ def eventi_m3u8_generator_world():
                     logo_attribute = f' tvg-logo="{logo_url}"' if logo_url else ''
      
                     try: 
-                        stream = get_stream_from_channel_id(channel_id) 
+                        # Controlla se è un canale tennis
+                        if "tennis channel" in channel_name.lower() or "tennis stream" in channel_name.lower():
+                            # Usa la nuova funzione per i canali tennis
+                            stream = search_m3u8_in_sites(channel_id, is_tennis=True)
+                            if not stream:
+                                # Fallback al metodo originale se non trovato
+                                stream = get_stream_from_channel_id(channel_id)
+                        else:
+                            stream = get_stream_from_channel_id(channel_id)
+                            
                         if stream: 
                             cleaned_event_id = clean_tvg_id(event_title) # Usa event_title per tvg-id
-                            f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n{stream}\n\n')
+                            f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n')
+                            # Aggiungi EXTHTTP headers per canali daddy (esclusi .php)
+                            if ("newkso.ru" in stream or "premium" in stream) and not stream.endswith('.php'):
+                                daddy_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
+                                f.write(f'#EXTHTTP:{json.dumps(daddy_headers)}\n')
+                            f.write(f'{stream}\n\n')
                             print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
                         else: 
                             print(f"[✗] {tvg_name} - Nessuno stream trovato") 
@@ -1244,11 +1307,14 @@ def eventi_m3u8_generator():
         return None
      
     def get_stream_from_channel_id(channel_id): 
-        # Costruisce l'URL .php per Daddylive
-        # eventi_m3u8_generator usa /stream/stream-{id}.php
+        # Prima cerca nei nuovi siti .m3u8
+        m3u8_url = search_m3u8_in_sites(channel_id, is_tennis=False)
+        if m3u8_url:
+            return m3u8_url
+        
+        # Fallback al vecchio metodo .php se non trovato
         embed_url = f"{LINK_DADDY}/stream/stream-{channel_id}.php" 
-
-        print(f"Generazione URL base per il canale Daddylive {channel_id}.")
+        print(f"Fallback URL .php per il canale Daddylive {channel_id}.")
         return embed_url
      
     def clean_category_name(name): 
@@ -1359,7 +1425,12 @@ def eventi_m3u8_generator():
                         stream = get_stream_from_channel_id(channel_id) 
                         if stream: 
                             cleaned_event_id = clean_tvg_id(event_title) # Usa event_title per tvg-id
-                            f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n{stream}\n\n')
+                            f.write(f'#EXTINF:-1 tvg-id="{cleaned_event_id}" tvg-name="{category} | {tvg_name}"{logo_attribute} group-title="Eventi Live",{category} | {tvg_name}\n')
+                            # Aggiungi EXTHTTP headers per canali daddy (esclusi .php)
+                            if ("newkso.ru" in stream or "premium" in stream) and not stream.endswith('.php'):
+                                daddy_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
+                                f.write(f'#EXTHTTP:{json.dumps(daddy_headers)}\n')
+                            f.write(f'{stream}\n\n')
                             print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
                         else: 
                             print(f"[✗] {tvg_name} - Nessuno stream trovato") 
@@ -2564,11 +2635,14 @@ def italy_channels():
 
     # --- Funzioni per risolvere gli stream Daddylive ---
     def get_stream_from_channel_id(channel_id):
-        # LINK_DADDY Ã¨ una variabile globale
-        # italy_channels usa /stream/stream-{id}.php per i canali Daddylive dalla pagina HTML
-        raw_php_url = f"{LINK_DADDY.rstrip('/')}/stream/stream-{channel_id}.php"
+        # Prima cerca nei nuovi siti .m3u8
+        m3u8_url = search_m3u8_in_sites(channel_id, is_tennis=False)
+        if m3u8_url:
+            return m3u8_url
         
-        print(f"Generazione URL base per il canale Daddylive {channel_id}.")
+        # Fallback al vecchio metodo .php se non trovato
+        raw_php_url = f"{LINK_DADDY.rstrip('/')}/stream/stream-{channel_id}.php"
+        print(f"Fallback URL .php per il canale Daddylive {channel_id}.")
         return raw_php_url
     # --- Fine funzioni Daddylive ---
 
@@ -2676,11 +2750,16 @@ def italy_channels():
                             vavoo_headers = {"User-Agent": "VAVOO/2.6", "Referer": "https://vavoo.to/", "Origin": "https://vavoo.to"}
                             f.write(f'#EXTHTTP:{json.dumps(vavoo_headers)}\n')
                             f.write(f"{final_url_to_write}\n\n")
-                        # 3. Controlla se Ã¨ un file .php (tipicamente Daddylive)
+                        # 3. Controlla se è un file .php (tipicamente Daddylive)
                         elif final_url_to_write.endswith('.php'): 
-                            # Per file .php (es. Daddylive), nessun header speciale aggiunto qui
+                            # Per file .php (es. Daddylive), nessun header speciale aggiunto
                             f.write(f"{final_url_to_write}\n\n")
-                        # 4. Altri canali (es. link diretti manuali senza http_headers specifici)
+                        # 4. Controlla se è un canale daddy (newkso.ru o premium) ma non .php
+                        elif ("newkso.ru" in final_url_to_write or "premium" in final_url_to_write) and not final_url_to_write.endswith('.php'):
+                            daddy_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
+                            f.write(f'#EXTHTTP:{json.dumps(daddy_headers)}\n')
+                            f.write(f"{final_url_to_write}\n\n")
+                        # 5. Altri canali (es. link diretti manuali senza http_headers specifici)
                         else:
                             # Scrivi l'URL direttamente senza header aggiuntivi
                             f.write(f"{final_url_to_write}\n\n")
