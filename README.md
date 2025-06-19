@@ -39,7 +39,7 @@ Non sai come creare un proxy o vuoi una lista gia pronta usa questo link.
 Questa listi deve essere utilizzata con mediaflow-proxy usando il link cosi.
 
 - **Lista M3U**  
-  [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:PASSWORD&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:PASSWORD&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u)
+  [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u)
 
 Sostituisci:
 
