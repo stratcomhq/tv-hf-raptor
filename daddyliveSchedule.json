@@ -1,5 +1,87 @@
 {
     "Thursday 19th June 2025 - Schedule Time UK GMT": {
+        "PPV Events</span>": [
+            {
+                "time": "21:45",
+                "event": "Lucas Oil Firecracker 100 Lernerville",
+                "channels": [
+                    {
+                        "channel_name": "Floracing",
+                        "channel_id": "55"
+                    }
+                ]
+            },
+            {
+                "time": "21:45",
+                "event": "Super DIRTcar Series",
+                "channels": [
+                    {
+                        "channel_name": "Event PPV",
+                        "channel_id": "59"
+                    }
+                ]
+            },
+            {
+                "time": "22:00",
+                "event": "2025 NAPA ASCoC Ohio Sprint Speedweek at Waynesfield Raceway Park",
+                "channels": [
+                    {
+                        "channel_name": "Floracing",
+                        "channel_id": "68"
+                    }
+                ]
+            },
+            {
+                "time": "22:00",
+                "event": "World of Outlaws Sprint Cars Husets",
+                "channels": [
+                    {
+                        "channel_name": "Event PPV",
+                        "channel_id": "69"
+                    }
+                ]
+            },
+            {
+                "time": "22:30",
+                "event": "2025 USAC Eastern Storm at Big Diamond Speedwa",
+                "channels": [
+                    {
+                        "channel_name": "Floracing",
+                        "channel_id": "76"
+                    }
+                ]
+            },
+            {
+                "time": "22:45",
+                "event": "2025 Flying Tiger Triple Crown #1 at Thunder Road Speedbowl",
+                "channels": [
+                    {
+                        "channel_name": "Floracing",
+                        "channel_id": "77"
+                    }
+                ]
+            },
+            {
+                "time": "23:15",
+                "event": "DIRTcar Summer Nationals Late Models Lee",
+                "channels": [
+                    {
+                        "channel_name": "Dirtvision",
+                        "channel_id": "86"
+                    }
+                ]
+            },
+            {
+                "time": "00:45",
+                "event": "2025 NARC Super Dirt Cup at Skagit Speedway",
+                "channels": [
+                    {
+                        "channel_name": "Floracing",
+                        "channel_id": "105"
+                    }
+                ]
+            }
+        ],
         "TV Shows</span>": [
             {
                 "time": "15:00",
@@ -759,6 +841,11 @@
             },
             {
                 "time": "01:15",
+                "event": "Colombia - Primera A - Apertura : America de Cali vs Independiente Medellin",
+                "channels": []
+            },
+            {
+                "time": "01:15",
                 "event": "CONCACAF Gold Cup : Saudi Arabia vs USA",
                 "channels": [
                     {
@@ -813,13 +900,18 @@
             },
             {
                 "time": "01:15",
-                "event": "Colombia Primera A - 6:45am - Once Caldas vs Atl\u00e9tico Nacional",
+                "event": "Colombia Primera A : Once Caldas vs Atl\u00e9tico Nacional",
                 "channels": [
                     {
                         "channel_name": "Win+ Futbol",
                         "channel_id": "392"
                     }
                 ]
+            },
+            {
+                "time": "01:15",
+                "event": "Colombia - Primera A : Millonarios vs Santa Fe",
+                "channels": []
             }
         ],
         "Cricket</span>": [
