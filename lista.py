@@ -23,7 +23,7 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
             test_url = f"{base_url}{folder_name}/mono.m3u8"
             
             try:
-                response = requests.head(test_url, timeout=30)
+                response = requests.head(test_url, timeout=10)
                 if response.status_code == 200:
                     print(f"[✓] Stream tennis trovato: {test_url}")
                     return test_url
@@ -44,7 +44,7 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
         for site in daddy_sites:
             test_url = f"{site}{folder_name}/mono.m3u8"
             try:
-                response = requests.head(test_url, timeout=120)
+                response = requests.head(test_url, timeout=10)
                 if response.status_code == 200:
                     print(f"[✓] Stream daddy trovato: {test_url}")
                     return test_url
