@@ -36,7 +36,7 @@ Non sai come creare un proxy o vuoi una lista gia pronta usa questo link.
 
 ## 🔗 Link Film & MPD TEST
 
-Questa listi deve essere utilizzata con mediaflow-proxy usando il link cosi.
+Queste liste devono essere utilizzate con mediaflow-proxy usando il link cosi.
 
 - **Lista Film**  
   [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u)
