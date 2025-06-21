@@ -15,9 +15,14 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
     """
     # Questi siti richiedono headers specifici per non restituire un errore 404
     daddy_headers = {
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
-        "Referer": "https://forcedtoplay.xyz/",
-        "Origin": "https://forcedtoplay.xyz"
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+        'Accept': '*/*',
+        'Accept-Language': 'it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Origin': 'https://forcedtoplay.xyz',
+        'Referer': 'https://forcedtoplay.xyz/',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'cross-site',
     }
 
     if is_tennis:
@@ -28,18 +33,22 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
             folder_name = f"wikiten{tennis_suffix}"
             base_url = "https://new.newkso.ru/wikihz/"
             test_url = f"{base_url}{folder_name}/mono.m3u8"
+
+            response = None
             
             try:
                 response = requests.get(test_url, timeout=10, headers=daddy_headers, stream=True)
                 if response.status_code == 200:
                     print(f"[✓] Stream tennis trovato: {test_url}")
-                    response.close() # Chiudi la connessione immediatamente
                     return test_url
                 else:
                     print(f"[i] Tentativo su {test_url} (tennis) fallito con status code: {response.status_code}")
-                response.close() # Assicurati che la connessione sia chiusa anche in caso di status code non 200
             except requests.exceptions.RequestException as e:
                 print(f"[!] Errore di connessione per {test_url} (tennis): {e}")
+
+            finally:
+                if response:
+                    response.close()
     else:
         # Per i canali daddy, cerca nei siti specificati
         daddy_sites = [
@@ -54,18 +63,20 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
         
         for site in daddy_sites:
             test_url = f"{site}{folder_name}/mono.m3u8"
+            response = None
             try:
                 response = requests.get(test_url, timeout=10, headers=daddy_headers, stream=True)
                 if response.status_code == 200:
                     print(f"[✓] Stream daddy trovato: {test_url}")
-                    response.close() # Chiudi la connessione immediatamente
                     return test_url
                 else:
                     print(f"[i] Tentativo su {test_url} fallito con status code: {response.status_code}")
-                response.close() # Assicurati che la connessione sia chiusa anche in caso di status code non 200
             except requests.exceptions.RequestException as e:
                 print(f"[!] Errore di connessione per {test_url}: {e}")
                 continue
+            finally:
+                if response:
+                    response.close()
     
     print(f"[!] Nessun stream .m3u8 trovato per channel_id {channel_id}")
     return None
