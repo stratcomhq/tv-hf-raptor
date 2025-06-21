@@ -17,7 +17,7 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
     PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
     
     if PROXIES:
-        print(f"[i] Utilizzo del proxy: {PROXY_URL}")
+        print(f"[i] Utilizzo del proxy: X ")
 
     if is_tennis:
         # Per i canali tennis, cerca in wikihz
