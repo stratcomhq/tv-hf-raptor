@@ -157,7 +157,7 @@ Per ottenere i link M3U8 diretti per Daddylive e farli funzionare correttamente,
 ### Come configurare `HTTP_PROXY` su GitHub:
 
 1.  **Accedi alle impostazioni del tuo repository GitHub**: Vai su `Settings` -> `Secrets and variables` -> `Actions`.
-2.  **Aggiungi una nuova variabile**: Clicca su `New repository variable`.
+2.  **Aggiungi una nuova variabile**: Clicca su `New repository secret`.
 3.  **Nome della variabile**: Inserisci `HTTP_PROXY`.
 4.  **Valore della variabile**: Qui dovrai inserire i tuoi proxy. È fortemente consigliato utilizzare proxy di alta qualità per una maggiore stabilità. Puoi ottenerli da servizi come [webshare.io](https://www.webshare.io/).
 
