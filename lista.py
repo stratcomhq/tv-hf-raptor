@@ -13,6 +13,12 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
     """
     Cerca i file .m3u8 nei siti specificati per i canali daddy e tennis
     """
+    PROXY_URL = os.getenv("HTTP_PROXY")
+    PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
+    
+    if PROXIES:
+        print(f"[i] Utilizzo del proxy: {PROXY_URL}")
+
     if is_tennis:
         # Per i canali tennis, cerca in wikihz
         # Esempio: se id è 1507 cerca wikiten7, se è 1517 cerca wikiten17
@@ -23,12 +29,17 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
             test_url = f"{base_url}{folder_name}/mono.m3u8"
             
             try:
-                response = requests.head(test_url, timeout=10)
+                response = requests.head(test_url, timeout=15, proxies=PROXIES)
                 if response.status_code == 200:
                     print(f"[✓] Stream tennis trovato: {test_url}")
                     return test_url
-            except:
-                pass
+                else:
+                    print(f"[-] Tentativo su {test_url} fallito con status code: {response.status_code}")
+            except requests.exceptions.RequestException as e:
+                print(f"[!] Errore di rete cercando {test_url}: {e}")
+            except Exception as e:
+                print(f"[!] Errore imprevisto cercando {test_url}: {e}")
+
     else:
         # Per i canali daddy, cerca nei siti specificati
         daddy_sites = [
@@ -44,12 +55,18 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
         for site in daddy_sites:
             test_url = f"{site}{folder_name}/mono.m3u8"
             try:
-                response = requests.head(test_url, timeout=10)
+                response = requests.head(test_url, timeout=15, proxies=PROXIES)
                 if response.status_code == 200:
                     print(f"[✓] Stream daddy trovato: {test_url}")
                     return test_url
-            except:
-                continue
+                else:
+                    # Logga lo status code per il debug
+                    print(f"[-] Tentativo su {test_url} fallito con status code: {response.status_code}")
+            except requests.exceptions.RequestException as e:
+                print(f"[!] Errore di rete cercando {test_url}: {e}")
+                continue # Continua con il prossimo sito
+            except Exception as e:
+                print(f"[!] Errore imprevisto cercando {test_url}: {e}"
     
     print(f"[!] Nessun stream .m3u8 trovato per channel_id {channel_id}")
     return None
