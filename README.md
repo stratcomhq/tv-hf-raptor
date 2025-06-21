@@ -30,7 +30,7 @@ Queste liste devono essere utilizzate con un proxy.
 Non sai come creare un proxy o vuoi una lista gia pronta usa questo link.
 
 - **Lista M3U con Proxy**  
-  [`https://nzo66-tvproxy.hf.space/proxy?url=https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/lista.m3u`](https://nzo66-tvproxy.hf.space/proxy?url=https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/lista.m3u)
+  [`https://nzo66-tvproxy.hf.space/proxy?url=https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/lista.m3u`](https://nzo66-tvproxy.hf.space/proxy?<server-ip>/proxy?url=https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/lista.m3u)
 
 ---
 
@@ -147,6 +147,48 @@ Dopo le modifiche:
 1. Vai sulla sezione **Actions** della tua repo  
 2. Avvia manualmente lo script  
 3. Assicurati che **GitHub Actions sia abilitato** nella repository  
+
+---
+
+## 💡 Ottenere link M3U8 diretti per Daddylive con proxy HTTP su GitHub
+
+Per ottenere i link M3U8 diretti per Daddylive e farli funzionare correttamente, è necessario configurare i proxy HTTP come variabile d'ambiente su GitHub. Questa variabile è specificamente `HTTP_PROXY`.
+
+### Come configurare `HTTP_PROXY` su GitHub:
+
+1.  **Accedi alle impostazioni del tuo repository GitHub**: Vai su `Settings` -> `Secrets and variables` -> `Actions`.
+2.  **Aggiungi una nuova variabile**: Clicca su `New repository variable`.
+3.  **Nome della variabile**: Inserisci `HTTP_PROXY`.
+4.  **Valore della variabile**: Qui dovrai inserire i tuoi proxy. È fortemente consigliato utilizzare proxy di alta qualità per una maggiore stabilità. Puoi ottenerli da servizi come [webshare.io](https://www.webshare.io/).
+
+    **Importante**: Per un funzionamento ottimale, avrai bisogno di **almeno due account proxy** da webshare.io. I proxy devono essere separati da una virgola (`,`).
+
+    **Formato esempio per il valore di `HTTP_PROXY`**:
+    `http://user1:pass1@ip1:port1,http://user2:pass2@ip2:port2`
+
+    Assicurati che i proxy siano attivi e funzionanti.
+
+Configurando questa variabile, le tue GitHub Actions utilizzeranno automaticamente questi proxy per risolvere i link M3U8 di Daddylive, garantendo una riproduzione fluida.
+
+---
+
+### Come ottenere proxy gratuiti da webshare.io:
+
+1.  **Visita il sito web**: Vai su <mcurl name="https://www.webshare.io/" url="https://www.webshare.io/"></mcurl>.
+2.  **Registrati per un account gratuito**: Clicca su "Get Started for Free" o "Sign Up" e crea un account. Non è richiesta una carta di credito.
+3.  **Accedi alla dashboard**: Dopo la registrazione, verrai reindirizzato alla tua dashboard.
+4.  **Scarica i proxy gratuiti**: Nella dashboard, cerca l'opzione per scaricare i tuoi proxy gratuiti. <mcreference link="https://www.webshare.io/" index="1">1</mcreference> Webshare.io offre 10 proxy gratuiti per account, con un limite di traffico di 1GB al mese. <mcreference link="https://www.webshare.io/" index="1">1</mcreference>
+
+### Come estrarre la stringa del proxy da webshare.io:
+
+1.  **Accedi alla tua dashboard di webshare.io**.
+2.  Vai nella sezione Free > Proxy List, seleziona le seguenti opzioni:
+    -   **Authentication Method**: `Username/Password`
+    -   **Connection Method**: `Rotating Proxy Endpoint`
+    -   **Proxy Protocol**: `HTTP`
+3.  Clicca su "See example configurations" o un'opzione simile.
+4.  Cerca l'esempio del comando `curl`. La stringa del proxy sarà la parte all'interno delle doppie virgolette, subito dopo `-x` o `--proxy`.
+    -   **Esempio**: Se il comando `curl` è `curl -x "http://user:pass@ip:port/" http://example.com`, la stringa del proxy è `http://user:pass@ip:port` (assicurati di escludere la barra finale `/` se presente).
 
 ---
 
