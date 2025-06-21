@@ -23,12 +23,14 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
             test_url = f"{base_url}{folder_name}/mono.m3u8"
             
             try:
-                response = requests.head(test_url, timeout=30)
+                response = requests.head(test_url, timeout=10)
                 if response.status_code == 200:
                     print(f"[✓] Stream tennis trovato: {test_url}")
                     return test_url
-            except:
-                pass
+                else:
+                    print(f"[i] Tentativo su {test_url} (tennis) fallito con status code: {response.status_code}")
+            except requests.exceptions.RequestException as e:
+                print(f"[!] Errore di connessione per {test_url} (tennis): {e}")
     else:
         # Per i canali daddy, cerca nei siti specificati
         daddy_sites = [
@@ -44,11 +46,14 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
         for site in daddy_sites:
             test_url = f"{site}{folder_name}/mono.m3u8"
             try:
-                response = requests.head(test_url, timeout=30)
+                response = requests.head(test_url, timeout=10)
                 if response.status_code == 200:
                     print(f"[✓] Stream daddy trovato: {test_url}")
                     return test_url
-            except:
+                else:
+                    print(f"[i] Tentativo su {test_url} fallito con status code: {response.status_code}")
+            except requests.exceptions.RequestException as e:
+                print(f"[!] Errore di connessione per {test_url}: {e}")
                 continue
     
     print(f"[!] Nessun stream .m3u8 trovato per channel_id {channel_id}")
