@@ -66,7 +66,7 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
                 print(f"[!] Errore di rete cercando {test_url}: {e}")
                 continue # Continua con il prossimo sito
             except Exception as e:
-                print(f"[!] Errore imprevisto cercando {test_url}: {e}"
+                print(f"[!] Errore imprevisto cercando {test_url}: {e}")
     
     print(f"[!] Nessun stream .m3u8 trovato per channel_id {channel_id}")
     return None
