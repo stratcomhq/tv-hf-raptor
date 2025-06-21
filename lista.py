@@ -13,6 +13,13 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
     """
     Cerca i file .m3u8 nei siti specificati per i canali daddy e tennis
     """
+    # Questi siti richiedono headers specifici per non restituire un errore 404
+    daddy_headers = {
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+        "Referer": "https://forcedtoplay.xyz/",
+        "Origin": "https://forcedtoplay.xyz"
+    }
+
     if is_tennis:
         # Per i canali tennis, cerca in wikihz
         # Esempio: se id è 1507 cerca wikiten7, se è 1517 cerca wikiten17
@@ -23,7 +30,7 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
             test_url = f"{base_url}{folder_name}/mono.m3u8"
             
             try:
-                response = requests.head(test_url, timeout=10)
+                response = requests.head(test_url, timeout=10, headers=daddy_headers)
                 if response.status_code == 200:
                     print(f"[✓] Stream tennis trovato: {test_url}")
                     return test_url
@@ -46,7 +53,7 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
         for site in daddy_sites:
             test_url = f"{site}{folder_name}/mono.m3u8"
             try:
-                response = requests.head(test_url, timeout=10)
+                response = requests.head(test_url, timeout=10, headers=daddy_headers)
                 if response.status_code == 200:
                     print(f"[✓] Stream daddy trovato: {test_url}")
                     return test_url
