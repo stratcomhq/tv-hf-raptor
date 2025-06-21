@@ -26,6 +26,8 @@ jobs:
       - name: Run Script
         run: |
           python lista.py
+        env:
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
       
       - name: Configura Git
         run: |
