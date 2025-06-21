@@ -172,23 +172,23 @@ Configurando questa variabile, le tue GitHub Actions utilizzeranno automaticamen
 
 ---
 
-### Come ottenere proxy gratuiti da webshare.io:
+### 🆓 Come ottenere proxy gratuiti da webshare.io:
 
-1.  **Visita il sito web**: Vai su <mcurl name="https://www.webshare.io/" url="https://www.webshare.io/"></mcurl>.
-2.  **Registrati per un account gratuito**: Clicca su "Get Started for Free" o "Sign Up" e crea un account. Non è richiesta una carta di credito.
-3.  **Accedi alla dashboard**: Dopo la registrazione, verrai reindirizzato alla tua dashboard.
-4.  **Scarica i proxy gratuiti**: Nella dashboard, cerca l'opzione per scaricare i tuoi proxy gratuiti. <mcreference link="https://www.webshare.io/" index="1">1</mcreference> Webshare.io offre 10 proxy gratuiti per account, con un limite di traffico di 1GB al mese. <mcreference link="https://www.webshare.io/" index="1">1</mcreference>
+1.  **Visita il sito web** 🌐: Vai su <mcurl name="https://www.webshare.io/" url="https://www.webshare.io/"></mcurl>.
+2.  **Registrati per un account gratuito** ✍️: Clicca su "Get Started for Free" o "Sign Up" e crea un account. Non è richiesta una carta di credito. 💳
+3.  **Accedi alla dashboard** 🚀: Dopo la registrazione, verrai reindirizzato alla tua dashboard.
+4.  **Scarica i proxy gratuiti** 📥: Nella dashboard, cerca l'opzione per scaricare i tuoi proxy gratuiti. <mcreference link="https://www.webshare.io/" index="1">1</mcreference> Webshare.io offre 10 proxy gratuiti per account, con un limite di traffico di 1GB al mese. <mcreference link="https://www.webshare.io/" index="1">1</mcreference>
 
-### Come estrarre la stringa del proxy da webshare.io:
+### 🔗 Come estrarre la stringa del proxy da webshare.io:
 
 1.  **Accedi alla tua dashboard di webshare.io**.
-2.  Vai nella sezione Free > Proxy List, seleziona le seguenti opzioni:
+2.  Nella sezione Free > Proxy List, seleziona le seguenti opzioni:
     -   **Authentication Method**: `Username/Password`
     -   **Connection Method**: `Rotating Proxy Endpoint`
     -   **Proxy Protocol**: `HTTP`
-3.  Clicca su "See example configurations" o un'opzione simile.
-4.  Cerca l'esempio del comando `curl`. La stringa del proxy sarà la parte all'interno delle doppie virgolette, subito dopo `-x` o `--proxy`.
-    -   **Esempio**: Se il comando `curl` è `curl -x "http://user:pass@ip:port/" http://example.com`, la stringa del proxy è `http://user:pass@ip:port` (assicurati di escludere la barra finale `/` se presente).
+3.  Clicca su "See example configurations" o un'opzione simile. 🔍
+4.  Cerca l'esempio del comando `curl`. La stringa del proxy sarà la parte all'interno delle doppie virgolette, subito dopo `-x` o `--proxy`. 🎯
+    -   **Esempio**: Se il comando `curl` è `curl -x "http://user:pass@ip:port/" http://example.com`, la stringa del proxy è `http://user:pass@ip:port` (assicurati di escludere la barra finale `/` se presente). 
 
 ---
 
