@@ -29,15 +29,12 @@ Queste liste devono essere utilizzate con un proxy.
 
 ---
 
-## 🔗 Link Film & MPD TEST
+## 🔗 Link Film TEST
 
 Queste liste devono essere utilizzate con mediaflow-proxy usando il link cosi.
 
 - **Lista Film**  
   [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/film.m3u)
-
-- **Lista MPD** (Solo con ip Europeo come Render)
-  [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/mpd.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/mpd.m3u)
 
 Sostituisci:
 
