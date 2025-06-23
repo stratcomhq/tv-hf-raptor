@@ -2614,25 +2614,15 @@ def italy_channels():
         # poichÃ© sono caricate nello scope della funzione italy_channels().
 
         # Esempio di header comuni per un gruppo di canali (es. kangal)
-        kangal_common_headers = {
+        custom_common_headers = {
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
             "referer": f"{LINK_SS}/", 
             "origin": LINK_SS        
         }
 
         return [
-            # --- Canali KANGAL.ICU (esempio con header comuni) ---
-            {"name": "SKY SPORT 251 (X)", "url": "https://hls.kangal.icu/hls/sky251/index.m3u8", "tvg_id": "sky.sport..251.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 252 (X)", "url": "https://hls.kangal.icu/hls/sky252/index.m3u8", "tvg_id": "sky.sport..252.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 253 (X)", "url": "https://hls.kangal.icu/hls/sky253/index.m3u8", "tvg_id": "sky.sport..253.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 254 (X)", "url": "https://hls.kangal.icu/hls/sky254/index.m3u8", "tvg_id": "sky.sport..254.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 255 (X)", "url": "https://hls.kangal.icu/hls/sky255/index.m3u8", "tvg_id": "sky.sport..255.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 256 (X)", "url": "https://hls.kangal.icu/hls/sky256/index.m3u8", "tvg_id": "sky.sport..256.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 257 (X)", "url": "https://hls.kangal.icu/hls/sky257/index.m3u8", "tvg_id": "sky.sport..257.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 258 (X)", "url": "https://hls.kangal.icu/hls/sky258/index.m3u8", "tvg_id": "sky.sport..258.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 259 (X)", "url": "https://hls.kangal.icu/hls/sky259/index.m3u8", "tvg_id": "sky.sport..259.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 260 (X)", "url": "https://hls.kangal.icu/hls/sky260/index.m3u8", "tvg_id": "sky.sport..260.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
-            {"name": "SKY SPORT 261 (X)", "url": "https://hls.kangal.icu/hls/sky261/index.m3u8", "tvg_id": "sky.sport..261.it", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/hd/sky-sport-hd-it.png", "category": "Sport", "http_headers": kangal_common_headers},
+            # --- Canali CUSTOM (esempio con header comuni) ---
+            #{"name": "XXXXX", "url": "XXXXXXXXX.m3u8", "tvg_id": "XXXXXXXX", "logo": "XXXXXXXX.png", "category": "XXXXXXXXXX", "http_headers": custom_common_headers}
 
             # --- ESEMPIO: Canale con header DIVERSI/UNICI ---
             #{
