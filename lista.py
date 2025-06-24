@@ -2864,22 +2864,15 @@ def italy_channels():
         for base_vavoo_url in BASE_URLS:
             json_channels_data = fetch_channels(base_vavoo_url)
             all_fetched_channels.extend(filter_italian_channels(json_channels_data, base_vavoo_url))
-
         # Controlla se i canali Daddylive devono essere inclusi
         canali_daddy_enabled = os.getenv("CANALI_DADDY", "no").strip().lower() == "si"
         
-
         # 2. Canali dalla pagina HTML di Daddylive
-        print("\n--- Fetching canali da Daddylive (HTML) ---")
-        daddylive_247_page_url = f"{LINK_DADDY.rstrip('/')}/24-7-channels.php"
-        scraped_daddylive_channels = fetch_channels_from_daddylive_page(daddylive_247_page_url, LINK_DADDY)
-
         processed_scraped_channels = []
         if canali_daddy_enabled:
             print("\n--- Fetching canali da Daddylive (HTML) ---")
             daddylive_247_page_url = f"{LINK_DADDY.rstrip('/')}/24-7-channels.php"
             scraped_daddylive_channels = fetch_channels_from_daddylive_page(daddylive_247_page_url, LINK_DADDY)
-
             processed_scraped_channels = []
             seen_daddy_transformed_base_names = {}
             for raw_name, stream_url in scraped_daddylive_channels:
