@@ -3125,13 +3125,14 @@ def remover():
     canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
 
     # Lista dei file da eliminare
-    files_to_delete = ["channels_italy.m3u8", "eventi.xml"]
+    files_to_delete = ["channels_italy.m3u8"]
 
     # Condizionalmente aggiungi eventi.m3u8 alla lista di eliminazione
     if canali_daddy_flag == "si":
         files_to_delete.append("eventi.m3u8")
+        files_to_delete.append("eventi.xml")
     else:
-        print("[INFO] Skipping deletion of eventi.m3u8 in remover as CANALI_DADDY is not 'si'.")
+        print("[INFO] Skipping deletion of eventi.m3u8 and eventi.xml in remover as CANALI_DADDY is not 'si'.")
     
     for filename in files_to_delete:
         if os.path.exists(filename):
