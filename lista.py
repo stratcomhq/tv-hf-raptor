@@ -3146,21 +3146,26 @@ def main():
         except Exception as e:
             print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
 
+        # Leggi le variabili d'ambiente
         eventi_en = os.getenv("EVENTI_EN", "no").strip().lower()
         world_flag = os.getenv("WORLD", "si").strip().lower()
+        canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
 
         # EPG Eventi
-        try:
-            if eventi_en == "si":
-                epg_eventi_generator_world()
-            else:
-                epg_eventi_generator()
-        except Exception as e:
-            print(f"Errore durante la generazione EPG eventi: {e}")
-            return
+        # Genera eventi.xml solo se CANALI_DADDY è "si"
+        if canali_daddy_flag == "si": # Questa riga è corretta
+            try: # Questo blocco 'try' deve essere indentato sotto l'if
+                if eventi_en == "si":
+                    epg_eventi_generator_world()
+                else:
+                    epg_eventi_generator()
+            except Exception as e:
+                print(f"Errore durante la generazione EPG eventi: {e}")
+                return # Interrompi l'esecuzione se la generazione EPG fallisce
+        else: # Questo blocco 'else' deve essere l'else dell'if, non del try
+            print("[INFO] Generazione eventi.xml saltata: CANALI_DADDY non è 'si'.")
 
         # Eventi M3U8
-        canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
         try:
             if canali_daddy_flag == "si":
                 if eventi_en == "si":
