@@ -161,7 +161,7 @@ Per ottenere i link M3U8 diretti per Daddylive e farli funzionare correttamente,
 3.  **Nome della variabile**: Inserisci `HTTP_PROXY`.
 4.  **Valore della variabile**: Qui dovrai inserire i tuoi proxy. È fortemente consigliato utilizzare proxy di alta qualità per una maggiore stabilità. Puoi ottenerli da servizi come [webshare.io](https://www.webshare.io/).
 
-    **Importante**: Per un funzionamento ottimale, avrai bisogno di **almeno due account proxy** da webshare.io. I proxy devono essere separati da una virgola (`,`).
+    **Importante**: Per un funzionamento ottimale, avrai bisogno di **almeno un account proxy** da webshare.io.Se hai due proxy devono essere separati da una virgola (`,`).
 
     **Formato esempio per il valore di `HTTP_PROXY`**:
     `http://user1:pass1@ip1:port1,http://user2:pass2@ip2:port2`
