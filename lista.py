@@ -13,6 +13,10 @@ DADDY_CACHE_FILE = "daddy_cache.json"
 daddy_cache = {}
 
 def load_daddy_cache():
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+    if canali_daddy_flag != "si":
+        print("[INFO] Skipping loading daddy_cache as CANALI_DADDY is not 'si'.")
+        return
     """Carica la cache dei link di daddy da un file JSON."""
     global daddy_cache
     if os.path.exists(DADDY_CACHE_FILE):
@@ -25,6 +29,10 @@ def load_daddy_cache():
             daddy_cache = {}
 
 def save_daddy_cache():
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+    if canali_daddy_flag != "si":
+        print("[INFO] Skipping saving daddy_cache as CANALI_DADDY is not 'si'.")
+        return
     """Salva la cache dei link di daddy su un file JSON."""
     global daddy_cache
     try:
