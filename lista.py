@@ -167,8 +167,15 @@ def merger_playlist():
     script_directory = os.path.dirname(os.path.abspath(__file__))
     
     # Scarica/leggi le playlist
-    playlist1 = download_playlist(url1)
-    playlist2 = download_playlist(url2, append_params=True)
+    playlist1 = download_playlist(url1) # channels_italy.m3u8
+    
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+    if canali_daddy_flag == "si":
+        playlist2 = download_playlist(url2, append_params=True) # eventi.m3u8
+    else:
+        print("[INFO] Skipping eventi.m3u8 in merger_playlist as CANALI_DADDY is not 'si'.")
+        playlist2 = "" # Empty playlist if not enabled
+
     playlist6 = download_playlist(url6)
     
     # Unisci le playlist
@@ -229,11 +236,17 @@ def merger_playlistworld():
     script_directory = os.path.dirname(os.path.abspath(__file__))
     
     # Scarica/leggi le playlist
-    playlist1 = download_playlist(url1)
-    playlist2 = download_playlist(url2, append_params=True)
+    playlist1 = download_playlist(url1) # channels_italy.m3u8
+    
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+    if canali_daddy_flag == "si":
+        playlist2 = download_playlist(url2, append_params=True) # eventi.m3u8
+    else:
+        print("[INFO] Skipping eventi.m3u8 in merger_playlistworld as CANALI_DADDY is not 'si'.")
+        playlist2 = "" # Empty playlist if not enabled
+
     playlist5 = download_playlist(url5)
     playlist6 = download_playlist(url6, exclude_group_title="Italy")
-
     # Unisci le playlist
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist5 + "\n" + playlist6
     
@@ -2847,10 +2860,14 @@ def italy_channels():
         all_fetched_channels = [] # ConterrÃ  tuple (nome_canale, url_stream)
 
         # 1. Canali da sorgenti JSON (Vavoo)
-        print("\n--- Fetching canali da sorgenti Vavoo (JSON) ---")
+        print("\n--- Fetching canali da sorgenti Vavoo (JSON) ---") # This line is always printed
         for base_vavoo_url in BASE_URLS:
             json_channels_data = fetch_channels(base_vavoo_url)
             all_fetched_channels.extend(filter_italian_channels(json_channels_data, base_vavoo_url))
+
+        # Controlla se i canali Daddylive devono essere inclusi
+        canali_daddy_enabled = os.getenv("CANALI_DADDY", "no").strip().lower() == "si"
+        
 
         # 2. Canali dalla pagina HTML di Daddylive
         print("\n--- Fetching canali da Daddylive (HTML) ---")
@@ -2858,59 +2875,65 @@ def italy_channels():
         scraped_daddylive_channels = fetch_channels_from_daddylive_page(daddylive_247_page_url, LINK_DADDY)
 
         processed_scraped_channels = []
-        seen_scraped_names = {}
-        # Rinominato seen_scraped_names a seen_daddy_transformed_base_names per chiarezza
-        seen_daddy_transformed_base_names = {}
-        for raw_name, stream_url in scraped_daddylive_channels:
-            # 1. Pulizia iniziale generica del nome grezzo
-            name_after_initial_clean = clean_channel_name(raw_name)
+        if canali_daddy_enabled:
+            print("\n--- Fetching canali da Daddylive (HTML) ---")
+            daddylive_247_page_url = f"{LINK_DADDY.rstrip('/')}/24-7-channels.php"
+            scraped_daddylive_channels = fetch_channels_from_daddylive_page(daddylive_247_page_url, LINK_DADDY)
 
-            # 2. Trasformazioni specifiche per Daddylive:
-            #    - Rimuovi "italy" (case insensitive)
-            #    - Converti in maiuscolo
-            # Questo sarÃ  il nome base per la gestione dei duplicati Daddylive
-            base_daddy_name = re.sub(r'italy', '', name_after_initial_clean, flags=re.IGNORECASE).strip()
-            base_daddy_name = re.sub(r'\s+', ' ', base_daddy_name).strip() # Rimuovi spazi doppi
-            base_daddy_name = base_daddy_name.upper()
-            
-            # Rinominare i canali Sky Calcio e Sky Calcio 7 specifici di Daddylive
-            # Questo avviene DOPO la pulizia iniziale e l'uppercase,
-            # e PRIMA della gestione dei duplicati e dell'aggiunta di "(D)"
-            sky_calcio_rename_map = {
-                "SKY CALCIO 1": "SKY SPORT 251",
-                "SKY CALCIO 2": "SKY SPORT 252",
-                "SKY CALCIO 3": "SKY SPORT 253",
-                "SKY CALCIO 4": "SKY SPORT 254",
-                "SKY CALCIO 5": "SKY SPORT 255",
-                "SKY CALCIO 6": "SKY SPORT 256",
-                "SKY CALCIO 7": "DAZN 1"
-            }
+            processed_scraped_channels = []
+            seen_daddy_transformed_base_names = {}
+            for raw_name, stream_url in scraped_daddylive_channels:
+                # 1. Pulizia iniziale generica del nome grezzo
+                name_after_initial_clean = clean_channel_name(raw_name)
 
-            if base_daddy_name in sky_calcio_rename_map:
-                original_bdn_for_log = base_daddy_name
-                base_daddy_name = sky_calcio_rename_map[base_daddy_name]
-                print(f"Rinominato canale Daddylive (HTML) da '{original_bdn_for_log}' a '{base_daddy_name}'")
+                # 2. Trasformazioni specifiche per Daddylive:
+                #    - Rimuovi "italy" (case insensitive)
+                #    - Converti in maiuscolo
+                # Questo sarÃ  il nome base per la gestione dei duplicati Daddylive
+                base_daddy_name = re.sub(r'italy', '', name_after_initial_clean, flags=re.IGNORECASE).strip()
+                base_daddy_name = re.sub(r'\s+', ' ', base_daddy_name).strip() # Rimuovi spazi doppi
+                base_daddy_name = base_daddy_name.upper()
+                
+                # Rinominare i canali Sky Calcio e Sky Calcio 7 specifici di Daddylive
+                # Questo avviene DOPO la pulizia iniziale e l'uppercase,
+                # e PRIMA della gestione dei duplicati e dell'aggiunta di "(D)"
+                sky_calcio_rename_map = {
+                    "SKY CALCIO 1": "SKY SPORT 251",
+                    "SKY CALCIO 2": "SKY SPORT 252",
+                    "SKY CALCIO 3": "SKY SPORT 253",
+                    "SKY CALCIO 4": "SKY SPORT 254",
+                    "SKY CALCIO 5": "SKY SPORT 255",
+                    "SKY CALCIO 6": "SKY SPORT 256",
+                    "SKY CALCIO 7": "DAZN 1"
+                }
+
+                if base_daddy_name in sky_calcio_rename_map:
+                    original_bdn_for_log = base_daddy_name
+                    base_daddy_name = sky_calcio_rename_map[base_daddy_name]
+                    print(f"Rinominato canale Daddylive (HTML) da '{original_bdn_for_log}' a '{base_daddy_name}'")
 
 
-            # Gestione skip DAZN (usa il nome base trasformato per il check)
-            # clean_channel_name potrebbe giÃ  aver trasformato "dazn 1" in "DAZN2"
-            if base_daddy_name == "DAZN" or base_daddy_name == "DAZN2":
-                print(f"Skipping canale Daddylive (HTML) a causa della regola DAZN: {raw_name} (base trasformato: {base_daddy_name})")
-                continue
-            
-            # 3. Gestione duplicati basata sul nome base trasformato di Daddylive
-            count = seen_daddy_transformed_base_names.get(base_daddy_name, 0) + 1
-            seen_daddy_transformed_base_names[base_daddy_name] = count
-            
-            # 4. Costruzione del nome finale per Daddylive
-            final_name = base_daddy_name
-            if count > 1:
-                final_name = f"{base_daddy_name} ({count})" # Es. NOME CANALE (2)
-            final_name = f"{final_name} (D)" # Es. NOME CANALE (D) o NOME CANALE (2) (D)
-            
-            processed_scraped_channels.append((final_name, stream_url))
+                # Gestione skip DAZN (usa il nome base trasformato per il check)
+                # clean_channel_name potrebbe giÃ  aver trasformato "dazn 1" in "DAZN2"
+                if base_daddy_name == "DAZN" or base_daddy_name == "DAZN2":
+                    print(f"Skipping canale Daddylive (HTML) a causa della regola DAZN: {raw_name} (base trasformato: {base_daddy_name})")
+                    continue
+                
+                # 3. Gestione duplicati basata sul nome base trasformato di Daddylive
+                count = seen_daddy_transformed_base_names.get(base_daddy_name, 0) + 1
+                seen_daddy_transformed_base_names[base_daddy_name] = count
+                
+                # 4. Costruzione del nome finale per Daddylive
+                final_name = base_daddy_name
+                if count > 1:
+                    final_name = f"{base_daddy_name} ({count})" # Es. NOME CANALE (2)
+                final_name = f"{final_name} (D)" # Es. NOME CANALE (D) o NOME CANALE (2) (D)
+                
+                processed_scraped_channels.append((final_name, stream_url))
 
-        all_fetched_channels.extend(processed_scraped_channels)
+            all_fetched_channels.extend(processed_scraped_channels)
+        else:
+            print("\n--- Skipping Daddylive channels: CANALI_DADDY is not 'si' ---")
 
         # 3. Canali manuali
         manual_channels_data = get_manual_channels()
@@ -3068,8 +3091,16 @@ def world_channels_generator():
 def removerworld():
     import os
     
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+    
     # Lista dei file da eliminare
     files_to_delete = ["world.m3u8", "channels_italy.m3u8", "eventi.m3u8", "eventi.xml"]
+    
+    # Condizionalmente aggiungi eventi.m3u8 alla lista di eliminazione
+    if canali_daddy_flag == "si":
+        files_to_delete.append("eventi.m3u8")
+    else:
+        print("[INFO] Skipping deletion of eventi.m3u8 in removerworld as CANALI_DADDY is not 'si'.")
     
     for filename in files_to_delete:
         if os.path.exists(filename):
@@ -3080,12 +3111,20 @@ def removerworld():
                 print(f"Errore durante l'eliminazione di {filename}: {e}")
         else:
             print(f"File non trovato: {filename}")
-            
+
 def remover():
     import os
     
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+
     # Lista dei file da eliminare
-    files_to_delete = ["channels_italy.m3u8", "eventi.m3u8", "eventi.xml"]
+    files_to_delete = ["channels_italy.m3u8", "eventi.xml"]
+
+    # Condizionalmente aggiungi eventi.m3u8 alla lista di eliminazione
+    if canali_daddy_flag == "si":
+        files_to_delete.append("eventi.m3u8")
+    else:
+        print("[INFO] Skipping deletion of eventi.m3u8 in remover as CANALI_DADDY is not 'si'.")
     
     for filename in files_to_delete:
         if os.path.exists(filename):
@@ -3103,6 +3142,7 @@ def main():
     try:
         try:
             schedule_success = schedule_extractor()
+            # schedule_extractor() is always run to get the daddyliveSchedule.json, which is needed by other parts.
         except Exception as e:
             print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
 
@@ -3120,11 +3160,15 @@ def main():
             return
 
         # Eventi M3U8
+        canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
         try:
-            if eventi_en == "si":
-                eventi_m3u8_generator_world()
+            if canali_daddy_flag == "si":
+                if eventi_en == "si":
+                    eventi_m3u8_generator_world()
+                else:
+                    eventi_m3u8_generator()
             else:
-                eventi_m3u8_generator()
+                print("[INFO] Generazione eventi.m3u8 saltata: CANALI_DADDY non è 'si'.")
         except Exception as e:
             print(f"Errore durante la generazione eventi.m3u8: {e}")
             return
