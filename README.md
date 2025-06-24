@@ -41,7 +41,7 @@ Sostituisci:
 - `<server-ip>` con l'indirizzo IP del tuo server mediaflow-proxy  
 - `<password>` con la password del tuo mediaflow-proxy  
 
-- **Lista MPD** (solo ip Europeo e con Mediaflow-Proxy)
+- **Lista MPD** (solo ip Europeo)
   [`https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/mpd.m3u`](https://nzo66-mfpform3u.hf.space/proxy?<server-ip>:<password>&https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/mpd.m3u)
 
 Sostituisci:
