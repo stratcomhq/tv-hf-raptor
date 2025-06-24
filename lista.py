@@ -9,6 +9,31 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+DADDY_CACHE_FILE = "daddy_cache.json"
+daddy_cache = {}
+
+def load_daddy_cache():
+    """Carica la cache dei link di daddy da un file JSON."""
+    global daddy_cache
+    if os.path.exists(DADDY_CACHE_FILE):
+        try:
+            with open(DADDY_CACHE_FILE, 'r', encoding='utf-8') as f:
+                daddy_cache = json.load(f)
+                print(f"[i] Cache dei link daddy caricata da {DADDY_CACHE_FILE}")
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"[!] Errore nel caricare la cache dei link daddy: {e}")
+            daddy_cache = {}
+
+def save_daddy_cache():
+    """Salva la cache dei link di daddy su un file JSON."""
+    global daddy_cache
+    try:
+        with open(DADDY_CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(daddy_cache, f, indent=4)
+        print(f"[i] Cache dei link daddy salvata in {DADDY_CACHE_FILE}")
+    except IOError as e:
+        print(f"[!] Errore nel salvare la cache dei link daddy: {e}")
+
 def headers_to_extvlcopt(headers_dict):
     """Converts a dictionary of headers to a full #EXTVLCOPT line."""
     if not headers_dict:
@@ -33,6 +58,12 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
     """
     Cerca i file .m3u8 nei siti specificati per i canali daddy e tennis
     """
+    # Controlla la cache prima per i canali daddy
+    if not is_tennis and str(channel_id) in daddy_cache:
+        cached_url = daddy_cache[str(channel_id)]
+        print(f"[✓] Stream daddy trovato nella cache per channel_id {channel_id}: {cached_url}")
+        return cached_url
+
     PROXY_URL = os.getenv("HTTP_PROXY")
     PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
     
@@ -78,6 +109,8 @@ def search_m3u8_in_sites(channel_id, is_tennis=False):
                 response = requests.head(test_url, timeout=15, proxies=PROXIES)
                 if response.status_code == 200:
                     print(f"[✓] Stream daddy trovato: {test_url}")
+                    # Salva nella cache in memoria
+                    daddy_cache[str(channel_id)] = test_url
                     return test_url
                 else:
                     # Logga lo status code per il debug
@@ -3066,65 +3099,69 @@ def remover():
 
 # Funzione principale che esegue tutti gli script
 def main():
+    load_daddy_cache()
     try:
-        schedule_success = schedule_extractor()
-    except Exception as e:
-        print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
+        try:
+            schedule_success = schedule_extractor()
+        except Exception as e:
+            print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
 
-    eventi_en = os.getenv("EVENTI_EN", "no").strip().lower()
-    world_flag = os.getenv("WORLD", "si").strip().lower()
+        eventi_en = os.getenv("EVENTI_EN", "no").strip().lower()
+        world_flag = os.getenv("WORLD", "si").strip().lower()
 
-    # EPG Eventi
-    try:
-        if eventi_en == "si":
-            epg_eventi_generator_world()
-        else:
-            epg_eventi_generator()
-    except Exception as e:
-        print(f"Errore durante la generazione EPG eventi: {e}")
-        return
-
-    # Eventi M3U8
-    try:
-        if eventi_en == "si":
-            eventi_m3u8_generator_world()
-        else:
-            eventi_m3u8_generator()
-    except Exception as e:
-        print(f"Errore durante la generazione eventi.m3u8: {e}")
-        return
-
-    # EPG Merger
-    try:
-        epg_merger()
-    except Exception as e:
-        print(f"Errore durante l'esecuzione di epg_merger: {e}")
-        return
-
-    # Canali Italia
-    try:
-        italy_channels()
-    except Exception as e:
-        print(f"Errore durante l'esecuzione di italy_channels: {e}")
-        return
-
-    # Canali World e Merge finale
-    try:
-        if world_flag == "si":
-            world_channels_generator()
-            merger_playlistworld()
-            removerworld()
-        elif world_flag == "no":
-            merger_playlist()
-            remover()
-        else:
-            print(f"Valore WORLD non valido: '{world_flag}'. Usa 'si' o 'no'.")
+        # EPG Eventi
+        try:
+            if eventi_en == "si":
+                epg_eventi_generator_world()
+            else:
+                epg_eventi_generator()
+        except Exception as e:
+            print(f"Errore durante la generazione EPG eventi: {e}")
             return
-    except Exception as e:
-        print(f"Errore nella fase finale: {e}")
-        return
 
-    print("Tutti gli script sono stati eseguiti correttamente!")
+        # Eventi M3U8
+        try:
+            if eventi_en == "si":
+                eventi_m3u8_generator_world()
+            else:
+                eventi_m3u8_generator()
+        except Exception as e:
+            print(f"Errore durante la generazione eventi.m3u8: {e}")
+            return
+
+        # EPG Merger
+        try:
+            epg_merger()
+        except Exception as e:
+            print(f"Errore durante l'esecuzione di epg_merger: {e}")
+            return
+
+        # Canali Italia
+        try:
+            italy_channels()
+        except Exception as e:
+            print(f"Errore durante l'esecuzione di italy_channels: {e}")
+            return
+
+        # Canali World e Merge finale
+        try:
+            if world_flag == "si":
+                world_channels_generator()
+                merger_playlistworld()
+                removerworld()
+            elif world_flag == "no":
+                merger_playlist()
+                remover()
+            else:
+                print(f"Valore WORLD non valido: '{world_flag}'. Usa 'si' o 'no'.")
+                return
+        except Exception as e:
+            print(f"Errore nella fase finale: {e}")
+            return
+
+        print("Tutti gli script sono stati eseguiti correttamente!")
+    finally:
+        save_daddy_cache()
 
 if __name__ == "__main__":
     main()
