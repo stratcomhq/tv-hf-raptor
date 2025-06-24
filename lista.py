@@ -3138,16 +3138,16 @@ def remover():
 def main():
     load_daddy_cache()
     try:
-        try:
-            schedule_success = schedule_extractor()
-            # schedule_extractor() is always run to get the daddyliveSchedule.json, which is needed by other parts.
-        except Exception as e:
-            print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
+        canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+        if canali_daddy_flag == "si":
+            try:
+                schedule_success = schedule_extractor()
+            except Exception as e:
+                print(f"Errore durante l'esecuzione di schedule_extractor: {e}")
 
         # Leggi le variabili d'ambiente
         eventi_en = os.getenv("EVENTI_EN", "no").strip().lower()
         world_flag = os.getenv("WORLD", "si").strip().lower()
-        canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
 
         # EPG Eventi
         # Genera eventi.xml solo se CANALI_DADDY è "si"
