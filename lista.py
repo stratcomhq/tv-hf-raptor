@@ -324,17 +324,22 @@ def epg_merger():
             for element in root:
                 root_finale.append(element)
 
-    # Aggiungere eventi.xml da file locale
-    if os.path.exists(path_eventi):
-        try:
-            tree_eventi = ET.parse(path_eventi)
-            root_eventi = tree_eventi.getroot()
-            for programme in root_eventi.findall(".//programme"):
-                root_finale.append(programme)
-        except ET.ParseError as e:
-            print(f"Errore nel parsing del file eventi.xml: {e}")
+    # Check CANALI_DADDY flag before processing eventi.xml
+    canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
+    if canali_daddy_flag == "si":
+        # Aggiungere eventi.xml da file locale
+        if os.path.exists(path_eventi):
+            try:
+                tree_eventi = ET.parse(path_eventi)
+                root_eventi = tree_eventi.getroot()
+                for programme in root_eventi.findall(".//programme"):
+                    root_finale.append(programme)
+            except ET.ParseError as e:
+                print(f"Errore nel parsing del file eventi.xml: {e}")
+        else:
+            print(f"File non trovato: {path_eventi}")
     else:
-        print(f"File non trovato: {path_eventi}")
+        print("[INFO] Skipping eventi.xml in epg_merger as CANALI_DADDY is not 'si'.")
 
     # Aggiungere it.xml da URL remoto
     tree_it = download_and_parse_xml(url_it)
