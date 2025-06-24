@@ -12,23 +12,22 @@ load_dotenv()
 def headers_to_extvlcopt(headers_dict):
     """Converts a dictionary of headers to a full #EXTVLCOPT line."""
     if not headers_dict:
-        return None
+        return []
     
-    options = []
+    vlc_opt_lines = []
     for key, value in headers_dict.items():
         lower_key = key.lower()
         if lower_key == 'user-agent':
-            options.append(f'http-user-agent="{value}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-user-agent="{value}"')
         elif lower_key == 'referer':
-            options.append(f'http-referer="{value}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-referer="{value}"')
         elif lower_key == 'cookie':
-            options.append(f'http-cookie="{value}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-cookie="{value}"')
         else:
             # Generic header format, ensuring value is a string
-            options.append(f'http-header="{key}: {str(value)}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-header="{key}: {str(value)}"')
             
-    if not options: return None
-    return f'#EXTVLCOPT:{",".join(options)}'
+    return vlc_opt_lines
 
 def search_m3u8_in_sites(channel_id, is_tennis=False):
     """
@@ -904,8 +903,9 @@ def eventi_m3u8_generator_world():
                             # Aggiungi EXTHTTP headers per canali daddy (esclusi .php)
                             if ("newkso.ru" in stream or "premium" in stream) and not stream.endswith('.php'):
                                 daddy_headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
-                                vlc_opt_line = headers_to_extvlcopt(daddy_headers)
-                                if vlc_opt_line: f.write(f'{vlc_opt_line}\n')
+                                vlc_opt_lines = headers_to_extvlcopt(daddy_headers)
+                                for line in vlc_opt_lines:
+                                    f.write(f'{line}\n')
                             f.write(f'{stream}\n\n')
                             print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
                         else: 
@@ -1468,8 +1468,9 @@ def eventi_m3u8_generator():
                             # Aggiungi EXTHTTP headers per canali daddy (esclusi .php)
                             if ("newkso.ru" in stream or "premium" in stream) and not stream.endswith('.php'):
                                 daddy_headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
-                                vlc_opt_line = headers_to_extvlcopt(daddy_headers)
-                                if vlc_opt_line: f.write(f'{vlc_opt_line}\n')
+                                vlc_opt_lines = headers_to_extvlcopt(daddy_headers)
+                                for line in vlc_opt_lines:
+                                    f.write(f'{line}\n')
                             f.write(f'{stream}\n\n')
                             print(f"[✓] {tvg_name}" + (f" (logo trovato)" if logo_url else " (nessun logo trovato)")) 
                         else: 
@@ -2772,14 +2773,16 @@ def italy_channels():
                         # 1. Controlla se ci sono header HTTP personalizzati (tipicamente per canali manuali)
                         if "http_headers" in ch_data and ch_data["http_headers"]:
                             headers_dict = ch_data["http_headers"]
-                            vlc_opt_line = headers_to_extvlcopt(headers_dict)
-                            if vlc_opt_line: f.write(f"{vlc_opt_line}\n")
+                            vlc_opt_lines = headers_to_extvlcopt(headers_dict)
+                            for line in vlc_opt_lines:
+                                f.write(f"{line}\n")
                             f.write(f"{final_url_to_write}\n\n") # Write the base URL
                         # 2. Controlla se Ã¨ un canale Vavoo (basato sull'URL)
                         elif any(base_vavoo_url.rstrip('/') + "/play/" in final_url_to_write for base_vavoo_url in BASE_URLS): # VAVOO
                             vavoo_headers = {"User-Agent": "VAVOO/2.6", "Referer": "https://vavoo.to/", "Origin": "https://vavoo.to"}
-                            vlc_opt_line = headers_to_extvlcopt(vavoo_headers)
-                            if vlc_opt_line: f.write(f'{vlc_opt_line}\n')
+                            vlc_opt_lines = headers_to_extvlcopt(vavoo_headers)
+                            for line in vlc_opt_lines:
+                                f.write(f'{line}\n')
                             f.write(f"{final_url_to_write}\n\n")
                         # 3. Controlla se è un file .php (tipicamente Daddylive)
                         elif final_url_to_write.endswith('.php'): 
@@ -2788,8 +2791,9 @@ def italy_channels():
                         # 4. Controlla se è un canale daddy (newkso.ru o premium) ma non .php
                         elif ("newkso.ru" in final_url_to_write or "premium" in final_url_to_write) and not final_url_to_write.endswith('.php'):
                             daddy_headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1", "Referer": "https://forcedtoplay.xyz/", "Origin": "https://forcedtoplay.xyz"}
-                            vlc_opt_line = headers_to_extvlcopt(daddy_headers)
-                            if vlc_opt_line: f.write(f'{vlc_opt_line}\n')
+                            vlc_opt_lines = headers_to_extvlcopt(daddy_headers)
+                            for line in vlc_opt_lines:
+                                f.write(f'{line}\n')
                             f.write(f"{final_url_to_write}\n\n")
                         # 5. Altri canali (es. link diretti manuali senza http_headers specifici)
                         else:
@@ -3007,8 +3011,9 @@ def world_channels_generator():
                 for name, url in grouped_channels[country]:
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{country}", {name}\n')
                     vavoo_headers = {"User-Agent": "VAVOO/2.6", "Referer": "https://vavoo.to/", "Origin": "https://vavoo.to"}
-                    vlc_opt_line = headers_to_extvlcopt(vavoo_headers)
-                    if vlc_opt_line: f.write(f'{vlc_opt_line}\n')
+                    vlc_opt_lines = headers_to_extvlcopt(vavoo_headers)
+                    for line in vlc_opt_lines:
+                        f.write(f'{line}\n')
                     f.write(f"{url}\n\n")
     
     # Funzione principale
