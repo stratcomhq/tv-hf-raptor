@@ -51,14 +51,16 @@ def headers_to_extvlcopt(headers_dict):
     for key, value in headers_dict.items():
         lower_key = key.lower()
         if lower_key == 'user-agent':
-            vlc_opt_lines.append(f'#EXTVLCOPT:http-user-agent="{value}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-user-agent={value}')
         elif lower_key == 'referer':
-            vlc_opt_lines.append(f'#EXTVLCOPT:http-referer="{value}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-referer={value}')
         elif lower_key == 'cookie':
-            vlc_opt_lines.append(f'#EXTVLCOPT:http-cookie="{value}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-cookie={value}')
+        elif lower_key == 'origin': # Specific handling for Origin
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-origin={value}')
         else:
             # Generic header format, ensuring value is a string
-            vlc_opt_lines.append(f'#EXTVLCOPT:http-header="{key}: {str(value)}"')
+            vlc_opt_lines.append(f'#EXTVLCOPT:http-header="{key}: {str(value)}"') # Keep quotes and colon for generic http-header
             
     return vlc_opt_lines
 
