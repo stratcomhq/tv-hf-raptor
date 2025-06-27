@@ -3102,7 +3102,7 @@ def removerworld():
     canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
     
     # Lista dei file da eliminare
-    files_to_delete = ["world.m3u8", "channels_italy.m3u8"]
+    files_to_delete = []
     
     # Condizionalmente aggiungi eventi.m3u8 e eventi.xml alla lista di eliminazione
     if canali_daddy_flag == "si":
@@ -3127,7 +3127,7 @@ def remover():
     canali_daddy_flag = os.getenv("CANALI_DADDY", "no").strip().lower()
 
     # Lista dei file da eliminare
-    files_to_delete = ["channels_italy.m3u8"]
+    files_to_delete = []
 
     # Condizionalmente aggiungi eventi.m3u8 alla lista di eliminazione
     if canali_daddy_flag == "si":
